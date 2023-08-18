@@ -1,8 +1,14 @@
 import subprocess
 import json
 
-def get_token():
+def get_bot_token():
     with open("res/bot_token.txt", "r", encoding="utf-8") as file:
+        content = file.readline().strip()
+
+    return content
+
+def get_server_token():
+    with open("res/server_token.txt", "r", encoding="utf-8") as file:
         content = file.readline().strip()
 
     return content
@@ -35,11 +41,12 @@ def cull_json(json_data, categories_to_remove):
     return [entry for entry in json_data if entry["category"] not in categories_to_remove]
 
 def main():
-    #get the bot token from local file
-    token = get_token()
+    #get the tokens from local file
+    bot = get_bot_token()
+    server = get_server_token()
     
     # Call the CLI command and capture its output
-    cli_command = "dotnet DCE/DiscordChatExporter.Cli.dll channels -g 857848490683269161 -t " + token
+    cli_command = f"dotnet DCE/DiscordChatExporter.Cli.dll channels -g {server} -t {bot}"
     output = subprocess.check_output(cli_command, shell=True, text=True)
 
     # Process the output and create the desired JSON format
