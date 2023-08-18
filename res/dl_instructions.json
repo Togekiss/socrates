@@ -1,0 +1,6 @@
+{
+    "last_download":"",
+    "thread_download_path":"Threads\\%T\\%C.json",
+    "dm_download_path":"DMs\\%C.json",
+    "thread_download_command": "dotnet DiscordChatExporter.Cli.dll export -t 'token' -c 53555 -f Json"
+}

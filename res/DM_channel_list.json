@@ -1,0 +1,47 @@
+[
+    {
+        "id": "858215752872099840",
+        "category": "Text and Calls",
+        "channel": "dm-1"
+    },
+    {
+        "id": "858215776024395806",
+        "category": "Text and Calls",
+        "channel": "dm-2"
+    },
+    {
+        "id": "858215802159366174",
+        "category": "Text and Calls",
+        "channel": "dm-3"
+    },
+    {
+        "id": "907476652760653906",
+        "category": "Text and Calls",
+        "channel": "dm-4"
+    },
+    {
+        "id": "907476676622032897",
+        "category": "Text and Calls",
+        "channel": "dm-5"
+    },
+    {
+        "id": "1090067650811547778",
+        "category": "Text and Calls",
+        "channel": "dm-6"
+    },
+    {
+        "id": "867145019423719434",
+        "category": "Text and Calls",
+        "channel": "lets-call"
+    },
+    {
+        "id": "1025574458649497642",
+        "category": "Text and Calls",
+        "channel": "lets-call-2"
+    },
+    {
+        "id": "1090067695367634995",
+        "category": "Text and Calls",
+        "channel": "lets-call-3"
+    }
+]
