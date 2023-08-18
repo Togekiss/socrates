@@ -12,9 +12,27 @@ Additionally, it serves as a history backup and chat analyser prepper.
 
 Socrates is in development process. Currently, the bot itself only serves as a watcher to export channels using DCE and its token. All logic and scripts have to be run manually and locally. Server structure and search parameters are hardcoded and functionality is split in several files.
 
+It also calls scenes 'threads' because that is how scenes in the RP world are called. It will be changed to 'scenes' to avoid confusion with Discord's 'Thread' functionality.
+
 The current focus of development is fine-tuning the 'end of scene' tags to, hopefully, detect most manners of closing scenes and avoid tagging them as 'timed out'.
 
 Once this basic functionality is in working condition, the focus will shift to cleaning and organizing the code, and making the bot operational to be invoked with commands in Discord.
+
+## How to use in local (in case you want to help or play with it!)
+
+(Note: These instructions are for its current state of development. They will change when the code is clean and adapted to use on other servers. They're a mess, I know. Ask me for more info if you need!)
+
+- Create a folder named 'DCE' and download the CLI version of https://github.com/Tyrrrz/DiscordChatExporter
+- Create a file in the 'res' folder named 'bot_token.txt', and copy the bot's token. For now, any bot that can see your server's channels work.
+- Create a file in the 'res' folder named 'server_token.txt' and copy the server ID.
+- Create a 'Elysium/Threads/' folder tree.
+- Manually use DCE to download the channels in the previous folder. Should be saved in 'Category name/channel-name.json' format. Yep sorry still dont have a script that does it
+- Run 'idAssigner.py'
+- Find the hardcoded character name in 'thread_finder.py' and type the desired character
+- Run 'thread_finder.py'
+- Find the hardcoded status in 'url_creator.py' and type the desired status
+- Run 'url_creator.py'
+- You should have the scenes list in 'out/output.txt'
 
 ## How does it work?
 
