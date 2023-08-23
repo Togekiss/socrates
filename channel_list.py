@@ -37,8 +37,11 @@ def read_categories_from_txt(file_path):
     with open(file_path, "r", encoding="utf-8") as file:
         return {category.strip() for category in file}
 
-def cull_json(json_data, categories_to_remove):
+def cull_json_remove(json_data, categories_to_remove):
     return [entry for entry in json_data if entry["category"] not in categories_to_remove]
+
+def cull_json_keep(json_data, categories_to_keep):
+    return [entry for entry in json_data if entry["category"] in categories_to_keep]
 
 def main():
     #get the tokens from local file
@@ -52,16 +55,23 @@ def main():
     # Process the output and create the desired JSON format
     parsed_data = parse_output(output)
 
-    # Read the list of categories from the .txt file
-    categories_txt_file = "res/scene_categories_cull.txt"
-    categories_to_remove = read_categories_from_txt(categories_txt_file)
+    # Read the list of categories from the .txt files
+    scene_categories_list = "res/scene_categories_cull.txt"
+    categories_to_remove = read_categories_from_txt(scene_categories_list)
+    
+    dm_categories_list = "res/dm_categories_keep.txt"
+    categories_to_keep = read_categories_from_txt(dm_categories_list)
 
     # Cull the JSON data by removing the entries with matching categories
-    culled_json_data = cull_json(parsed_data, categories_to_remove)
-
+    scene_channel_list = cull_json_remove(parsed_data, categories_to_remove)
+    dm_channel_list = cull_json_keep(parsed_data, categories_to_keep)
+    
     # Save the culled JSON data back to the same file
     json_file_path = "res/scene_channel_list.json"
-    save_to_json(culled_json_data, json_file_path)
+    save_to_json(scene_channel_list, json_file_path)
+
+    json_file_path = "res/DM_channel_list.json"
+    save_to_json(dm_channel_list, json_file_path)
 
 if __name__ == "__main__":
     main()

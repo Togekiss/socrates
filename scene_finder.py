@@ -65,7 +65,7 @@ def find_scene_starts(data, target_author):
 
 # Get the path of the "scenes" folder in the same directory as the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
-folder_name = "Elysium/scenes"
+folder_name = "Elysium/Scenes"
 folder_path = os.path.join(script_dir, folder_name)
 
 with open("res/character_ids.json", "r", encoding="utf-8") as file:

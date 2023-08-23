@@ -145,6 +145,11 @@
         "channel": "travel-bus"
     },
     {
+        "id": "1140762448241119303",
+        "category": "DORM: LUNE (WOMEN)",
+        "channel": "baras-room"
+    },
+    {
         "id": "1112835247260844153",
         "category": "DORM: LUNE (WOMEN)",
         "channel": "camilles-room"
@@ -180,11 +185,6 @@
         "channel": "suzu-room"
     },
     {
-        "id": "1091139207000490025",
-        "category": "DORM: LUNE (WOMEN)",
-        "channel": "tomokys-room"
-    },
-    {
         "id": "983226269074333706",
         "category": "Dorm: Alden (Men)",
         "channel": "alden-entrance"
@@ -208,11 +208,6 @@
         "id": "1077729099998560407",
         "category": "Dorm: Alden (Men)",
         "channel": "aois-room"
-    },
-    {
-        "id": "1005694704916115456",
-        "category": "Dorm: Alden (Men)",
-        "channel": "eijis-room"
     },
     {
         "id": "1079885760922136646",
@@ -310,6 +305,11 @@
         "channel": "hospital"
     },
     {
+        "id": "1141243375606046761",
+        "category": "Kaminashi City",
+        "channel": "hotel"
+    },
+    {
         "id": "1044879471884386365",
         "category": "Kaminashi City",
         "channel": "kami-sports-field"
@@ -400,6 +400,11 @@
         "channel": "train"
     },
     {
+        "id": "1135437845088186528",
+        "category": "Kaminashi City",
+        "channel": "vino-de-silvangre-headquarters"
+    },
+    {
         "id": "1018676008997617705",
         "category": "Kaminashi City",
         "channel": "wc-donalds"
@@ -435,9 +440,9 @@
         "channel": "ariel-apartment"
     },
     {
-        "id": "1044041510246690878",
+        "id": "1141197895681458226",
         "category": "Kaminashi Apartments",
-        "channel": "korinna-apartment"
+        "channel": "kaizers-penthouse"
     },
     {
         "id": "1012354351177682964",
@@ -457,7 +462,7 @@
     {
         "id": "1057515545152458832",
         "category": "Kaminashi Apartments",
-        "channel": "maxine-studio"
+        "channel": "maxine-penthouse"
     },
     {
         "id": "995184169065918474",
@@ -702,7 +707,7 @@
     {
         "id": "1019238031548493914",
         "category": "Rosenfeld Mansion",
-        "channel": "r-alricks-bedroom"
+        "channel": "r-alrick-and-elises-bedroom"
     },
     {
         "id": "1012223373004255263",
@@ -737,7 +742,7 @@
     {
         "id": "1034461615246024794",
         "category": "Rosenfeld Mansion",
-        "channel": "r-elises-room"
+        "channel": "r-elises-trophy-room"
     },
     {
         "id": "1102444642559074424",
@@ -823,6 +828,11 @@
         "id": "1067873790081630208",
         "category": "Outskirts",
         "channel": "abandoned-cabin"
+    },
+    {
+        "id": "1138909077838254200",
+        "category": "Outskirts",
+        "channel": "beach"
     },
     {
         "id": "1090003211265511485",
@@ -920,9 +930,29 @@
         "channel": "morgans-pad"
     },
     {
+        "id": "995184071300886558",
+        "category": "Outskirts residences",
+        "channel": "rins-room"
+    },
+    {
         "id": "1060033536905707570",
         "category": "Outskirts residences",
         "channel": "volkers-cabin"
+    },
+    {
+        "id": "1040692298469609582",
+        "category": "Outskirts residences",
+        "channel": "yamada-estate"
+    },
+    {
+        "id": "1047972914688962681",
+        "category": "Outskirts residences",
+        "channel": "yamada-estate-2"
+    },
+    {
+        "id": "1047960968203874314",
+        "category": "Outskirts residences",
+        "channel": "yamada-rins-bedroom"
     },
     {
         "id": "1009688287792857168",
@@ -950,24 +980,14 @@
         "channel": "nsfw-aoi-x-shu"
     },
     {
-        "id": "1080592718151028817",
-        "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-ayato-x-lilly"
-    },
-    {
-        "id": "1106413725595992084",
-        "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-hyun-x-maxine"
-    },
-    {
         "id": "1115107897093935205",
         "category": "NSFW ROLEPLAYS ONLY",
         "channel": "nsfw-luciyui"
     },
     {
-        "id": "1087154462851870840",
+        "id": "1142511282558337196",
         "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-mari-volker-amina"
+        "channel": "nsfw-morgan-x-zephy"
     },
     {
         "id": "1068270827436515398",
@@ -1005,9 +1025,19 @@
         "channel": "nsfw-alrick-x-suzume"
     },
     {
+        "id": "1080592718151028817",
+        "category": "NSFW RP ARCHIVE",
+        "channel": "nsfw-ayato-x-lilly"
+    },
+    {
         "id": "1026328238252900382",
         "category": "NSFW RP ARCHIVE",
         "channel": "nsfw-chahuas-office"
+    },
+    {
+        "id": "1106413725595992084",
+        "category": "NSFW RP ARCHIVE",
+        "channel": "nsfw-hyun-x-maxine"
     },
     {
         "id": "1039420079672139826",
@@ -1023,6 +1053,11 @@
         "id": "858222649405997096",
         "category": "NSFW RP ARCHIVE",
         "channel": "nsfw-m-dungeon"
+    },
+    {
+        "id": "1087154462851870840",
+        "category": "NSFW RP ARCHIVE",
+        "channel": "nsfw-mari-volker-amina"
     },
     {
         "id": "1061010953694629949",
@@ -1070,6 +1105,11 @@
         "channel": "demis-room"
     },
     {
+        "id": "1005694704916115456",
+        "category": "archive",
+        "channel": "eijis-room"
+    },
+    {
         "id": "1014551996495298722",
         "category": "archive",
         "channel": "elise-dorm"
@@ -1080,28 +1120,13 @@
         "channel": "hyunwoos-room"
     },
     {
+        "id": "1044041510246690878",
+        "category": "archive",
+        "channel": "korinna-apartment"
+    },
+    {
         "id": "1012223579477258310",
         "category": "archive",
         "channel": "r-hao-kang's-room"
-    },
-    {
-        "id": "995184071300886558",
-        "category": "archive",
-        "channel": "rins-room"
-    },
-    {
-        "id": "1040692298469609582",
-        "category": "archive",
-        "channel": "yamada-estate"
-    },
-    {
-        "id": "1047972914688962681",
-        "category": "archive",
-        "channel": "yamada-estate-2"
-    },
-    {
-        "id": "1047960968203874314",
-        "category": "archive",
-        "channel": "yamada-rins-bedroom"
     }
 ]
