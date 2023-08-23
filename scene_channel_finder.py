@@ -53,14 +53,14 @@ def main():
     parsed_data = parse_output(output)
 
     # Read the list of categories from the .txt file
-    categories_txt_file = "res/thread_categories_cull.txt"
+    categories_txt_file = "res/scene_categories_cull.txt"
     categories_to_remove = read_categories_from_txt(categories_txt_file)
 
     # Cull the JSON data by removing the entries with matching categories
     culled_json_data = cull_json(parsed_data, categories_to_remove)
 
     # Save the culled JSON data back to the same file
-    json_file_path = "res/thread_channel_list.json"
+    json_file_path = "res/scene_channel_list.json"
     save_to_json(culled_json_data, json_file_path)
 
 if __name__ == "__main__":

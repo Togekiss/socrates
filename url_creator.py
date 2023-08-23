@@ -2,11 +2,11 @@ import datetime
 import json
 
 # Open the JSON file
-with open('out/thread_ends.json', 'r', encoding="utf-8") as file:
+with open('out/scene_ends.json', 'r', encoding="utf-8") as file:
     data = json.load(file)
 
 # Sort the objects by chronological order based on the "timestamp" field
-sorted_objects = sorted(data['thread_ends'], key=lambda obj: obj['timestamp'])
+sorted_objects = sorted(data['scene_ends'], key=lambda obj: obj['timestamp'])
 
 with open('out/output.txt', 'w') as output_file:
     for obj in sorted_objects:

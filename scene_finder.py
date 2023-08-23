@@ -3,30 +3,30 @@ import os
 import re
 import unicodedata
 
-def find_thread_starts(data, target_author):
+def find_scene_starts(data, target_author):
     pattern = r"(?i)(?:`|```).*\n*\b(?:end|hold|close|dropped|offline|moved|moving|continu)\w*.{0,10}\n*(?:`|```)\n*(?:$|@.*|\W*)"
     pattern2 = r"(?i)(?:`|```)\n*.*\b(?:moved|moving|continu)\w*.{0,15}\n*(?:`|```)\n*(?:$|@.*|\W*)"
     messages = data["messages"]
-    thread_starts = []
-    thread_ends = []
+    scene_starts = []
+    scene_ends = []
 
-    active_thread = False
+    active_scene = False
     message_count = 0
 
     for message in messages:
         author = int(message["author"]["id"])
 
-        # thread begins
-        if not active_thread and target_author == author:
-            active_thread = True
+        # scene begins
+        if not active_scene and target_author == author:
+            active_scene = True
             message_count = 0
             message["category"] = data['channel']['category']
             message["channel"] = data['channel']['name']
             message["status"] = 'active'
             message["link"] = f"https://discord.com/channels/{data['guild']['id']}/{data['channel']['id']}/{message['id']}"
-            thread_starts.append(message)
+            scene_starts.append(message)
 
-        if active_thread: 
+        if active_scene: 
 
             # accounts for some leeway, resets if characters appear again
             if target_author == author:
@@ -40,42 +40,42 @@ def find_thread_starts(data, target_author):
             
             # if there's any END or similar tag
             if re.search(normalized_pattern, normalized_content):
-                active_thread = False
+                active_scene = False
                 message["category"] = data['channel']['category']
                 message["channel"] = data['channel']['name']
-                thread_starts[-1]["status"] = 'end'
+                scene_starts[-1]["status"] = 'end'
                 message["status"] = 'end'
                 message["link"] = f"https://discord.com/channels/{data['guild']['id']}/{data['channel']['id']}/{message['id']}"
-                thread_ends.append(message)
+                scene_ends.append(message)
                 continue
             
             # if it's clear they left
             if message_count > 15:
-                active_thread = False
+                active_scene = False
                 message["category"] = data['channel']['category']
                 message["channel"] = data['channel']['name']
-                thread_starts[-1]["status"] = 'timeout'
+                scene_starts[-1]["status"] = 'timeout'
                 message["status"] = 'timeout'
                 message["link"] = f"https://discord.com/channels/{data['guild']['id']}/{data['channel']['id']}/{message['id']}"
-                thread_ends.append(message)
+                scene_ends.append(message)
         
 
-    return thread_starts, thread_ends
+    return scene_starts, scene_ends
 
 
-# Get the path of the "Threads" folder in the same directory as the script
+# Get the path of the "scenes" folder in the same directory as the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
-folder_name = "Elysium/Threads"
+folder_name = "Elysium/scenes"
 folder_path = os.path.join(script_dir, folder_name)
 
-with open("res/chara_dict.json", "r", encoding="utf-8") as file:
+with open("res/character_ids.json", "r", encoding="utf-8") as file:
     author_id_mapping = json.load(file)
 
 author = author_id_mapping["Lysander D. Ruiz"]
 
-# Create an empty list to store thread starts and ends
-all_thread_starts = []
-all_thread_ends = []
+# Create an empty list to store scene starts and ends
+all_scene_starts = []
+all_scene_ends = []
 
 # Iterate over all JSON files in the "Kaminashi" folder and its subfolders
 for root, dirs, files in os.walk(folder_path):
@@ -87,28 +87,28 @@ for root, dirs, files in os.walk(folder_path):
             with open(file_path, "r", encoding="utf-8") as file:
                 json_data = json.load(file)
 
-                # Find thread starts and ends involving author
-                thread_starts, thread_ends = find_thread_starts(json_data, author)
+                # Find scene starts and ends involving author
+                scene_starts, scene_ends = find_scene_starts(json_data, author)
 
                 # Add the messages to the respective lists
-                all_thread_starts.extend(thread_starts)
-                all_thread_ends.extend(thread_ends)
+                all_scene_starts.extend(scene_starts)
+                all_scene_ends.extend(scene_ends)
 
-# Create output JSON file for thread starts
-thread_starts_output = {
-    "thread_starts": all_thread_starts
+# Create output JSON file for scene starts
+scene_starts_output = {
+    "scene_starts": all_scene_starts
 }
-thread_starts_output_file = os.path.join(script_dir, "out/thread_starts.json")
-with open(thread_starts_output_file, "w", encoding="utf-8") as file:
-    json.dump(thread_starts_output, file, indent=4)
+scene_starts_output_file = os.path.join(script_dir, "out/scene_starts.json")
+with open(scene_starts_output_file, "w", encoding="utf-8") as file:
+    json.dump(scene_starts_output, file, indent=4)
 
-# Create output JSON file for thread ends
-thread_ends_output = {
-    "thread_ends": all_thread_ends
+# Create output JSON file for scene ends
+scene_ends_output = {
+    "scene_ends": all_scene_ends
 }
-thread_ends_output_file = os.path.join(script_dir, "out/thread_ends.json")
-with open(thread_ends_output_file, "w", encoding="utf-8") as file:
-    json.dump(thread_ends_output, file, indent=4)
+scene_ends_output_file = os.path.join(script_dir, "out/scene_ends.json")
+with open(scene_ends_output_file, "w", encoding="utf-8") as file:
+    json.dump(scene_ends_output, file, indent=4)
 
-print("Thread starts output file created:", thread_starts_output_file)
-print("Thread ends output file created:", thread_ends_output_file)
+print("scene starts output file created:", scene_starts_output_file)
+print("scene ends output file created:", scene_ends_output_file)

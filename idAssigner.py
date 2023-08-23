@@ -28,7 +28,7 @@ chat_folder_path = os.path.join(script_dir, folder_name)
 
 
 # Initialize a dictionary to store author IDs
-chara_file="res/chara_dict.json"
+chara_file="res/character_ids.json"
 if os.path.exists(chara_file):
     # The file exists, open and load its contents
     with open(chara_file, "r", encoding="utf-8") as file:
