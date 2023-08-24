@@ -3,9 +3,9 @@ import os
 import re
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-folder_name = "Kaminashi City"
+folder_name = "Elysium/Scenes/Kaminashi City"
 folder_path = os.path.join(script_dir, folder_name)
-output_file = "output.json"  # Replace with the desired output file name
+output_file = "regex_results.json"  # Replace with the desired output file name
 
 regex_pattern = r"(?i)(?:`|```).*\b(?:end|hold|close)\w*.{0,5}(?:`|```)\n*(?:$|@.*)"
 

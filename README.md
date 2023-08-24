@@ -21,8 +21,7 @@ Once this basic functionality is in working condition, the focus will shift to c
 (Note: These instructions are for its current state of development. They will change when the code is clean and adapted to use on other servers. They're a mess, I know. Ask me for more info if you need!)
 
 - Create a folder named 'DCE' and download the CLI version of https://github.com/Tyrrrz/DiscordChatExporter
-- Create a file in the 'res' folder named 'bot_token.txt', and copy the bot's token. For now, any bot that can see your server's channels work.
-- Create a file in the 'res' folder named 'server_token.txt' and copy the server ID.
+- Copy the file in the 'res' folder named 'constants_empty.py', rename it 'constants.py' and fill in the fields.
 - Create a 'Elysium/Scenes/' folder tree.
 - Manually use DCE to download the channels in the previous folder. Should be saved in 'Category name/channel-name.json' format. Yep sorry still dont have a script that does it
 - Run 'idAssigner.py'
