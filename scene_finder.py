@@ -65,13 +65,13 @@ def find_scene_starts(data, target_author):
 
 # Get the path of the "scenes" folder in the same directory as the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
-folder_name = "Elysium/Scenes"
+folder_name = "Elysium"
 folder_path = os.path.join(script_dir, folder_name)
 
 with open("res/character_ids.json", "r", encoding="utf-8") as file:
     author_id_mapping = json.load(file)
 
-author = author_id_mapping["Lysander D. Ruiz"]
+author = author_id_mapping["Kaizer"]
 
 # Create an empty list to store scene starts and ends
 all_scene_starts = []

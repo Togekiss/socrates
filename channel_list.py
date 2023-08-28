@@ -15,6 +15,14 @@ def parse_output(output):
                 "channel": parts[1].split(" / ")[1].strip()
             }
             parsed_data.append(entry)
+        
+        if len(parts) == 3:
+            entry = {
+                "id": parts[0].replace('*', '').strip(),
+                "category": parts[1].split(" / ")[0].strip(),
+                "channel": parts[1].split(" / ")[1].strip()
+            }
+            parsed_data.append(entry)
 
     return parsed_data
 
@@ -35,7 +43,7 @@ def cull_json_keep(json_data, categories_to_keep):
 def get_channel_list():
 
     # Call the CLI command and capture its output
-    cli_command = f"dotnet DCE/DiscordChatExporter.Cli.dll channels -g {c.SERVER_ID} -t {c.BOT_TOKEN}"
+    cli_command = f"dotnet DCE/DiscordChatExporter.Cli.dll channels -g {c.SERVER_ID} -t {c.BOT_TOKEN} --include-threads"
     output = subprocess.check_output(cli_command, shell=True, text=True)
 
     # Process the output and create the desired JSON format

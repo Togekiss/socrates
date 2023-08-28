@@ -30,6 +30,16 @@
         "channel": "entrance"
     },
     {
+        "id": "1141605807276970075",
+        "category": "Thread",
+        "channel": "Fixin a Laptop"
+    },
+    {
+        "id": "1142028760632279070",
+        "category": "Thread",
+        "channel": "Rin the tiny tour guide"
+    },
+    {
         "id": "1028211403733094440",
         "category": "Ryoutei Twilight University",
         "channel": "front-gates"
@@ -70,9 +80,24 @@
         "channel": "kitchen"
     },
     {
+        "id": "1126270504030961775",
+        "category": "Thread",
+        "channel": "Baking buddies (6/28)"
+    },
+    {
         "id": "1015490950237278268",
         "category": "Ryoutei Twilight University",
         "channel": "kitchen-2"
+    },
+    {
+        "id": "1113537221472047155",
+        "category": "Thread",
+        "channel": "Cookin'"
+    },
+    {
+        "id": "1133860446051508305",
+        "category": "Thread",
+        "channel": "The \"Game\""
     },
     {
         "id": "1027352306175451176",
@@ -210,6 +235,11 @@
         "channel": "aois-room"
     },
     {
+        "id": "1094834156548132864",
+        "category": "Thread",
+        "channel": "Shu + Aoi"
+    },
+    {
         "id": "1079885760922136646",
         "category": "Dorm: Alden (Men)",
         "channel": "kaorus-room"
@@ -230,14 +260,29 @@
         "channel": "strixs-room"
     },
     {
+        "id": "1145178748887515188",
+        "category": "Thread",
+        "channel": "Guilt"
+    },
+    {
         "id": "1047676163914469456",
         "category": "Dorm: Alden (Men)",
         "channel": "tamas-room"
     },
     {
+        "id": "1138657286684938251",
+        "category": "Thread",
+        "channel": "Serious Talk Time"
+    },
+    {
         "id": "1112835039072362577",
         "category": "Dorm: Alden (Men)",
         "channel": "zephys-room"
+    },
+    {
+        "id": "1125252363842748446",
+        "category": "Thread",
+        "channel": "Hangout"
     },
     {
         "id": "1002334115745505300",
@@ -263,6 +308,21 @@
         "id": "858224470711861258",
         "category": "Kaminashi City",
         "channel": "city"
+    },
+    {
+        "id": "1137169501125881856",
+        "category": "Thread",
+        "channel": "A Juicy Photoshoot~"
+    },
+    {
+        "id": "1138921694040428595",
+        "category": "Thread",
+        "channel": "Event center"
+    },
+    {
+        "id": "1137582668071047178",
+        "category": "Thread",
+        "channel": "The Not Date Date"
     },
     {
         "id": "1037567717571575879",
@@ -298,6 +358,11 @@
         "id": "1107365758469668976",
         "category": "Kaminashi City",
         "channel": "grand-mall-2"
+    },
+    {
+        "id": "1122530807215558738",
+        "category": "Thread",
+        "channel": "Da Bois"
     },
     {
         "id": "858225716679016448",
@@ -395,6 +460,11 @@
         "channel": "tenib-eleven"
     },
     {
+        "id": "1140739542597513276",
+        "category": "Thread",
+        "channel": "Red Riding Hood & The White Wolf"
+    },
+    {
         "id": "1060026976456421467",
         "category": "Kaminashi City",
         "channel": "train"
@@ -415,6 +485,11 @@
         "channel": "back-of-bar"
     },
     {
+        "id": "1141818382782574645",
+        "category": "Thread",
+        "channel": "A Toast to Emnity (Shin/Rin)"
+    },
+    {
         "id": "1019771317303644261",
         "category": "The Twisted Viper Bar",
         "channel": "bar-tables"
@@ -430,9 +505,24 @@
         "channel": "adrians-penthouse"
     },
     {
+        "id": "1140508783437692968",
+        "category": "Thread",
+        "channel": "I Can See You"
+    },
+    {
+        "id": "1137065607486001153",
+        "category": "Thread",
+        "channel": "Moving Day"
+    },
+    {
         "id": "1047678308806053958",
         "category": "Kaminashi Apartments",
         "channel": "aminas-apartment"
+    },
+    {
+        "id": "1145024713068920984",
+        "category": "Kaminashi Apartments",
+        "channel": "aratas-penthouse"
     },
     {
         "id": "1112837472108433568",
@@ -460,9 +550,44 @@
         "channel": "maris-apartment"
     },
     {
+        "id": "1129907476653948958",
+        "category": "Thread",
+        "channel": "A Celebration for Two~"
+    },
+    {
+        "id": "1082535694490153010",
+        "category": "Thread",
+        "channel": "Mari's Personal Times"
+    },
+    {
+        "id": "1107413854763360276",
+        "category": "Thread",
+        "channel": "The Sleepover~!"
+    },
+    {
         "id": "1057515545152458832",
         "category": "Kaminashi Apartments",
         "channel": "maxine-penthouse"
+    },
+    {
+        "id": "1143992522717278258",
+        "category": "Thread",
+        "channel": "Broken Creeds"
+    },
+    {
+        "id": "1141252199863820399",
+        "category": "Thread",
+        "channel": "Craxis"
+    },
+    {
+        "id": "1139764425881047080",
+        "category": "Thread",
+        "channel": "Enter Mason Voorhees"
+    },
+    {
+        "id": "1133951019894718524",
+        "category": "Thread",
+        "channel": "You're Not You When You're Hangry"
     },
     {
         "id": "995184169065918474",
@@ -483,6 +608,11 @@
         "id": "1029404507148390420",
         "category": "Kaminashi Apartments",
         "channel": "volkers-apartment"
+    },
+    {
+        "id": "1090829001636990977",
+        "category": "Thread",
+        "channel": "Waking up at 3am in Volker's bed"
     },
     {
         "id": "1018321929582694450",
@@ -598,6 +728,11 @@
         "id": "858220486936231946",
         "category": "Sakamaki Mansion",
         "channel": "subarus-room"
+    },
+    {
+        "id": "1137061362590285934",
+        "category": "Thread",
+        "channel": "A Needed Talk - MaxiYui"
     },
     {
         "id": "858220579889610802",
@@ -755,6 +890,11 @@
         "channel": "r-entrance"
     },
     {
+        "id": "1143070768599683134",
+        "category": "Thread",
+        "channel": "Paper Rings"
+    },
+    {
         "id": "1085718632551694396",
         "category": "Rosenfeld Mansion",
         "channel": "r-forest"
@@ -763,6 +903,11 @@
         "id": "1031607441454010428",
         "category": "Rosenfeld Mansion",
         "channel": "r-garden"
+    },
+    {
+        "id": "1133552294177275944",
+        "category": "Thread",
+        "channel": "Tea Time with Snake & Wolf ??"
     },
     {
         "id": "1033156182925385859",
@@ -860,6 +1005,11 @@
         "channel": "forest"
     },
     {
+        "id": "1141154388212187279",
+        "category": "Thread",
+        "channel": "Carnage! At the disco"
+    },
+    {
         "id": "1081383785712582656",
         "category": "Outskirts",
         "channel": "pond"
@@ -930,6 +1080,11 @@
         "channel": "morgans-pad"
     },
     {
+        "id": "1141281583291187211",
+        "category": "Thread",
+        "channel": "Late night visit"
+    },
+    {
         "id": "995184071300886558",
         "category": "Outskirts residences",
         "channel": "rins-room"
@@ -938,6 +1093,11 @@
         "id": "1060033536905707570",
         "category": "Outskirts residences",
         "channel": "volkers-cabin"
+    },
+    {
+        "id": "1090644774014423190",
+        "category": "Thread",
+        "channel": "Reconciliation of the Elders"
     },
     {
         "id": "1040692298469609582",
@@ -963,6 +1123,11 @@
         "id": "1120123473872818176",
         "category": "NSFW ROLEPLAYS ONLY",
         "channel": "nsfw-adri-x-maxine"
+    },
+    {
+        "id": "1145486036173070448",
+        "category": "NSFW ROLEPLAYS ONLY",
+        "channel": "nsfw-adrian-x-lilly"
     },
     {
         "id": "1024558316703195166",
@@ -1098,6 +1263,11 @@
         "id": "1005694666542428341",
         "category": "NSFW RP ARCHIVE",
         "channel": "nsfw-yuuichi-x-ruki"
+    },
+    {
+        "id": "1131989202465210569",
+        "category": "Thread",
+        "channel": "Room 4: Ruki, Aoi, Kaoru"
     },
     {
         "id": "1049936606389350431",

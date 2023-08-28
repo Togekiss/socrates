@@ -21,13 +21,13 @@ Once this basic functionality is in working condition, the focus will shift to c
 (Note: These instructions are for its current state of development. They will change when the code is clean and adapted to use on other servers. They're a mess, I know. Ask me for more info if you need!)
 
 - Create a folder named 'DCE' and download the CLI version of https://github.com/Tyrrrz/DiscordChatExporter
-- Copy the file in the 'res' folder named 'constants_empty.py', rename it 'constants.py' and fill in the fields.
-- Create a 'Elysium/Scenes/' folder tree.
-- Manually use DCE to download the channels in the previous folder. Should be saved in 'Category name/channel-name.json' format. Yep sorry still dont have a script that does it
+- Copy the file in the 'res' folder named 'constants copy.py', rename it 'constants.py' and fill in the fields.
+- Manually use DCE to download the channels in the previous folder. Should be saved in 'Category name/channel-name.json' format.
+- OR run 'channel_downloader.py'
 - Run 'idAssigner.py'
-- Find the hardcoded character name in 'scene_finder.py' and type the desired character
+- Find the character name in 'constants.py' and type the desired character
 - Run 'scene_finder.py'
-- Find the hardcoded status in 'url_creator.py' and type the desired status
+- Find the status in 'constants.py' and type the desired status
 - Run 'url_creator.py'
 - You should have the scenes list in 'out/output.txt'
 
