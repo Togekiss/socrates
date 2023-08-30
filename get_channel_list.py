@@ -3,7 +3,8 @@ import json
 from res import constants as c
 
 def parse_output(output):
-    parsed_data = []
+    parsed_channels = []
+    parsed_threads = []
     lines = output.strip().split("\n")
     
     # Saving the 'parent channel' in case we encounter threads  
@@ -20,7 +21,7 @@ def parse_output(output):
                 "thread": False,
                 "threadName": ""
             }
-            parsed_data.append(entry)
+            parsed_channels.append(entry)
             parent_channel = entry
         
         # If it's a thread
@@ -32,9 +33,9 @@ def parse_output(output):
                 "thread": True,
                 "threadName": parts[1].split(" / ")[1].strip()
             }
-            parsed_data.append(entry)
+            parsed_threads.append(entry)
 
-    return parsed_data
+    return parsed_channels, parsed_threads
 
 def save_to_json(data, file_path):
     with open(file_path, "w", encoding="utf-8") as file:
@@ -57,7 +58,7 @@ def get_channel_list():
     output = subprocess.check_output(cli_command, shell=True, text=True)
 
     # Process the output and create the desired JSON format
-    parsed_data = parse_output(output)
+    parsed_channels, parsed_threads = parse_output(output)
 
     # Read the list of categories from the .txt files
     scene_categories_list = "res/scene_categories_cull.txt"
@@ -67,8 +68,10 @@ def get_channel_list():
     categories_to_keep = read_categories_from_txt(dm_categories_list)
 
     # Cull the JSON data by removing the entries with matching categories
-    scene_channel_list = cull_json_remove(parsed_data, categories_to_remove)
-    dm_channel_list = cull_json_keep(parsed_data, categories_to_keep)
+    scene_channel_list = cull_json_remove(parsed_channels, categories_to_remove)
+    thread_channel_list = cull_json_remove(parsed_threads, categories_to_remove)
+    dm_channel_list = cull_json_keep(parsed_channels, categories_to_keep)
+    
     
     # Save the culled JSON data back to the same file
     json_file_path = "res/scene_channel_list.json"
@@ -76,6 +79,9 @@ def get_channel_list():
 
     json_file_path = "res/DM_channel_list.json"
     save_to_json(dm_channel_list, json_file_path)
+
+    json_file_path = "res/thread_channel_list.json"
+    save_to_json(thread_channel_list, json_file_path)
 
 if __name__ == "__main__":
     get_channel_list()
