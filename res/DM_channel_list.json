@@ -2,46 +2,64 @@
     {
         "id": "858215752872099840",
         "category": "Text and Calls",
-        "channel": "dm-1"
+        "channel": "dm-1",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858215776024395806",
         "category": "Text and Calls",
-        "channel": "dm-2"
+        "channel": "dm-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858215802159366174",
         "category": "Text and Calls",
-        "channel": "dm-3"
+        "channel": "dm-3",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "907476652760653906",
         "category": "Text and Calls",
-        "channel": "dm-4"
+        "channel": "dm-4",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "907476676622032897",
         "category": "Text and Calls",
-        "channel": "dm-5"
+        "channel": "dm-5",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1090067650811547778",
         "category": "Text and Calls",
-        "channel": "dm-6"
+        "channel": "dm-6",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "867145019423719434",
         "category": "Text and Calls",
-        "channel": "lets-call"
+        "channel": "lets-call",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1025574458649497642",
         "category": "Text and Calls",
-        "channel": "lets-call-2"
+        "channel": "lets-call-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1090067695367634995",
         "category": "Text and Calls",
-        "channel": "lets-call-3"
+        "channel": "lets-call-3",
+        "thread": false,
+        "threadName": ""
     }
 ]

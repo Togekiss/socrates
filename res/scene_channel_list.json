@@ -2,1301 +2,2150 @@
     {
         "id": "1023336880915361812",
         "category": "Ryoutei Twilight University",
-        "channel": "classroom-1"
+        "channel": "classroom-1",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1023336906160865310",
         "category": "Ryoutei Twilight University",
-        "channel": "classroom-2"
+        "channel": "classroom-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1023336930596884620",
         "category": "Ryoutei Twilight University",
-        "channel": "classroom-3"
+        "channel": "classroom-3",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1126984952391667742",
         "category": "Ryoutei Twilight University",
-        "channel": "deans-office"
+        "channel": "deans-office",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1050904549398937670",
         "category": "Ryoutei Twilight University",
-        "channel": "dining-hall"
+        "channel": "dining-hall",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858216361889103873",
         "category": "Ryoutei Twilight University",
-        "channel": "entrance"
+        "channel": "entrance",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1141605807276970075",
-        "category": "Thread",
-        "channel": "Fixin a Laptop"
+        "category": "Ryoutei Twilight University",
+        "channel": "entrance",
+        "thread": true,
+        "threadName": "Fixin a Laptop"
     },
     {
         "id": "1142028760632279070",
-        "category": "Thread",
-        "channel": "Rin the tiny tour guide"
+        "category": "Ryoutei Twilight University",
+        "channel": "entrance",
+        "thread": true,
+        "threadName": "Rin the tiny tour guide"
     },
     {
         "id": "1028211403733094440",
         "category": "Ryoutei Twilight University",
-        "channel": "front-gates"
+        "channel": "front-gates",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858217694208852008",
         "category": "Ryoutei Twilight University",
-        "channel": "gym"
+        "channel": "gym",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858216426162094080",
         "category": "Ryoutei Twilight University",
-        "channel": "hallway-1"
+        "channel": "hallway-1",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858216441835814962",
         "category": "Ryoutei Twilight University",
-        "channel": "hallway-2"
+        "channel": "hallway-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858216459220942909",
         "category": "Ryoutei Twilight University",
-        "channel": "hallway-3"
+        "channel": "hallway-3",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858216486388760606",
         "category": "Ryoutei Twilight University",
-        "channel": "homeroom"
+        "channel": "homeroom",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858219842049671179",
         "category": "Ryoutei Twilight University",
-        "channel": "infirmary"
+        "channel": "infirmary",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1113896099879596112",
+        "category": "Ryoutei Twilight University",
+        "channel": "infirmary",
+        "thread": true,
+        "threadName": "Ari's first visit of the Infirmary"
+    },
+    {
+        "id": "1089935243265454264",
+        "category": "Ryoutei Twilight University",
+        "channel": "infirmary",
+        "thread": true,
+        "threadName": "Salves for the burns"
     },
     {
         "id": "858218397347217408",
         "category": "Ryoutei Twilight University",
-        "channel": "kitchen"
+        "channel": "kitchen",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1126270504030961775",
-        "category": "Thread",
-        "channel": "Baking buddies (6/28)"
+        "category": "Ryoutei Twilight University",
+        "channel": "kitchen",
+        "thread": true,
+        "threadName": "Baking buddies (6/28)"
     },
     {
         "id": "1015490950237278268",
         "category": "Ryoutei Twilight University",
-        "channel": "kitchen-2"
+        "channel": "kitchen-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1113537221472047155",
-        "category": "Thread",
-        "channel": "Cookin'"
+        "category": "Ryoutei Twilight University",
+        "channel": "kitchen-2",
+        "thread": true,
+        "threadName": "Cookin'"
+    },
+    {
+        "id": "1116863946989772872",
+        "category": "Ryoutei Twilight University",
+        "channel": "kitchen-2",
+        "thread": true,
+        "threadName": "Cupcakes made by an angel"
+    },
+    {
+        "id": "1118908207688061099",
+        "category": "Ryoutei Twilight University",
+        "channel": "kitchen-2",
+        "thread": true,
+        "threadName": "Hard bloody candy"
     },
     {
         "id": "1133860446051508305",
-        "category": "Thread",
-        "channel": "The \"Game\""
+        "category": "Ryoutei Twilight University",
+        "channel": "kitchen-2",
+        "thread": true,
+        "threadName": "The \"Game\""
     },
     {
         "id": "1027352306175451176",
         "category": "Ryoutei Twilight University",
-        "channel": "lawn"
+        "channel": "lawn",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858216938332618773",
         "category": "Ryoutei Twilight University",
-        "channel": "library"
+        "channel": "library",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1022255522143027251",
         "category": "Ryoutei Twilight University",
-        "channel": "library-2"
+        "channel": "library-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012011429706072174",
         "category": "Ryoutei Twilight University",
-        "channel": "locker-room"
+        "channel": "locker-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858216395833999380",
         "category": "Ryoutei Twilight University",
-        "channel": "main-hall"
+        "channel": "main-hall",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858216671470026784",
         "category": "Ryoutei Twilight University",
-        "channel": "music-room"
+        "channel": "music-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858218539604508672",
         "category": "Ryoutei Twilight University",
-        "channel": "roof"
+        "channel": "roof",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1097987611005550712",
         "category": "Ryoutei Twilight University",
-        "channel": "roof-2"
+        "channel": "roof-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858216781587939328",
         "category": "Ryoutei Twilight University",
-        "channel": "science-lab"
+        "channel": "science-lab",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858217139457228820",
         "category": "Ryoutei Twilight University",
-        "channel": "staircase"
+        "channel": "staircase",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858218619400617985",
         "category": "Ryoutei Twilight University",
-        "channel": "staircase-2"
+        "channel": "staircase-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858219894944301087",
         "category": "Ryoutei Twilight University",
-        "channel": "storage"
+        "channel": "storage",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1049898636420579338",
         "category": "Ryoutei Twilight University",
-        "channel": "theater"
+        "channel": "theater",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1056049325307867146",
         "category": "Ryoutei Twilight University",
-        "channel": "travel-bus"
+        "channel": "travel-bus",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1140762448241119303",
         "category": "DORM: LUNE (WOMEN)",
-        "channel": "baras-room"
+        "channel": "baras-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1112835247260844153",
         "category": "DORM: LUNE (WOMEN)",
-        "channel": "camilles-room"
+        "channel": "camilles-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "983226023351029820",
         "category": "DORM: LUNE (WOMEN)",
-        "channel": "lune-entrance"
+        "channel": "lune-entrance",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "983225960881090610",
         "category": "DORM: LUNE (WOMEN)",
-        "channel": "lune-gardens"
+        "channel": "lune-gardens",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "983225866710552616",
         "category": "DORM: LUNE (WOMEN)",
-        "channel": "lune-kitchen"
+        "channel": "lune-kitchen",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "983225897391894539",
         "category": "DORM: LUNE (WOMEN)",
-        "channel": "lune-living-room"
+        "channel": "lune-living-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1005694411163836456",
         "category": "DORM: LUNE (WOMEN)",
-        "channel": "mifuyus-room"
+        "channel": "mifuyus-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "999191893600636978",
         "category": "DORM: LUNE (WOMEN)",
-        "channel": "suzu-room"
+        "channel": "suzu-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "983226269074333706",
         "category": "Dorm: Alden (Men)",
-        "channel": "alden-entrance"
+        "channel": "alden-entrance",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "983226329812054036",
         "category": "Dorm: Alden (Men)",
-        "channel": "alden-gardens"
+        "channel": "alden-gardens",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1104057851330187314",
         "category": "Dorm: Alden (Men)",
-        "channel": "alden-hallway"
+        "channel": "alden-hallway",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "983226297234886746",
         "category": "Dorm: Alden (Men)",
-        "channel": "alden-living-room"
+        "channel": "alden-living-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1077729099998560407",
         "category": "Dorm: Alden (Men)",
-        "channel": "aois-room"
+        "channel": "aois-room",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1133489898679181323",
+        "category": "Dorm: Alden (Men)",
+        "channel": "aois-room",
+        "thread": true,
+        "threadName": "Cat Catching~"
+    },
+    {
+        "id": "1119362445656473744",
+        "category": "Dorm: Alden (Men)",
+        "channel": "aois-room",
+        "thread": true,
+        "threadName": "Shoi"
     },
     {
         "id": "1094834156548132864",
-        "category": "Thread",
-        "channel": "Shu + Aoi"
+        "category": "Dorm: Alden (Men)",
+        "channel": "aois-room",
+        "thread": true,
+        "threadName": "Shu + Aoi"
     },
     {
         "id": "1079885760922136646",
         "category": "Dorm: Alden (Men)",
-        "channel": "kaorus-room"
+        "channel": "kaorus-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1079886095799554168",
         "category": "Dorm: Alden (Men)",
-        "channel": "lysanders-room"
+        "channel": "lysanders-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1047678393233186816",
         "category": "Dorm: Alden (Men)",
-        "channel": "ryus-room"
+        "channel": "ryus-room",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1097722625008087110",
+        "category": "Dorm: Alden (Men)",
+        "channel": "ryus-room",
+        "thread": true,
+        "threadName": "Shoryu"
     },
     {
         "id": "1091998334379642991",
         "category": "Dorm: Alden (Men)",
-        "channel": "strixs-room"
+        "channel": "strixs-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1145178748887515188",
-        "category": "Thread",
-        "channel": "Guilt"
+        "category": "Dorm: Alden (Men)",
+        "channel": "strixs-room",
+        "thread": true,
+        "threadName": "Guilt"
     },
     {
         "id": "1047676163914469456",
         "category": "Dorm: Alden (Men)",
-        "channel": "tamas-room"
+        "channel": "tamas-room",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1133299462073229433",
+        "category": "Dorm: Alden (Men)",
+        "channel": "tamas-room",
+        "thread": true,
+        "threadName": "Aftercall talk (July 25th)"
+    },
+    {
+        "id": "1110811943272452096",
+        "category": "Dorm: Alden (Men)",
+        "channel": "tamas-room",
+        "thread": true,
+        "threadName": "Sad Ramen Hours (May 22nd)"
     },
     {
         "id": "1138657286684938251",
-        "category": "Thread",
-        "channel": "Serious Talk Time"
+        "category": "Dorm: Alden (Men)",
+        "channel": "tamas-room",
+        "thread": true,
+        "threadName": "Serious Talk Time"
     },
     {
         "id": "1112835039072362577",
         "category": "Dorm: Alden (Men)",
-        "channel": "zephys-room"
+        "channel": "zephys-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1125252363842748446",
-        "category": "Thread",
-        "channel": "Hangout"
+        "category": "Dorm: Alden (Men)",
+        "channel": "zephys-room",
+        "thread": true,
+        "threadName": "Hangout"
     },
     {
         "id": "1002334115745505300",
         "category": "Kaminashi City",
-        "channel": "art-museum"
+        "channel": "art-museum",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858224494267203584",
         "category": "Kaminashi City",
-        "channel": "back-ally"
+        "channel": "back-ally",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1003114008481632328",
         "category": "Kaminashi City",
-        "channel": "bookstore"
+        "channel": "bookstore",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858225171236126720",
         "category": "Kaminashi City",
-        "channel": "cafe"
+        "channel": "cafe",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1145777749437452391",
+        "category": "Kaminashi City",
+        "channel": "cafe",
+        "thread": true,
+        "threadName": "A Date Beyond Expectations [Shin/Rin]"
     },
     {
         "id": "858224470711861258",
         "category": "Kaminashi City",
-        "channel": "city"
+        "channel": "city",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1137169501125881856",
-        "category": "Thread",
-        "channel": "A Juicy Photoshoot~"
+        "category": "Kaminashi City",
+        "channel": "city",
+        "thread": true,
+        "threadName": "A Juicy Photoshoot~"
     },
     {
         "id": "1138921694040428595",
-        "category": "Thread",
-        "channel": "Event center"
+        "category": "Kaminashi City",
+        "channel": "city",
+        "thread": true,
+        "threadName": "Event center"
     },
     {
         "id": "1137582668071047178",
-        "category": "Thread",
-        "channel": "The Not Date Date"
+        "category": "Kaminashi City",
+        "channel": "city",
+        "thread": true,
+        "threadName": "The Not Date Date"
     },
     {
         "id": "1037567717571575879",
         "category": "Kaminashi City",
-        "channel": "city-gym"
+        "channel": "city-gym",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1123992338411294930",
         "category": "Kaminashi City",
-        "channel": "city-roofs"
+        "channel": "city-roofs",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858225125660164096",
         "category": "Kaminashi City",
-        "channel": "clothing-store"
+        "channel": "clothing-store",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1019770828038094898",
         "category": "Kaminashi City",
-        "channel": "crimson-onsen"
+        "channel": "crimson-onsen",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858225149328621578",
         "category": "Kaminashi City",
-        "channel": "dining-plaza"
+        "channel": "dining-plaza",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1030380778040856596",
         "category": "Kaminashi City",
-        "channel": "grand-mall"
+        "channel": "grand-mall",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1107365758469668976",
         "category": "Kaminashi City",
-        "channel": "grand-mall-2"
+        "channel": "grand-mall-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1122530807215558738",
-        "category": "Thread",
-        "channel": "Da Bois"
+        "category": "Kaminashi City",
+        "channel": "grand-mall-2",
+        "thread": true,
+        "threadName": "Da Bois"
     },
     {
         "id": "858225716679016448",
         "category": "Kaminashi City",
-        "channel": "hospital"
+        "channel": "hospital",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1115812564799062036",
+        "category": "Kaminashi City",
+        "channel": "hospital",
+        "thread": true,
+        "threadName": "(Lucien's visit. June 6th)"
     },
     {
         "id": "1141243375606046761",
         "category": "Kaminashi City",
-        "channel": "hotel"
+        "channel": "hotel",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1044879471884386365",
         "category": "Kaminashi City",
-        "channel": "kami-sports-field"
+        "channel": "kami-sports-field",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1088643484531040266",
         "category": "Kaminashi City",
-        "channel": "kaminashi-police-department"
+        "channel": "kaminashi-police-department",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1032662517488566332",
         "category": "Kaminashi City",
-        "channel": "licks-ice-cream-parlor"
+        "channel": "licks-ice-cream-parlor",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "995973698458759228",
         "category": "Kaminashi City",
-        "channel": "midnight-cafe"
+        "channel": "midnight-cafe",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1028580161643360306",
         "category": "Kaminashi City",
-        "channel": "natural-history-museum"
+        "channel": "natural-history-museum",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1023144263908872273",
         "category": "Kaminashi City",
-        "channel": "nirvana-restaurant"
+        "channel": "nirvana-restaurant",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1013913417544904796",
         "category": "Kaminashi City",
-        "channel": "obelisk-dance-club"
+        "channel": "obelisk-dance-club",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1020565670225780736",
         "category": "Kaminashi City",
-        "channel": "obsidian-strip-club"
+        "channel": "obsidian-strip-club",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858225279447990323",
         "category": "Kaminashi City",
-        "channel": "park"
+        "channel": "park",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1100179487842381965",
         "category": "Kaminashi City",
-        "channel": "park-2"
+        "channel": "park-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858225297110073365",
         "category": "Kaminashi City",
-        "channel": "public-library"
+        "channel": "public-library",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1107365686235365478",
         "category": "Kaminashi City",
-        "channel": "ramen-shop"
+        "channel": "ramen-shop",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858224529612079114",
         "category": "Kaminashi City",
-        "channel": "shopping-district"
+        "channel": "shopping-district",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1013913494766243961",
         "category": "Kaminashi City",
-        "channel": "solar-eclipse-maid-cafe"
+        "channel": "solar-eclipse-maid-cafe",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "995084012693504011",
         "category": "Kaminashi City",
-        "channel": "supermarket"
+        "channel": "supermarket",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "995176338384244757",
         "category": "Kaminashi City",
-        "channel": "supermarket-2"
+        "channel": "supermarket-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1086459940979355788",
         "category": "Kaminashi City",
-        "channel": "tenib-eleven"
+        "channel": "tenib-eleven",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1140739542597513276",
-        "category": "Thread",
-        "channel": "Red Riding Hood & The White Wolf"
+        "category": "Kaminashi City",
+        "channel": "tenib-eleven",
+        "thread": true,
+        "threadName": "Red Riding Hood & The White Wolf"
     },
     {
         "id": "1060026976456421467",
         "category": "Kaminashi City",
-        "channel": "train"
+        "channel": "train",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1135437845088186528",
         "category": "Kaminashi City",
-        "channel": "vino-de-silvangre-headquarters"
+        "channel": "vino-de-silvangre-headquarters",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1018676008997617705",
         "category": "Kaminashi City",
-        "channel": "wc-donalds"
+        "channel": "wc-donalds",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1019771259896205382",
         "category": "The Twisted Viper Bar",
-        "channel": "back-of-bar"
+        "channel": "back-of-bar",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1141818382782574645",
-        "category": "Thread",
-        "channel": "A Toast to Emnity (Shin/Rin)"
+        "category": "The Twisted Viper Bar",
+        "channel": "back-of-bar",
+        "thread": true,
+        "threadName": "A Toast to Emnity (Shin/Rin)"
     },
     {
         "id": "1019771317303644261",
         "category": "The Twisted Viper Bar",
-        "channel": "bar-tables"
+        "channel": "bar-tables",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1013915163423932496",
         "category": "The Twisted Viper Bar",
-        "channel": "barside"
+        "channel": "barside",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1112837122005684275",
         "category": "Kaminashi Apartments",
-        "channel": "adrians-penthouse"
+        "channel": "adrians-penthouse",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1121183145832755352",
+        "category": "Kaminashi Apartments",
+        "channel": "adrians-penthouse",
+        "thread": true,
+        "threadName": "A Brisk Morning Run"
+    },
+    {
+        "id": "1125630984654700565",
+        "category": "Kaminashi Apartments",
+        "channel": "adrians-penthouse",
+        "thread": true,
+        "threadName": "Funky Moon Night"
+    },
+    {
+        "id": "1133127192897925253",
+        "category": "Kaminashi Apartments",
+        "channel": "adrians-penthouse",
+        "thread": true,
+        "threadName": "Homecoming"
     },
     {
         "id": "1140508783437692968",
-        "category": "Thread",
-        "channel": "I Can See You"
+        "category": "Kaminashi Apartments",
+        "channel": "adrians-penthouse",
+        "thread": true,
+        "threadName": "I Can See You"
     },
     {
         "id": "1137065607486001153",
-        "category": "Thread",
-        "channel": "Moving Day"
+        "category": "Kaminashi Apartments",
+        "channel": "adrians-penthouse",
+        "thread": true,
+        "threadName": "Moving Day"
     },
     {
         "id": "1047678308806053958",
         "category": "Kaminashi Apartments",
-        "channel": "aminas-apartment"
+        "channel": "aminas-apartment",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1063007387881054248",
+        "category": "Kaminashi Apartments",
+        "channel": "aminas-apartment",
+        "thread": true,
+        "threadName": "Save the white wolf"
     },
     {
         "id": "1145024713068920984",
         "category": "Kaminashi Apartments",
-        "channel": "aratas-penthouse"
+        "channel": "aratas-penthouse",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1112837472108433568",
         "category": "Kaminashi Apartments",
-        "channel": "ariel-apartment"
+        "channel": "ariel-apartment",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1141197895681458226",
         "category": "Kaminashi Apartments",
-        "channel": "kaizers-penthouse"
+        "channel": "kaizers-penthouse",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012354351177682964",
         "category": "Kaminashi Apartments",
-        "channel": "kotones-apartment"
+        "channel": "kotones-apartment",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1019064593055764602",
         "category": "Kaminashi Apartments",
-        "channel": "kousuke-apartment"
+        "channel": "kousuke-apartment",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1079885537416073356",
         "category": "Kaminashi Apartments",
-        "channel": "maris-apartment"
+        "channel": "maris-apartment",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1129907476653948958",
-        "category": "Thread",
-        "channel": "A Celebration for Two~"
+        "category": "Kaminashi Apartments",
+        "channel": "maris-apartment",
+        "thread": true,
+        "threadName": "A Celebration for Two~"
+    },
+    {
+        "id": "1086064458406821889",
+        "category": "Kaminashi Apartments",
+        "channel": "maris-apartment",
+        "thread": true,
+        "threadName": "Ackerman Pays a Little Visit"
+    },
+    {
+        "id": "1129565962090315876",
+        "category": "Kaminashi Apartments",
+        "channel": "maris-apartment",
+        "thread": true,
+        "threadName": "Apartment Info"
+    },
+    {
+        "id": "1080624630974398506",
+        "category": "Kaminashi Apartments",
+        "channel": "maris-apartment",
+        "thread": true,
+        "threadName": "Fashion for an Idol"
+    },
+    {
+        "id": "1082861279686963311",
+        "category": "Kaminashi Apartments",
+        "channel": "maris-apartment",
+        "thread": true,
+        "threadName": "Finally, a Massage"
     },
     {
         "id": "1082535694490153010",
-        "category": "Thread",
-        "channel": "Mari's Personal Times"
+        "category": "Kaminashi Apartments",
+        "channel": "maris-apartment",
+        "thread": true,
+        "threadName": "Mari's Personal Times"
     },
     {
         "id": "1107413854763360276",
-        "category": "Thread",
-        "channel": "The Sleepover~!"
+        "category": "Kaminashi Apartments",
+        "channel": "maris-apartment",
+        "thread": true,
+        "threadName": "The Sleepover~!"
     },
     {
         "id": "1057515545152458832",
         "category": "Kaminashi Apartments",
-        "channel": "maxine-penthouse"
+        "channel": "maxine-penthouse",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1143992522717278258",
-        "category": "Thread",
-        "channel": "Broken Creeds"
+        "category": "Kaminashi Apartments",
+        "channel": "maxine-penthouse",
+        "thread": true,
+        "threadName": "Broken Creeds"
     },
     {
         "id": "1141252199863820399",
-        "category": "Thread",
-        "channel": "Craxis"
+        "category": "Kaminashi Apartments",
+        "channel": "maxine-penthouse",
+        "thread": true,
+        "threadName": "Craxis"
     },
     {
         "id": "1139764425881047080",
-        "category": "Thread",
-        "channel": "Enter Mason Voorhees"
+        "category": "Kaminashi Apartments",
+        "channel": "maxine-penthouse",
+        "thread": true,
+        "threadName": "Enter Mason Voorhees"
+    },
+    {
+        "id": "1107840124600983612",
+        "category": "Kaminashi Apartments",
+        "channel": "maxine-penthouse",
+        "thread": true,
+        "threadName": "Familiarity and Sinking"
+    },
+    {
+        "id": "1121936888853438554",
+        "category": "Kaminashi Apartments",
+        "channel": "maxine-penthouse",
+        "thread": true,
+        "threadName": "Let's Try \"Normal\""
+    },
+    {
+        "id": "1075556618898509958",
+        "category": "Kaminashi Apartments",
+        "channel": "maxine-penthouse",
+        "thread": true,
+        "threadName": "Sonic is Drowning.exe"
+    },
+    {
+        "id": "1125532331726360606",
+        "category": "Kaminashi Apartments",
+        "channel": "maxine-penthouse",
+        "thread": true,
+        "threadName": "The Visit"
+    },
+    {
+        "id": "1120885062494339162",
+        "category": "Kaminashi Apartments",
+        "channel": "maxine-penthouse",
+        "thread": true,
+        "threadName": "The Vulture [Part 1]"
     },
     {
         "id": "1133951019894718524",
-        "category": "Thread",
-        "channel": "You're Not You When You're Hangry"
+        "category": "Kaminashi Apartments",
+        "channel": "maxine-penthouse",
+        "thread": true,
+        "threadName": "You're Not You When You're Hangry"
     },
     {
         "id": "995184169065918474",
         "category": "Kaminashi Apartments",
-        "channel": "rumis-apartment"
+        "channel": "rumis-apartment",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1061745964496457758",
         "category": "Kaminashi Apartments",
-        "channel": "shous-apartment"
+        "channel": "shous-apartment",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1069743758960242769",
+        "category": "Kaminashi Apartments",
+        "channel": "shous-apartment",
+        "thread": true,
+        "threadName": "The return of the king"
     },
     {
         "id": "1005703003963129856",
         "category": "Kaminashi Apartments",
-        "channel": "suzume-apartment"
+        "channel": "suzume-apartment",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1037461257680322631",
+        "category": "Kaminashi Apartments",
+        "channel": "suzume-apartment",
+        "thread": true,
+        "threadName": "End of the Stalker Arc"
+    },
+    {
+        "id": "1049975876202278933",
+        "category": "Kaminashi Apartments",
+        "channel": "suzume-apartment",
+        "thread": true,
+        "threadName": "Michi and Amina come over for cookies!!!"
+    },
+    {
+        "id": "1096259376551055370",
+        "category": "Kaminashi Apartments",
+        "channel": "suzume-apartment",
+        "thread": true,
+        "threadName": "Suzume's Diary"
     },
     {
         "id": "1029404507148390420",
         "category": "Kaminashi Apartments",
-        "channel": "volkers-apartment"
+        "channel": "volkers-apartment",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1073207761531310100",
+        "category": "Kaminashi Apartments",
+        "channel": "volkers-apartment",
+        "thread": true,
+        "threadName": "Meeting after Eiji's party"
     },
     {
         "id": "1090829001636990977",
-        "category": "Thread",
-        "channel": "Waking up at 3am in Volker's bed"
+        "category": "Kaminashi Apartments",
+        "channel": "volkers-apartment",
+        "thread": true,
+        "threadName": "Waking up at 3am in Volker's bed"
     },
     {
         "id": "1018321929582694450",
         "category": "Kaminashi Apartments",
-        "channel": "yuuichis-apartment"
+        "channel": "yuuichis-apartment",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1063097650771148803",
+        "category": "Kaminashi Apartments",
+        "channel": "yuuichis-apartment",
+        "thread": true,
+        "threadName": "[SOLO] Yui Hangover 01|12"
+    },
+    {
+        "id": "1112953247951503440",
+        "category": "Kaminashi Apartments",
+        "channel": "yuuichis-apartment",
+        "thread": true,
+        "threadName": "Homecoming"
     },
     {
         "id": "858220406782951434",
         "category": "Sakamaki Mansion",
-        "channel": "ayatos-room"
+        "channel": "ayatos-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858220444955050024",
         "category": "Sakamaki Mansion",
-        "channel": "kanatos-room"
+        "channel": "kanatos-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858220429457621012",
         "category": "Sakamaki Mansion",
-        "channel": "laitos-room"
+        "channel": "laitos-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858220358272679949",
         "category": "Sakamaki Mansion",
-        "channel": "reijis-lab"
+        "channel": "reijis-lab",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858220335274655764",
         "category": "Sakamaki Mansion",
-        "channel": "reijis-room"
+        "channel": "reijis-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858221076474363904",
         "category": "Sakamaki Mansion",
-        "channel": "s-balcony"
+        "channel": "s-balcony",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858221126676906034",
         "category": "Sakamaki Mansion",
-        "channel": "s-bathroom"
+        "channel": "s-bathroom",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858221247899762688",
         "category": "Sakamaki Mansion",
-        "channel": "s-dining-room"
+        "channel": "s-dining-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858220926046437386",
         "category": "Sakamaki Mansion",
-        "channel": "s-dungeon"
+        "channel": "s-dungeon",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858219308218974220",
         "category": "Sakamaki Mansion",
-        "channel": "s-front-gates"
+        "channel": "s-front-gates",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858220832140296213",
         "category": "Sakamaki Mansion",
-        "channel": "s-game-room"
+        "channel": "s-game-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858221371523334174",
         "category": "Sakamaki Mansion",
-        "channel": "s-garden"
+        "channel": "s-garden",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1088666741455982663",
+        "category": "Sakamaki Mansion",
+        "channel": "s-garden",
+        "thread": true,
+        "threadName": "Sneaking outside"
     },
     {
         "id": "858219465422274600",
         "category": "Sakamaki Mansion",
-        "channel": "s-kitchen"
+        "channel": "s-kitchen",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858219390629314570",
         "category": "Sakamaki Mansion",
-        "channel": "s-living-room"
+        "channel": "s-living-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858220163513843722",
         "category": "Sakamaki Mansion",
-        "channel": "s-locked-room"
+        "channel": "s-locked-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858219351231299584",
         "category": "Sakamaki Mansion",
-        "channel": "s-main-hall"
+        "channel": "s-main-hall",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858219546576814080",
         "category": "Sakamaki Mansion",
-        "channel": "s-pool"
+        "channel": "s-pool",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858219525517869076",
         "category": "Sakamaki Mansion",
-        "channel": "s-staircase"
+        "channel": "s-staircase",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858220996228939778",
         "category": "Sakamaki Mansion",
-        "channel": "s-underground"
+        "channel": "s-underground",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1081383538995232848",
         "category": "Sakamaki Mansion",
-        "channel": "s-wax-room"
+        "channel": "s-wax-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858220312163909641",
         "category": "Sakamaki Mansion",
-        "channel": "shus-room"
+        "channel": "shus-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858220486936231946",
         "category": "Sakamaki Mansion",
-        "channel": "subarus-room"
+        "channel": "subarus-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1137061362590285934",
-        "category": "Thread",
-        "channel": "A Needed Talk - MaxiYui"
+        "category": "Sakamaki Mansion",
+        "channel": "subarus-room",
+        "thread": true,
+        "threadName": "A Needed Talk - MaxiYui"
     },
     {
         "id": "858220579889610802",
         "category": "Sakamaki Mansion",
-        "channel": "yuis-room"
+        "channel": "yuis-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222599488929832",
         "category": "Mukami Manor",
-        "channel": "azusa-room"
+        "channel": "azusa-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222612156645397",
         "category": "Mukami Manor",
-        "channel": "guest-room"
+        "channel": "guest-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222586046709801",
         "category": "Mukami Manor",
-        "channel": "kou-room"
+        "channel": "kou-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222678413279243",
         "category": "Mukami Manor",
-        "channel": "m-balcony"
+        "channel": "m-balcony",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222052023730198",
         "category": "Mukami Manor",
-        "channel": "m-dining-hall"
+        "channel": "m-dining-hall",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1068696579466330262",
         "category": "Mukami Manor",
-        "channel": "m-dungeon"
+        "channel": "m-dungeon",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858221785308594206",
         "category": "Mukami Manor",
-        "channel": "m-front-gates"
+        "channel": "m-front-gates",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222836953776138",
         "category": "Mukami Manor",
-        "channel": "m-garden"
+        "channel": "m-garden",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222015877480468",
         "category": "Mukami Manor",
-        "channel": "m-hallway"
+        "channel": "m-hallway",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222031831957554",
         "category": "Mukami Manor",
-        "channel": "m-kitchen"
+        "channel": "m-kitchen",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222758243336202",
         "category": "Mukami Manor",
-        "channel": "m-library"
+        "channel": "m-library",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858221978551844864",
         "category": "Mukami Manor",
-        "channel": "m-living-room"
+        "channel": "m-living-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222252918833162",
         "category": "Mukami Manor",
-        "channel": "m-pool"
+        "channel": "m-pool",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1009700118963957771",
         "category": "Mukami Manor",
-        "channel": "rukis-room"
+        "channel": "rukis-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222574629814292",
         "category": "Mukami Manor",
-        "channel": "yuma-room"
+        "channel": "yuma-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1120521669191155712",
         "category": "Tsukinami Manor",
-        "channel": "t-dungeon"
+        "channel": "t-dungeon",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1113039711854940171",
         "category": "Tsukinami Manor",
-        "channel": "t-entrance"
+        "channel": "t-entrance",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1113039749305868328",
         "category": "Tsukinami Manor",
-        "channel": "t-garden"
+        "channel": "t-garden",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1117973028299608147",
         "category": "Tsukinami Manor",
-        "channel": "t-grand-hall"
+        "channel": "t-grand-hall",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1119411848261939200",
         "category": "Tsukinami Manor",
-        "channel": "t-guest-room"
+        "channel": "t-guest-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1019238031548493914",
         "category": "Rosenfeld Mansion",
-        "channel": "r-alrick-and-elises-bedroom"
+        "channel": "r-alrick-and-elises-bedroom",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012223373004255263",
         "category": "Rosenfeld Mansion",
-        "channel": "r-alricks-study"
+        "channel": "r-alricks-study",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012223533402816522",
         "category": "Rosenfeld Mansion",
-        "channel": "r-atrium"
+        "channel": "r-atrium",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1031611991703420958",
         "category": "Rosenfeld Mansion",
-        "channel": "r-ballroom"
+        "channel": "r-ballroom",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1023721459094401044",
         "category": "Rosenfeld Mansion",
-        "channel": "r-basement"
+        "channel": "r-basement",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1025931554347819071",
         "category": "Rosenfeld Mansion",
-        "channel": "r-bathroom"
+        "channel": "r-bathroom",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012809074640953457",
         "category": "Rosenfeld Mansion",
-        "channel": "r-dining-room"
+        "channel": "r-dining-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1034461615246024794",
         "category": "Rosenfeld Mansion",
-        "channel": "r-elises-trophy-room"
+        "channel": "r-elises-trophy-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1102444642559074424",
         "category": "Rosenfeld Mansion",
-        "channel": "r-entertainment-room"
+        "channel": "r-entertainment-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012221207485087774",
         "category": "Rosenfeld Mansion",
-        "channel": "r-entrance"
+        "channel": "r-entrance",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1143070768599683134",
-        "category": "Thread",
-        "channel": "Paper Rings"
+        "category": "Rosenfeld Mansion",
+        "channel": "r-entrance",
+        "thread": true,
+        "threadName": "Paper Rings"
     },
     {
         "id": "1085718632551694396",
         "category": "Rosenfeld Mansion",
-        "channel": "r-forest"
+        "channel": "r-forest",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1031607441454010428",
         "category": "Rosenfeld Mansion",
-        "channel": "r-garden"
+        "channel": "r-garden",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1133552294177275944",
-        "category": "Thread",
-        "channel": "Tea Time with Snake & Wolf ??"
+        "category": "Rosenfeld Mansion",
+        "channel": "r-garden",
+        "thread": true,
+        "threadName": "Tea Time with Snake & Wolf ??"
     },
     {
         "id": "1033156182925385859",
         "category": "Rosenfeld Mansion",
-        "channel": "r-guest-bath"
+        "channel": "r-guest-bath",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012223428008366090",
         "category": "Rosenfeld Mansion",
-        "channel": "r-guest-room"
+        "channel": "r-guest-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1015371212010037268",
         "category": "Rosenfeld Mansion",
-        "channel": "r-kitchen"
+        "channel": "r-kitchen",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012223337528832081",
         "category": "Rosenfeld Mansion",
-        "channel": "r-library"
+        "channel": "r-library",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1045208705886588928",
         "category": "Rosenfeld Mansion",
-        "channel": "r-lillys-room"
+        "channel": "r-lillys-room",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1076691759779815424",
+        "category": "Rosenfeld Mansion",
+        "channel": "r-lillys-room",
+        "thread": true,
+        "threadName": "Lilly's wild Ride"
     },
     {
         "id": "1012221466739216475",
         "category": "Rosenfeld Mansion",
-        "channel": "r-living-room"
+        "channel": "r-living-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1077807192352243742",
         "category": "Rosenfeld Mansion",
-        "channel": "r-lucys-quarters"
+        "channel": "r-lucys-quarters",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "999193361632198736",
         "category": "Rosenfeld Mansion",
-        "channel": "r-main-hall"
+        "channel": "r-main-hall",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012223552797282324",
         "category": "Rosenfeld Mansion",
-        "channel": "r-pool"
+        "channel": "r-pool",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1104193021588820049",
         "category": "Nakashima-estate",
-        "channel": "n-aois-room"
+        "channel": "n-aois-room",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1118666808208146452",
+        "category": "Nakashima-estate",
+        "channel": "n-aois-room",
+        "thread": true,
+        "threadName": "Aoi's room~"
     },
     {
         "id": "1118308018015186954",
         "category": "Nakashima-estate",
-        "channel": "n-garden"
+        "channel": "n-garden",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1104193061107540028",
         "category": "Nakashima-estate",
-        "channel": "n-shous-room"
+        "channel": "n-shous-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1067873790081630208",
         "category": "Outskirts",
-        "channel": "abandoned-cabin"
+        "channel": "abandoned-cabin",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1138909077838254200",
         "category": "Outskirts",
-        "channel": "beach"
+        "channel": "beach",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1090003211265511485",
         "category": "Outskirts",
-        "channel": "beachside-hotel"
+        "channel": "beachside-hotel",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1091664645401620522",
+        "category": "Outskirts",
+        "channel": "beachside-hotel",
+        "thread": true,
+        "threadName": "Continuation of dm 5"
     },
     {
         "id": "1081022939127890103",
         "category": "Outskirts",
-        "channel": "creek"
+        "channel": "creek",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1036441281674616872",
         "category": "Outskirts",
-        "channel": "farmers-market"
+        "channel": "farmers-market",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1015377732206604338",
         "category": "Outskirts",
-        "channel": "fields"
+        "channel": "fields",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858225850972635166",
         "category": "Outskirts",
-        "channel": "forest"
+        "channel": "forest",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1141154388212187279",
-        "category": "Thread",
-        "channel": "Carnage! At the disco"
+        "category": "Outskirts",
+        "channel": "forest",
+        "thread": true,
+        "threadName": "Carnage! At the disco"
     },
     {
         "id": "1081383785712582656",
         "category": "Outskirts",
-        "channel": "pond"
+        "channel": "pond",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1026086655687405708",
         "category": "Outskirts",
-        "channel": "princess-land-park"
+        "channel": "princess-land-park",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1065351294925156422",
         "category": "Outskirts",
-        "channel": "red-light-district"
+        "channel": "red-light-district",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1123453828902166568",
         "category": "Outskirts",
-        "channel": "redder-light-district"
+        "channel": "redder-light-district",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1021073886982451200",
         "category": "Outskirts",
-        "channel": "shooting-range"
+        "channel": "shooting-range",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1104827604621602936",
         "category": "Outskirts",
-        "channel": "spa"
+        "channel": "spa",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858225862323601409",
         "category": "Outskirts",
-        "channel": "woods"
+        "channel": "woods",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1077728748356501574",
         "category": "Outskirts residences",
-        "channel": "lecourt-estate"
+        "channel": "lecourt-estate",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1119337234039050322",
+        "category": "Outskirts residences",
+        "channel": "lecourt-estate",
+        "thread": true,
+        "threadName": "Slutty Scooby-Gang: Pregame"
     },
     {
         "id": "1109829772227399833",
         "category": "Outskirts residences",
-        "channel": "lecourt-estate-2"
+        "channel": "lecourt-estate-2",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1117222407619489812",
+        "category": "Outskirts residences",
+        "channel": "lecourt-estate-2",
+        "thread": true,
+        "threadName": "Suba-sans visit"
     },
     {
         "id": "1115261016570343528",
         "category": "Outskirts residences",
-        "channel": "lecourt-estate-3"
+        "channel": "lecourt-estate-3",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1102320120157720707",
         "category": "Outskirts residences",
-        "channel": "leon-noahs-bedroom"
+        "channel": "leon-noahs-bedroom",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1130468832687964231",
+        "category": "Outskirts residences",
+        "channel": "leon-noahs-bedroom",
+        "thread": true,
+        "threadName": "July 17th: An unexpected guest"
     },
     {
         "id": "1063559664467464462",
         "category": "Outskirts residences",
-        "channel": "leonharts-house"
+        "channel": "leonharts-house",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1064090014771847199",
+        "category": "Outskirts residences",
+        "channel": "leonharts-house",
+        "thread": true,
+        "threadName": "Save the white wolf [pt 2]"
     },
     {
         "id": "1121002414477156362",
         "category": "Outskirts residences",
-        "channel": "leons-lab"
+        "channel": "leons-lab",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1118400377616867428",
         "category": "Outskirts residences",
-        "channel": "morgans-pad"
+        "channel": "morgans-pad",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1141281583291187211",
-        "category": "Thread",
-        "channel": "Late night visit"
+        "category": "Outskirts residences",
+        "channel": "morgans-pad",
+        "thread": true,
+        "threadName": "Late night visit"
+    },
+    {
+        "id": "1129613789839491092",
+        "category": "Outskirts residences",
+        "channel": "morgans-pad",
+        "thread": true,
+        "threadName": "Morgan and Zephy Silly Time"
     },
     {
         "id": "995184071300886558",
         "category": "Outskirts residences",
-        "channel": "rins-room"
+        "channel": "rins-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1060033536905707570",
         "category": "Outskirts residences",
-        "channel": "volkers-cabin"
+        "channel": "volkers-cabin",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1145940247616696370",
+        "category": "Outskirts residences",
+        "channel": "volkers-cabin",
+        "thread": true,
+        "threadName": "Memory of Amina Alena Yukimitsu"
     },
     {
         "id": "1090644774014423190",
-        "category": "Thread",
-        "channel": "Reconciliation of the Elders"
+        "category": "Outskirts residences",
+        "channel": "volkers-cabin",
+        "thread": true,
+        "threadName": "Reconciliation of the Elders"
     },
     {
         "id": "1040692298469609582",
         "category": "Outskirts residences",
-        "channel": "yamada-estate"
+        "channel": "yamada-estate",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1047972914688962681",
         "category": "Outskirts residences",
-        "channel": "yamada-estate-2"
+        "channel": "yamada-estate-2",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1047960968203874314",
         "category": "Outskirts residences",
-        "channel": "yamada-rins-bedroom"
+        "channel": "yamada-rins-bedroom",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1009688287792857168",
         "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "guidelines-pls-read"
+        "channel": "guidelines-pls-read",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1120123473872818176",
         "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-adri-x-maxine"
+        "channel": "nsfw-adri-x-maxine",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1145486036173070448",
         "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-adrian-x-lilly"
+        "channel": "nsfw-adrian-x-lilly",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1024558316703195166",
         "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-alrick-x-elise"
+        "channel": "nsfw-alrick-x-elise",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1053452284656361543",
         "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-amina-x-tama"
+        "channel": "nsfw-amina-x-tama",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1078893551779328130",
         "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-aoi-x-shu"
+        "channel": "nsfw-aoi-x-shu",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1099605604789665924",
+        "category": "NSFW ROLEPLAYS ONLY",
+        "channel": "nsfw-aoi-x-shu",
+        "thread": true,
+        "threadName": "F for Shu"
+    },
+    {
+        "id": "1102836781738635305",
+        "category": "NSFW ROLEPLAYS ONLY",
+        "channel": "nsfw-aoi-x-shu",
+        "thread": true,
+        "threadName": "gay men"
+    },
+    {
+        "id": "1080701437773873163",
+        "category": "NSFW ROLEPLAYS ONLY",
+        "channel": "nsfw-aoi-x-shu",
+        "thread": true,
+        "threadName": "rip to the bathtub"
     },
     {
         "id": "1115107897093935205",
         "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-luciyui"
+        "channel": "nsfw-luciyui",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1116134769172951150",
+        "category": "NSFW ROLEPLAYS ONLY",
+        "channel": "nsfw-luciyui",
+        "thread": true,
+        "threadName": "The.Shower."
     },
     {
         "id": "1142511282558337196",
         "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-morgan-x-zephy"
+        "channel": "nsfw-morgan-x-zephy",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1068270827436515398",
         "category": "NSFW ROLEPLAYS ONLY",
-        "channel": "nsfw-shou-x-ryu"
+        "channel": "nsfw-shou-x-ryu",
+        "thread": false,
+        "threadName": ""
+    },
+    {
+        "id": "1094356027408924754",
+        "category": "NSFW ROLEPLAYS ONLY",
+        "channel": "nsfw-shou-x-ryu",
+        "thread": true,
+        "threadName": "Pookies revenge ??"
+    },
+    {
+        "id": "1087851820942114836",
+        "category": "NSFW ROLEPLAYS ONLY",
+        "channel": "nsfw-shou-x-ryu",
+        "thread": true,
+        "threadName": "Rip Shou"
+    },
+    {
+        "id": "1116175755907440692",
+        "category": "NSFW ROLEPLAYS ONLY",
+        "channel": "nsfw-shou-x-ryu",
+        "thread": true,
+        "threadName": "Shouryu"
     },
     {
         "id": "1040693130510483506",
         "category": "love-hotel",
-        "channel": "suite-one"
+        "channel": "suite-one",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1040693297657680023",
         "category": "love-hotel",
-        "channel": "suite-three"
+        "channel": "suite-three",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1040693219140309062",
         "category": "love-hotel",
-        "channel": "suite-two"
+        "channel": "suite-two",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1022161620966842378",
         "category": "NSFW RP ARCHIVE",
-        "channel": "m-nsfw-rukis-room"
+        "channel": "m-nsfw-rukis-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1024844997197045770",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-alrick-x-eiji"
+        "channel": "nsfw-alrick-x-eiji",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1013710130015121428",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-alrick-x-suzume"
+        "channel": "nsfw-alrick-x-suzume",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1080592718151028817",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-ayato-x-lilly"
+        "channel": "nsfw-ayato-x-lilly",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1026328238252900382",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-chahuas-office"
+        "channel": "nsfw-chahuas-office",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1106413725595992084",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-hyun-x-maxine"
+        "channel": "nsfw-hyun-x-maxine",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1039420079672139826",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-kang-x-alrick"
+        "channel": "nsfw-kang-x-alrick",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1078894840122716240",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-kou-x-tama"
+        "channel": "nsfw-kou-x-tama",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222649405997096",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-m-dungeon"
+        "channel": "nsfw-m-dungeon",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1087154462851870840",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-mari-volker-amina"
+        "channel": "nsfw-mari-volker-amina",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1061010953694629949",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-maxine-x-eiji"
+        "channel": "nsfw-maxine-x-eiji",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012223398044246058",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-r-alrick-x-yui"
+        "channel": "nsfw-r-alrick-x-yui",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "858222560113590273",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-ruki-x-yui"
+        "channel": "nsfw-ruki-x-yui",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1032440557840105534",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-suzumes-apartment"
+        "channel": "nsfw-suzumes-apartment",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1055717609934422077",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-tamaxamina-call"
+        "channel": "nsfw-tamaxamina-call",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1061296858296750140",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-vogels-residence"
+        "channel": "nsfw-vogels-residence",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1030805602995290232",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-yuixyuuichi-call"
+        "channel": "nsfw-yuixyuuichi-call",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1005694666542428341",
         "category": "NSFW RP ARCHIVE",
-        "channel": "nsfw-yuuichi-x-ruki"
-    },
-    {
-        "id": "1131989202465210569",
-        "category": "Thread",
-        "channel": "Room 4: Ruki, Aoi, Kaoru"
+        "channel": "nsfw-yuuichi-x-ruki",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1049936606389350431",
         "category": "archive",
-        "channel": "demis-room"
+        "channel": "demis-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1005694704916115456",
         "category": "archive",
-        "channel": "eijis-room"
+        "channel": "eijis-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1014551996495298722",
         "category": "archive",
-        "channel": "elise-dorm"
+        "channel": "elise-dorm",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1037243291521003590",
         "category": "archive",
-        "channel": "hyunwoos-room"
+        "channel": "hyunwoos-room",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1044041510246690878",
         "category": "archive",
-        "channel": "korinna-apartment"
+        "channel": "korinna-apartment",
+        "thread": false,
+        "threadName": ""
     },
     {
         "id": "1012223579477258310",
         "category": "archive",
-        "channel": "r-hao-kang's-room"
+        "channel": "r-hao-kang's-room",
+        "thread": false,
+        "threadName": ""
     }
 ]

@@ -5,22 +5,32 @@ from res import constants as c
 def parse_output(output):
     parsed_data = []
     lines = output.strip().split("\n")
-
+    
+    # Saving the 'parent channel' in case we encounter threads  
+    parent_channel = None
     for line in lines:
         parts = line.split(" | ")
+        
+        # If it's a channel
         if len(parts) == 2:
             entry = {
                 "id": parts[0].strip(),
                 "category": parts[1].split(" / ")[0].strip(),
-                "channel": parts[1].split(" / ")[1].strip()
+                "channel": parts[1].split(" / ")[1].strip(),
+                "thread": False,
+                "threadName": ""
             }
             parsed_data.append(entry)
+            parent_channel = entry
         
+        # If it's a thread
         if len(parts) == 3:
             entry = {
                 "id": parts[0].replace('*', '').strip(),
-                "category": parts[1].split(" / ")[0].strip(),
-                "channel": parts[1].split(" / ")[1].strip()
+                "category": parent_channel["category"],
+                "channel": parent_channel["channel"],
+                "thread": True,
+                "threadName": parts[1].split(" / ")[1].strip()
             }
             parsed_data.append(entry)
 
@@ -43,7 +53,7 @@ def cull_json_keep(json_data, categories_to_keep):
 def get_channel_list():
 
     # Call the CLI command and capture its output
-    cli_command = f"dotnet DCE/DiscordChatExporter.Cli.dll channels -g {c.SERVER_ID} -t {c.BOT_TOKEN} --include-threads"
+    cli_command = f"dotnet DCE/DiscordChatExporter.Cli.dll channels -g {c.SERVER_ID} -t {c.BOT_TOKEN} --include-threads All"
     output = subprocess.check_output(cli_command, shell=True, text=True)
 
     # Process the output and create the desired JSON format
