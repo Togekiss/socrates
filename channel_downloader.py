@@ -1,9 +1,8 @@
 import json
-import os
 import subprocess
 import time
 from res import constants as c
-from channel_list import get_channel_list 
+from get_channel_list import get_channel_list 
 
 
 def download_DMs():
@@ -16,7 +15,7 @@ def download_DMs():
     for item in json_data:
 
         # Call the CLI command and capture its output
-        cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export -c {item["id"]} -t {c.BOT_TOKEN} -f Json -o "{c.SERVER_NAME}/DMs/%C.json"'
+        cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export -c {item["id"]} -t {c.BOT_TOKEN} -f Json -o "{c.SERVER_NAME}/DMs/%C.json" --fuck-russia'
         output = subprocess.check_output(cli_command, shell=True, text=True)
         print(output)
 
@@ -31,7 +30,7 @@ def download_scenes():
     for item in json_data:
 
         # Call the CLI command and capture its output
-        cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export --parallel 3 -c {item["id"]} -t {c.BOT_TOKEN} -f Json -o "{c.SERVER_NAME}/Scenes/%T/%C.json"'
+        cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export --parallel 3 -c {item["id"]} -t {c.BOT_TOKEN} -f Json -o "{c.SERVER_NAME}/Scenes/%T/%C.json" --fuck-russia'
         output = subprocess.check_output(cli_command, shell=True, text=True)
         print(output)
     """
@@ -46,7 +45,7 @@ def download_scenes():
             channel_ids = channel_ids + " " + item["id"]
 
         # Call the CLI command and capture its output
-        cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export --parallel 3 -c {channel_ids} -t {c.BOT_TOKEN} -f Json -o "{c.SERVER_NAME}/Scenes/%T/%C.json"'
+        cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export --parallel 3 -c {channel_ids} -t {c.BOT_TOKEN} -f Json -o "{c.SERVER_NAME}/Scenes/%T/%C.json" --fuck-russia'
         output = subprocess.check_output(cli_command, shell=True, text=True)
         print(output)
 

@@ -1,6 +1,0 @@
-{
-    "last_download":"",
-    "scene_download_path":"scenes\\%T\\%C.json",
-    "dm_download_path":"DMs\\%C.json",
-    "scene_download_command": "dotnet DiscordChatExporter.Cli.dll export -t 'token' -c 53555 -f Json"
-}
