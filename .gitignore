@@ -2,7 +2,7 @@
 /DCE
 /Elysium
 /Elysium copy
-/out
+/out/*
 constants.py
-res
-/*.json
+__pycache__
+*list.json
