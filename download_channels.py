@@ -1,4 +1,5 @@
 import json
+import os
 import subprocess
 import time
 from res import constants as c
@@ -18,6 +19,30 @@ def download_DMs():
         cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export -c {item["id"]} -t {c.BOT_TOKEN} -f Json -o "{c.SERVER_NAME}/DMs/%C.json" --fuck-russia'
         output = subprocess.check_output(cli_command, shell=True, text=True)
         print(output)
+
+
+def get_last_exported():
+
+    date = ""
+
+    # Get the path of the server folder in the same directory as the script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    folder_name = "Elysium"
+    chat_folder_path = os.path.join(script_dir, folder_name)
+
+    for root, dirs, files in os.walk(chat_folder_path):
+        for filename in files:
+            if filename.endswith(".json"):
+                file_path = os.path.join(root, filename)
+
+                # Load JSON data from file
+                with open(file_path, "r", encoding="utf-8") as file:
+                    json_data = json.load(file)
+                    date = json_data["exportedAt"]
+
+                return date
+
+
 
 def download_scenes():
 
@@ -58,12 +83,16 @@ def download_threads():
 def download_channels():
     
     # get the list of channels to download
-    get_channel_list()
+    # get_channel_list()
+
+    # check if there's already a backup
+    date = get_last_exported()
+    print(f'last exported: {date}')
 
     # run thru channel list to download it all
-    download_DMs()
-    download_scenes()
-    download_threads()
+    #download_DMs()
+    #download_scenes()
+    #download_threads()
 
     
 # invoke id_assigner.py

@@ -21,7 +21,7 @@ def assign_unique_ids(data, id_mapping):
 
 
 
-# Get the path of the "Chat" folder in the same directory as the script
+# Get the path of the server folder in the same directory as the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
 folder_name = "Elysium"
 chat_folder_path = os.path.join(script_dir, folder_name)
