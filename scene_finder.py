@@ -2,6 +2,7 @@ import json
 import os
 import re
 import unicodedata
+from res import constants as c
 
 def find_scene_starts(data, target_author):
     pattern = r"(?i)(?:`|```).*\n*\b(?:end|hold|close|dropped|offline|moved|moving|continu)\w*.{0,10}\n*(?:`|```)\n*(?:$|@.*|\W*)"
@@ -65,19 +66,19 @@ def find_scene_starts(data, target_author):
 
 # Get the path of the "scenes" folder in the same directory as the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
-folder_name = "Elysium"
+folder_name = c.SEARCH_FOLDER
 folder_path = os.path.join(script_dir, folder_name)
 
 with open("res/character_ids.json", "r", encoding="utf-8") as file:
     author_id_mapping = json.load(file)
 
-author = author_id_mapping["Kaizer"]
+author = author_id_mapping[c.CHARACTER]
 
 # Create an empty list to store scene starts and ends
 all_scene_starts = []
 all_scene_ends = []
 
-# Iterate over all JSON files in the "Kaminashi" folder and its subfolders
+# Iterate over all JSON files in the server folder and its subfolders
 for root, dirs, files in os.walk(folder_path):
     for filename in files:
         if filename.endswith(".json"):
