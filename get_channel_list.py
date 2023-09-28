@@ -7,7 +7,7 @@ def parse_output(output):
     parsed_channels = []
     parsed_threads = []
     lines = output.strip().split("\n")
-    last_exported = datetime.datetime.now().isoformat(sep='T', timespec='microseconds')
+    exported_at = datetime.datetime.now().isoformat(sep='T', timespec='microseconds')
     
     # Saving the 'parent channel' in case we encounter threads  
     parent_channel = None
@@ -22,7 +22,7 @@ def parse_output(output):
                 "channel": parts[1].split(" / ")[1].strip(),
                 "thread": False,
                 "threadName": "",
-                "lastExported": last_exported
+                "exportedAt": exported_at
             }
             parsed_channels.append(entry)
             parent_channel = entry
@@ -35,7 +35,7 @@ def parse_output(output):
                 "channel": parent_channel["channel"],
                 "thread": True,
                 "threadName": parts[1].split(" / ")[1].strip(),
-                "lastExported": last_exported
+                "exportedAt": exported_at
             }
             parsed_threads.append(entry)
 

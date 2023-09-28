@@ -10,23 +10,14 @@ from get_channel_list import get_channel_list
 def get_last_exported():
 
     date = ""
+    file = "res/DM_channel_list.json"
 
-    # Get the path of the server folder in the same directory as the script
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    folder_name = "Elysium/Scenes"
-    chat_folder_path = os.path.join(script_dir, folder_name)
+    # Load JSON data from file
+    with open(file, "r", encoding="utf-8") as file:
+        json_data = json.load(file)
+        date = json_data[0]["exportedAt"]
 
-    for root, dirs, files in os.walk(chat_folder_path):
-        for filename in files:
-            if filename.endswith(".json"):
-                file_path = os.path.join(root, filename)
-
-                # Load JSON data from file
-                with open(file_path, "r", encoding="utf-8") as file:
-                    json_data = json.load(file)
-                    date = json_data["exportedAt"]
-
-                return date
+    return date
 
 def set_day_before(timestamp_str):
 
@@ -37,6 +28,7 @@ def set_day_before(timestamp_str):
     # Format the new timestamp back into the original format
     new_timestamp_str = new_timestamp.isoformat()
 
+    return new_timestamp_str
 
 
 def download_DMs():
@@ -99,17 +91,18 @@ def download_threads():
 def download_channels():
     
     # get the list of channels to download
-    get_channel_list()
+    #get_channel_list()
 
     # check if there's already a backup
     date = get_last_exported()
     print(f'last exported: {date}')
     after = set_day_before(date)
+    print(f'day before: {after}')
 
     # run thru channel list to download it all
-    download_DMs()
-    download_scenes()
-    download_threads()
+    #download_DMs()
+    #download_scenes()
+    #download_threads()
 
     
 # invoke id_assigner.py
