@@ -1,11 +1,13 @@
 import subprocess
 import json
+import datetime
 from res import constants as c
 
 def parse_output(output):
     parsed_channels = []
     parsed_threads = []
     lines = output.strip().split("\n")
+    last_exported = datetime.datetime.now().isoformat(sep='T', timespec='microseconds')
     
     # Saving the 'parent channel' in case we encounter threads  
     parent_channel = None
@@ -19,7 +21,8 @@ def parse_output(output):
                 "category": parts[1].split(" / ")[0].strip(),
                 "channel": parts[1].split(" / ")[1].strip(),
                 "thread": False,
-                "threadName": ""
+                "threadName": "",
+                "lastExported": last_exported
             }
             parsed_channels.append(entry)
             parent_channel = entry
@@ -31,7 +34,8 @@ def parse_output(output):
                 "category": parent_channel["category"],
                 "channel": parent_channel["channel"],
                 "thread": True,
-                "threadName": parts[1].split(" / ")[1].strip()
+                "threadName": parts[1].split(" / ")[1].strip(),
+                "lastExported": last_exported
             }
             parsed_threads.append(entry)
 
