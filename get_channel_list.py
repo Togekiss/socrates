@@ -3,6 +3,27 @@ import json
 import datetime
 from res import constants as c
 
+def group_threads(parsed_threads):
+    
+    grouped_data = {}
+
+    # Iterate through the JSON objects and group them by 'category'
+    for obj in parsed_threads:
+        category = obj['category']
+
+        obj.pop('category')
+        
+        if category in grouped_data:
+            grouped_data[category]['channels'].append(obj)
+        else:
+            grouped_data[category] = {'category': category, 'channels': [obj]}
+
+    # Convert the grouped data to a list
+    result = list(grouped_data.values())
+
+    return result
+
+
 def parse_output(output):
     parsed_channels = []
     parsed_threads = []
@@ -76,6 +97,7 @@ def get_channel_list():
     thread_channel_list = cull_json_remove(parsed_threads, categories_to_remove)
     dm_channel_list = cull_json_keep(parsed_channels, categories_to_keep)
     
+    grouped_threads = group_threads(thread_channel_list)
     
     # Save the culled JSON data back to the same file
     json_file_path = "res/scene_channel_list.json"
@@ -85,7 +107,7 @@ def get_channel_list():
     save_to_json(dm_channel_list, json_file_path)
 
     json_file_path = "res/thread_channel_list.json"
-    save_to_json(thread_channel_list, json_file_path)
+    save_to_json(grouped_threads, json_file_path)
 
 if __name__ == "__main__":
     get_channel_list()

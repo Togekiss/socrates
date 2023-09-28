@@ -1,6 +1,7 @@
 import json
 import os
 import shutil
+import time
 
 def find_index(messages, id, base=0):
     
@@ -73,8 +74,8 @@ def merge_channel(old, update):
         json.dump(merged_data, merged_file, indent=4)
 
 
-if __name__ == "__main__":
-    
+
+def merge():
     # Folders
     update_folder = 'Update'
     old_folder = 'Elysium'
@@ -102,4 +103,9 @@ if __name__ == "__main__":
     print("All channels merged")
 
 
-
+if __name__ == "__main__":
+    
+    start_time = time.time()
+    print("Merging started...")
+    merge()
+    print("Merging finished --- %s seconds ---" % (time.time() - start_time))
