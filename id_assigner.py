@@ -24,7 +24,7 @@ def assign_unique_ids(data, id_mapping):
 # Get the path of the server folder in the same directory as the script
 script_dir = os.path.dirname(os.path.abspath(__file__))
 folder_name = "Elysium"
-chat_folder_path = os.path.join(script_dir, folder_name)
+folder_path = os.path.join(script_dir, folder_name)
 
 
 # Initialize a dictionary to store author IDs
@@ -38,8 +38,8 @@ else:
     author_id_mapping = {}
 
 
-# Iterate over all JSON files in the "Chat" folder and its subfolders
-for root, dirs, files in os.walk(chat_folder_path):
+# Iterate over all JSON files in the folder and its subfolders
+for root, dirs, files in os.walk(folder_path):
     for filename in files:
         if filename.endswith(".json"):
             file_path = os.path.join(root, filename)
