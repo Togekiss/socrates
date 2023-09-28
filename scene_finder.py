@@ -3,6 +3,7 @@ import os
 import re
 import unicodedata
 from res import constants as c
+from url_creator import url_creator
 
 def find_scene_starts(data, target_author):
     pattern = r"(?i)(?:`|```).*\n*\b(?:end|hold|close|dropped|offline|moved|moving|continu)\w*.{0,10}\n*(?:`|```)\n*(?:$|@.*|\W*)"
@@ -113,3 +114,5 @@ with open(scene_ends_output_file, "w", encoding="utf-8") as file:
 
 print("scene starts output file created:", scene_starts_output_file)
 print("scene ends output file created:", scene_ends_output_file)
+
+url_creator()
