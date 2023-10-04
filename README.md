@@ -22,14 +22,13 @@ Once this basic functionality is in working condition, the focus will shift to c
 
 - Create a folder named 'DCE' and download the CLI version of https://github.com/Tyrrrz/DiscordChatExporter
 - Copy the file in the 'res' folder named 'constants copy.py', rename it 'constants.py' and fill in the fields.
-- Manually use DCE to download the channels in the previous folder. Should be saved in 'Category name/channel-name.json' format.
-- OR run 'channel_downloader.py'
-- Run 'idAssigner.py'
+- Run 'channel_downloader.py'
+- Manually double check 'character_ids.json'. Tupperbox renames (for example, "John Doe" has been renamed to "John D") and aliases (another tupper for the same character, for example, if John Doe has a tupper of his secret identity "Jon Buck") are registered as new, different characters. Manually write the same ID on both so they are treated as one single character. Save the file and run 'idAssigner.py'.
 - Find the character name in 'constants.py' and type the desired character
-- Run 'scene_finder.py'
 - Find the status in 'constants.py' and type the desired status
-- Run 'url_creator.py'
+- Run 'scene_finder.py'
 - You should have the scenes list in 'out/output.txt'
+  - Additionally, if you want to search for another status, just change the status in 'constants.py' and run 'url_creator.py' again
 
 ## How does it work?
 
@@ -64,8 +63,5 @@ After having gone through all channels, it will output a list of scenes, with th
 
 ### Chat exporting
 - Schedule a weekly/daily download of channels
-  - Only export messages 1 day before the last download (to catch edits) to the current date
-  - Then run a script to merge the files
-  - Once done, test if it's fast enough to just do it every time there's a request
-  - Or add a fast search vs updated search option
+  - Add a fast search option (against the last download) vs updated search option (update the library and then search)
 
