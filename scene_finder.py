@@ -24,7 +24,7 @@ def find_scene_starts(data, target_author):
             message_count = 0
             message["category"] = data['channel']['category']
             message["channel"] = data['channel']['name']
-            message["status"] = 'active'
+            message["status"] = 'open'
             message["link"] = f"https://discord.com/channels/{data['guild']['id']}/{data['channel']['id']}/{message['id']}"
             scene_starts.append(message)
 

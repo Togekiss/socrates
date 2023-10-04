@@ -1,5 +1,6 @@
 import datetime
 import json
+from res import constants as c
 
 def url_creator():
     # Open the JSON file
@@ -11,6 +12,9 @@ def url_creator():
 
     with open('out/output.txt', 'w') as output_file:
         for obj in sorted_objects:
-            #if obj['status'] == 'end':
-            obj_date = datetime.datetime.strptime(obj['timestamp'], "%Y-%m-%dT%H:%M:%S.%f%z")
-            output_file.write(f"{obj['category']} - {obj['channel']} - {obj_date.strftime('%B %d, %Y')}\n{obj['link']}\n\n")
+            if obj['status'] == c.STATUS or c.STATUS == "all":
+                obj_date = datetime.datetime.strptime(obj['timestamp'], "%Y-%m-%dT%H:%M:%S.%f%z")
+                output_file.write(f"{obj['category']} - {obj['channel']} - {obj_date.strftime('%B %d, %Y')}\n{obj['link']}\n\n")
+
+if __name__ == "__main__":
+    url_creator()
