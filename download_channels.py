@@ -169,8 +169,9 @@ def download_channels():
     download_threads(after)
 
     # merge the updates to the main files
-    print("Merging channels...") 
-    merge()
+    if date is not None:
+        print("Merging channels...") 
+        merge()
 
     # assign a proper ID to each character
     print("Assigning IDs...") 

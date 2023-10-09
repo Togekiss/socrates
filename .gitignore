@@ -1,8 +1,7 @@
 /.vscode
 /DCE
-/Elysium
+/Elysium*
 /Update
-/Elysium copy
 /out/*
 constants.py
 __pycache__

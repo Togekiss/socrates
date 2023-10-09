@@ -6,8 +6,8 @@ from res import constants as c
 from url_creator import url_creator
 
 def find_scene_starts(data, target_author):
-    pattern = r"(?i)(?:`|```).*\n*\b(?:end|hold|close|dropped|offline|moved|moving|continu)\w*.{0,10}\n*(?:`|```)\n*(?:$|@.*|\W*)"
-    pattern2 = r"(?i)(?:`|```)\n*.*\b(?:moved|moving|continu)\w*.{0,15}\n*(?:`|```)\n*(?:$|@.*|\W*)"
+    pattern = r"(?i)(?:`|```).*\n*.*\b(?:end|hold|close|dropped|offline|moved|moving|continu)\w*.{0,10}\n*(?:`|```)\n*(?:$|@.*|\W*)"
+    pattern2 = r"(?i).*\n*(?:moved to #|moving to #|continued in #|DM END|END DM|\[end\]|\[read\])\w*.{0,20}\n*"
     messages = data["messages"]
     scene_starts = []
     scene_ends = []
@@ -38,15 +38,16 @@ def find_scene_starts(data, target_author):
             
             # Convert the message content and pattern to normalized form
             normalized_content = unicodedata.normalize("NFKD", message["content"])
-            normalized_pattern = unicodedata.normalize("NFKD", pattern)
+            #normalized_pattern = unicodedata.normalize("NFKD", pattern)
+            #normalized_pattern2 = unicodedata.normalize("NFKD", pattern2)
             
             # if there's any END or similar tag
-            if re.search(normalized_pattern, normalized_content):
+            if re.search(pattern, normalized_content, flags=re.I) or re.search(pattern2, normalized_content, flags=re.I):
                 active_scene = False
                 message["category"] = data['channel']['category']
                 message["channel"] = data['channel']['name']
-                scene_starts[-1]["status"] = 'end'
-                message["status"] = 'end'
+                scene_starts[-1]["status"] = 'closed'
+                message["status"] = 'closed'
                 message["link"] = f"https://discord.com/channels/{data['guild']['id']}/{data['channel']['id']}/{message['id']}"
                 scene_ends.append(message)
                 continue
@@ -98,7 +99,7 @@ for root, dirs, files in os.walk(folder_path):
 
 # Create output JSON file for scene starts
 scene_starts_output = {
-    "scene_starts": all_scene_starts
+    "scenes": all_scene_starts
 }
 scene_starts_output_file = os.path.join(script_dir, "out/scene_starts.json")
 with open(scene_starts_output_file, "w", encoding="utf-8") as file:
@@ -106,7 +107,7 @@ with open(scene_starts_output_file, "w", encoding="utf-8") as file:
 
 # Create output JSON file for scene ends
 scene_ends_output = {
-    "scene_ends": all_scene_ends
+    "scenes": all_scene_ends
 }
 scene_ends_output_file = os.path.join(script_dir, "out/scene_ends.json")
 with open(scene_ends_output_file, "w", encoding="utf-8") as file:
