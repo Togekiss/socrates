@@ -5,65 +5,146 @@ import unicodedata
 from res import constants as c
 from url_creator import url_creator
 
-def find_scene_starts(data, target_author):
+def message_info(message, data, status, scene_id, i, other_authors=[]):
+
+    msg = {
+        "sceneId": scene_id,
+        "id": message['id'],
+        "timestamp": message['timestamp'],
+        "content": message['content'],
+        "index": i,
+        "authorID": message['author']['id'],
+        "category": data['channel']['category'],
+        "channel": data['channel']['name'],
+        "channelId": data['channel']['id'],
+        "link": f"https://discord.com/channels/{data['guild']['id']}/{data['channel']['id']}/{message['id']}",
+        "status": status,
+        "otherAuthors": other_authors
+    }
+
+    return msg
+
+
+def find_scenes_in_channel(data, target_author, scene_id):
+
+    # REGEX to detect the end of a scene
     pattern = r"(?i)(?:`|```).*\n*.*\b(?:end|hold|close|dropped|offline|moved|moving|continu)\w*.{0,10}\n*(?:`|```)\n*(?:$|@.*|\W*)"
     pattern2 = r"(?i).*\n*(?:moved to #|moving to #|continued in #|DM END|END DM|\[end\]|\[read\])\w*.{0,20}\n*"
-    messages = data["messages"]
+    
+    # create arrays, in case there is more than one scene in a thread
     scene_starts = []
     scene_ends = []
 
+    # set flags and counters
     active_scene = False
-    message_count = 0
+    author_missing_counter = 0
 
-    for message in messages:
-        author = int(message["author"]["id"])
+    # check if it's a thread; then it will only contain one scene so there's no need to check it all
+    if data["channel"]["type"] != "GuildTextChat":
+        
+        other_authors= []
 
-        # scene begins
-        if not active_scene and target_author == author:
-            active_scene = True
-            message_count = 0
-            message["category"] = data['channel']['category']
-            message["channel"] = data['channel']['name']
-            message["status"] = 'open'
-            message["link"] = f"https://discord.com/channels/{data['guild']['id']}/{data['channel']['id']}/{message['id']}"
-            scene_starts.append(message)
-
-        if active_scene: 
-
-            # accounts for some leeway, resets if characters appear again
-            if target_author == author:
-                message_count = 0
-            else:
-                message_count += 1
+        #look at the first 5 messages 
+        for message in data["messages"][:5]:
             
-            # Convert the message content and pattern to normalized form
-            normalized_content = unicodedata.normalize("NFKD", message["content"])
-            #normalized_pattern = unicodedata.normalize("NFKD", pattern)
-            #normalized_pattern2 = unicodedata.normalize("NFKD", pattern2)
+            author = int(message["author"]["id"])
+
+            #save the other characters
+            if author != target_author and author not in other_authors:
+                other_authors.append(author)
+
+            # if it contains the target author, we'll get the whole channel
+            if not active_scene and author == target_author:
+
+                active_scene = True
+
+                # get the last message and check if the thread is open or closed
+                last_message = data["messages"][-1]
+                normalized_content = unicodedata.normalize("NFKD", last_message["content"])
+                
+                if re.search(pattern, normalized_content, flags=re.I) or re.search(pattern2, normalized_content, flags=re.I):
+                    status = 'closed'
+                else:
+                    status = 'open'
+
+        # save the start and the end of the thread
+        if active_scene:
+            start_msg = message_info(data["messages"][0], data, status, scene_id, 0, other_authors)
+            scene_starts.append(start_msg)
             
-            # if there's any END or similar tag
-            if re.search(pattern, normalized_content, flags=re.I) or re.search(pattern2, normalized_content, flags=re.I):
-                active_scene = False
-                message["category"] = data['channel']['category']
-                message["channel"] = data['channel']['name']
-                scene_starts[-1]["status"] = 'closed'
-                message["status"] = 'closed'
-                message["link"] = f"https://discord.com/channels/{data['guild']['id']}/{data['channel']['id']}/{message['id']}"
-                scene_ends.append(message)
-                continue
+            end_msg = message_info(data["messages"][-1], data, status, scene_id, len(data["messages"]), other_authors)
+            scene_ends.append(end_msg)
             
-            # if it's clear they left
-            if message_count > 15:
-                active_scene = False
-                message["category"] = data['channel']['category']
-                message["channel"] = data['channel']['name']
-                scene_starts[-1]["status"] = 'timeout'
-                message["status"] = 'timeout'
-                message["link"] = f"https://discord.com/channels/{data['guild']['id']}/{data['channel']['id']}/{message['id']}"
-                scene_ends.append(message)
+            
+
+                
+
+    # if it's a channel, we will have to check the entirety of it
+    else:
+
+        for i, message in enumerate(data["messages"]):
+            
+            author = int(message["author"]["id"])
+            
+            # if we have no scene and we see our character, we mark it as a start of a scene
+            if not active_scene and author == target_author:
+                
+                active_scene = True
+                other_authors= []
+                author_missing_counter = 0
+                other_author_search = 0
+                scene_id = scene_id + 1
+
+                msg = message_info(message, data, 'open', scene_id, i)
+                scene_starts.append(msg)
+
+            # if we're already in an active scene, look for the end
+            if active_scene: 
+
+                # if our character appears, we consider this scene active
+                if target_author == author:
+                    author_missing_counter = 0
+                
+                else:
+                    # we write down other characters too- but only at the start,
+                    # to prevent adding authors of the next scene if this one timed out
+                    if author not in other_authors and other_author_search < 10:
+                        other_authors.append(author)
+
+                    # if our character doesn't appear, we worry the thread might have ended
+                    author_missing_counter += 1
+
+                other_author_search = other_author_search + 1
+
+                # Convert the message content to normalized form
+                normalized_content = unicodedata.normalize("NFKD", message["content"])
+
+                
+                # if there's any END or similar tag
+                if re.search(pattern, normalized_content, flags=re.I) or re.search(pattern2, normalized_content, flags=re.I):
+                    
+                    # tag the scene as closed
+                    active_scene = False
+                    scene_starts[-1]["status"] = 'closed'
+                    scene_starts[-1]["otherAuthors"] = other_authors
+
+                    msg = message_info(message, data, 'closed', scene_id, i, other_authors)
+                    scene_ends.append(msg)
+
+                    continue
+                
+                # if it's been too many messages without the target author
+                if author_missing_counter > len(other_authors)*5 and author not in other_authors:
+
+                    # tag the scene as timed out
+                    active_scene = False
+                    scene_starts[-1]["status"] = 'timeout'
+
+                    msg = message_info(message, data, 'timeout', scene_id, i, other_authors)
+                    scene_ends.append(msg)
         
 
-    return scene_starts, scene_ends
+    return scene_starts, scene_ends, scene_id
 
 
 # Get the path of the "scenes" folder in the same directory as the script
@@ -79,6 +160,7 @@ author = author_id_mapping[c.CHARACTER]
 # Create an empty list to store scene starts and ends
 all_scene_starts = []
 all_scene_ends = []
+scene_id = -1
 
 # Iterate over all JSON files in the server folder and its subfolders
 for root, dirs, files in os.walk(folder_path):
@@ -91,7 +173,7 @@ for root, dirs, files in os.walk(folder_path):
                 json_data = json.load(file)
 
                 # Find scene starts and ends involving author
-                scene_starts, scene_ends = find_scene_starts(json_data, author)
+                scene_starts, scene_ends, scene_id = find_scenes_in_channel(json_data, author, scene_id)
 
                 # Add the messages to the respective lists
                 all_scene_starts.extend(scene_starts)
