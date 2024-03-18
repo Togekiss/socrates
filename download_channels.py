@@ -39,8 +39,8 @@ def set_day_before(timestamp_str):
 
 def download_DMs(after):
 
-    dm_channel_list = "res/DM_channel_list.json"
-    with open(dm_channel_list, "r", encoding="utf-8") as file:
+    channel_list = "res/DM_channel_list.json"
+    with open(channel_list, "r", encoding="utf-8") as file:
         json_data = json.load(file)
     
     # Iterate through the list and download channels
@@ -71,8 +71,8 @@ def download_DMs(after):
 
 def download_scenes(after):
 
-    dm_channel_list = "res/scene_channel_list.json"
-    with open(dm_channel_list, "r", encoding="utf-8") as file:
+    channel_list = "res/scene_channel_list.json"
+    with open(channel_list, "r", encoding="utf-8") as file:
         json_data = json.load(file)
     
     # Iterate through the list and download channels
@@ -103,8 +103,8 @@ def download_scenes(after):
 
 def download_threads(after):
 
-    dm_channel_list = "res/thread_channel_list.json"
-    with open(dm_channel_list, "r", encoding="utf-8") as file:
+    channel_list = "res/thread_channel_list.json"
+    with open(channel_list, "r", encoding="utf-8") as file:
         json_data = json.load(file)
     
     # Iterate through each object and download the channel

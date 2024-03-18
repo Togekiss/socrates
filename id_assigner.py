@@ -58,7 +58,9 @@ def id_assigner():
 
 
     #sort and save the dictionary
-    sorted_dict = {key: author_id_mapping[key] for key in sorted(author_id_mapping)}
+    #sorted_dict = {key: author_id_mapping[key] for key in sorted(author_id_mapping)}
+    sorted_dict = {key: author_id_mapping[key] for key in sorted(author_id_mapping, key=lambda k: author_id_mapping[k])}
+
     with open(chara_file, "w", encoding="utf-8") as file:
         json.dump(sorted_dict, file, indent=4)
 
