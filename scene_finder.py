@@ -5,6 +5,7 @@ import unicodedata
 from res import constants as c
 from url_creator import url_creator
 
+# Saves the info we need to create scene lists
 def message_info(message, data, status, scene_id, i, other_authors=[]):
 
     msg = {
@@ -31,7 +32,7 @@ def find_scenes_in_channel(data, target_author, scene_id):
     pattern = r"(?i)(?:`|```).*\n*.*\b(?:end|hold|close|dropped|offline|moved|moving|continu)\w*.{0,10}\n*(?:`|```)\n*(?:$|@.*|\W*)"
     pattern2 = r"(?i).*\n*(?:moved to #|moving to #|continued in #|DM END|END DM|\[end\]|\[read\])\w*.{0,20}\n*"
     
-    # create arrays, in case there is more than one scene in a thread
+    # create arrays, in case there is more than one scene in a channel
     scene_starts = []
     scene_ends = []
 
@@ -146,56 +147,60 @@ def find_scenes_in_channel(data, target_author, scene_id):
 
     return scene_starts, scene_ends, scene_id
 
+if __name__ == "__main__":
 
-# Get the path of the "scenes" folder in the same directory as the script
-script_dir = os.path.dirname(os.path.abspath(__file__))
-folder_name = c.SEARCH_FOLDER
-folder_path = os.path.join(script_dir, folder_name)
+    # Get the path of the "scenes" folder in the same directory as the script
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    folder_name = c.SEARCH_FOLDER
+    folder_path = os.path.join(script_dir, folder_name)
 
-with open("res/character_ids.json", "r", encoding="utf-8") as file:
-    author_id_mapping = json.load(file)
+    # Load character IDs
+    with open("res/character_ids.json", "r", encoding="utf-8") as file:
+        author_id_mapping = json.load(file)
 
-author = author_id_mapping[c.CHARACTER]
+    # Find target character ID
+    author = author_id_mapping[c.CHARACTER]
 
-# Create an empty list to store scene starts and ends
-all_scene_starts = []
-all_scene_ends = []
-scene_id = -1
+    # Create an empty list to store scene starts and ends
+    all_scene_starts = []
+    all_scene_ends = []
+    scene_id = -1
 
-# Iterate over all JSON files in the server folder and its subfolders
-for root, dirs, files in os.walk(folder_path):
-    for filename in files:
-        if filename.endswith(".json"):
-            file_path = os.path.join(root, filename)
+    # Iterate over all JSON files in the server folder and its subfolders
+    for root, dirs, files in os.walk(folder_path):
+        for filename in files:
+            if filename.endswith(".json"):
+                file_path = os.path.join(root, filename)
 
-            # Load JSON data from file
-            with open(file_path, "r", encoding="utf-8") as file:
-                json_data = json.load(file)
+                # Load JSON data from file
+                with open(file_path, "r", encoding="utf-8") as file:
+                    json_data = json.load(file)
 
-                # Find scene starts and ends involving author
-                scene_starts, scene_ends, scene_id = find_scenes_in_channel(json_data, author, scene_id)
+                    # Find scene starts and ends involving author
+                    scene_starts, scene_ends, scene_id = find_scenes_in_channel(json_data, author, scene_id)
 
-                # Add the messages to the respective lists
-                all_scene_starts.extend(scene_starts)
-                all_scene_ends.extend(scene_ends)
+                    # Add the messages to the respective lists, can be more than one per channel
+                    all_scene_starts.extend(scene_starts)
+                    all_scene_ends.extend(scene_ends)
 
-# Create output JSON file for scene starts
-scene_starts_output = {
-    "scenes": all_scene_starts
-}
-scene_starts_output_file = os.path.join(script_dir, "out/scene_starts.json")
-with open(scene_starts_output_file, "w", encoding="utf-8") as file:
-    json.dump(scene_starts_output, file, indent=4)
+    # Create output JSON file for scene starts
+    scene_starts_output = {
+        "scenes": all_scene_starts
+    }
+    scene_starts_output_file = os.path.join(script_dir, "out/scene_starts.json")
+    with open(scene_starts_output_file, "w", encoding="utf-8") as file:
+        json.dump(scene_starts_output, file, indent=4)
 
-# Create output JSON file for scene ends
-scene_ends_output = {
-    "scenes": all_scene_ends
-}
-scene_ends_output_file = os.path.join(script_dir, "out/scene_ends.json")
-with open(scene_ends_output_file, "w", encoding="utf-8") as file:
-    json.dump(scene_ends_output, file, indent=4)
+    # Create output JSON file for scene ends
+    scene_ends_output = {
+        "scenes": all_scene_ends
+    }
+    scene_ends_output_file = os.path.join(script_dir, "out/scene_ends.json")
+    with open(scene_ends_output_file, "w", encoding="utf-8") as file:
+        json.dump(scene_ends_output, file, indent=4)
 
-print("scene starts output file created:", scene_starts_output_file)
-print("scene ends output file created:", scene_ends_output_file)
+    print("scene starts output file created:", scene_starts_output_file)
+    print("scene ends output file created:", scene_ends_output_file)
 
-url_creator()
+    # Uses the created JSONs to create a list of links to each scene start
+    url_creator()
