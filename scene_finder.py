@@ -58,6 +58,7 @@ def find_scenes_in_channel(data, target_author, scene_id):
             if not active_scene and author == target_author:
 
                 active_scene = True
+                scene_id = scene_id + 1
 
                 # get the last message and check if the thread is open or closed
                 last_message = data["messages"][-1]
@@ -143,6 +144,10 @@ def find_scenes_in_channel(data, target_author, scene_id):
 
                     msg = message_info(message, data, 'timeout', scene_id, i, other_authors)
                     scene_ends.append(msg)
+
+                # if it reaches the end of a channel while the scene is active
+                if message == data["messages"][-1]:
+                    scene_starts[-1]["otherAuthors"] = other_authors
         
 
     return scene_starts, scene_ends, scene_id
