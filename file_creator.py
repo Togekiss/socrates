@@ -67,13 +67,13 @@ def file_creator():
             # download channel from date to end_datet
         
         cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export -c {channel} -t {c.BOT_TOKEN} -f HtmlDark -o "{folder}/%a - %C.html" --dateformat "dd/MM/yyyy HH:mm" --after {date} {has_end} --fuck-russia'
-        '''
+        
         try:
             output = subprocess.check_output(cli_command, shell=True, text=True)
             print(output)
 
         except subprocess.CalledProcessError as e:
             pass
-        '''
+        
 if __name__ == "__main__":
     file_creator()

@@ -5,6 +5,11 @@ import unicodedata
 from res import constants as c
 from url_creator import url_creator
 
+
+# REGEX to detect the end of a scene
+pattern = r"(?i)(?:`|```).*\n*.*\b(?:end|hold|close|dropped|offline|moved|moving|continu)\w*.{0,10}\n*(?:`|```)\n*(?:$|@.*|\W*)"
+pattern2 = r"(?i).*\n*(?:moved to #|moving to #|continued in #|DM END|END DM|\[end\]|\[read\])\w*.{0,20}\n*"
+
 # Saves the info we need to create scene lists
 def message_info(message, data, status, scene_id, i, other_authors=[]):
 
@@ -25,13 +30,48 @@ def message_info(message, data, status, scene_id, i, other_authors=[]):
 
     return msg
 
+def find_real_start(messages, scene_start):
+
+    # first, we assume the found start is the real start
+    index = scene_start["index"]
+    found = False
+
+    all_authors = scene_start["otherAuthors"]
+    all_authors.append(int(scene_start["authorID"]))
+
+    print("\ninside real start at index ", index, " with authors ", all_authors)
+
+    while not found:
+        # if the current message is a SOF, the found start is the real start
+        if messages[index] == messages[0]:
+            found = True
+            print("found SOF")
+            return index
+
+        # if the previous message has an END tag, the found start is the real start
+        message_content = unicodedata.normalize("NFKD", messages[index-1]["content"])
+        if re.search(pattern, message_content, flags=re.I) or re.search(pattern2, message_content, flags=re.I):
+            found = True
+            print("found END at index ", index)
+            return index
+            
+        # if the previous message has an author not found in all_authors, the found start is the real start
+        if int(messages[index-1]["author"]["id"]) not in all_authors:
+            found = True
+            print("found different author ", int(messages[index-1]["author"]["id"]) ," at index ", index)
+            return index
+        
+        # if the previous message has an author found in all_authors, index-1 and repeat
+        if int(messages[index-1]["author"]["id"]) in all_authors:
+            print("found none, going back")
+            index = index-1
+    
+    # this should not trigger, but just in case
+    print("no trigger")
+    return index
 
 def find_scenes_in_channel(data, target_author, scene_id):
 
-    # REGEX to detect the end of a scene
-    pattern = r"(?i)(?:`|```).*\n*.*\b(?:end|hold|close|dropped|offline|moved|moving|continu)\w*.{0,10}\n*(?:`|```)\n*(?:$|@.*|\W*)"
-    pattern2 = r"(?i).*\n*(?:moved to #|moving to #|continued in #|DM END|END DM|\[end\]|\[read\])\w*.{0,20}\n*"
-    
     # create arrays, in case there is more than one scene in a channel
     scene_starts = []
     scene_ends = []
@@ -79,7 +119,6 @@ def find_scenes_in_channel(data, target_author, scene_id):
             
             
 
-                
 
     # if it's a channel, we will have to check the entirety of it
     else:
@@ -133,7 +172,6 @@ def find_scenes_in_channel(data, target_author, scene_id):
                     msg = message_info(message, data, 'closed', scene_id, i, other_authors)
                     scene_ends.append(msg)
 
-                    continue
                 
                 # if it's been too many messages without the target author
                 if author_missing_counter > len(other_authors)*5 and author not in other_authors:
@@ -147,7 +185,18 @@ def find_scenes_in_channel(data, target_author, scene_id):
 
                 # if it reaches the end of a channel while the scene is active
                 if message == data["messages"][-1]:
+                    active_scene = False
                     scene_starts[-1]["otherAuthors"] = other_authors
+    
+                # if we found the end of a scene, check if the start was the real start
+                if not active_scene:
+                    start_index = find_real_start(data["messages"], scene_starts[-1])
+                    msg = message_info(data["messages"][start_index],
+                                       data, scene_starts[-1]["status"],
+                                       scene_id, start_index,
+                                       other_authors)
+                    scene_starts[-1] = msg
+                
         
 
     return scene_starts, scene_ends, scene_id
