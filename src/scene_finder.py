@@ -2,6 +2,8 @@ import json
 import os
 import re
 import unicodedata
+from set_path import set_path
+set_path()
 from res import constants as c
 from url_creator import url_creator
 

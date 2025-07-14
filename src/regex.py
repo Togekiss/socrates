@@ -1,6 +1,8 @@
 import json
 import os
 import re
+from set_path import set_path
+set_path()
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 folder_name = "Elysium/Scenes/Kaminashi City"

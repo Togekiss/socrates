@@ -1,6 +1,8 @@
 import subprocess
 import json
 import datetime
+from set_path import set_path
+set_path()
 from res import constants as c
 
 def group_threads(parsed_threads):

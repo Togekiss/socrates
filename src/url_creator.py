@@ -1,5 +1,7 @@
 import datetime
 import json
+from set_path import set_path
+set_path()
 from res import constants as c
 
 def url_creator():

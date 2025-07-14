@@ -1,6 +1,8 @@
 import os
 import json
 import time
+from set_path import set_path
+set_path()
 
 # Function to assign unique IDs to authors based on their names
 def assign_unique_ids(data, id_mapping):

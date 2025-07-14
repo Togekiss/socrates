@@ -17,19 +17,57 @@ The current focus of development is fine-tuning the 'end of scene' tags to, hope
 Once this basic functionality is in working condition, the focus will shift to cleaning and organizing the code, and uploading the bot to a server to be operational 24/7 
  and invoked with Discord commands.
 
+
+ ## Folder structure
+
+- `DCE`: contains the CLI version of https://github.com/Tyrrrz/DiscordChatExporter
+
+- `res`: contains configuration files and metadata files the bot uses to download and navigate through channels
+  - `character_ids.json`: a list of tupperbox characters and their associated IDs
+  - `constants.py`: configuration file with server ID, bot token, and search parameters
+  - `constants copy.py`: copy of the configuration file with a blank bot token for GitHub upload
+  - `dm_categories_keep.txt`: list of Discord channel categories to be classified as DMs
+  - `scene_categories_cull.txt`: list of Discord channel categories that should be excluded from parsing
+  - `dm_channel_list.json`: list of DM channels with their IDs, names, and creation date
+  - `scene_channel_list.json`: list of scene channels with their IDs, names, and creation date
+  - `thread_channel_list.json`: list of thread channels with their IDs, names, and creation date
+
+- `out`: contains the results of scene searches, both for link lists and full scene extractions
+  - `[Character name]` folder: contains extracted scenes for a specific character, in HTML format
+  - `output.txt`: contains a list of all found scenes with links to their starting messages
+  - `output-dms.txt`: contains a list of all found DMs with links to their starting messages
+  - `scene_starts.json`: contains the metadata of the starting messages of found scenes. Used for debugging
+  - `scene_ends.json`: contains the metadata of the ending messages of found scenes. Used for debugging
+
+- `src`: contains the scripts to download channels, parse them, and extract scenes
+  - `download_channels.py`: updates the server backup by downloading new content from Discord with DCE
+  - `get_channel_list.py`: updates the list of channels to be downloaded by `download_channels.py`
+  - `merge.py`: merges the downloaded updates to the main server backup files
+  - `id_assigner.py`: parses the server backup and assigns a unique ID to each tupperbox bot
+  - `scene_finder.py`: parses the server backup and gathers a list of scenes for the specified character
+  - `file_creator.py`: uses the list of found scenes to download the full scenes with DCE in HTML format
+  - `url_creator.py`: helper function to create URLs that link to the starting messages of found scenes
+  - `regex.py`: helper function to create regular expressions to detect end of scenes
+
+
 ## How to use in local (in case you want to help or play with it!)
 
 (Note: These instructions are for its current state of development. They will change when the code is clean and adapted to use on other servers. They're a mess, I know. Ask me for more info if you need!)
 
-- Create a folder named 'DCE' and download the CLI version of https://github.com/Tyrrrz/DiscordChatExporter
-- Copy the file in the 'res' folder named 'constants copy.py', rename it 'constants.py' and fill in the fields.
-- Run 'channel_downloader.py'
-- Manually double check 'character_ids.json'. Tupperbox renames (for example, "John Doe" has been renamed to "John D") and aliases (another tupper for the same character, for example, if John Doe has a tupper of his secret identity "Jon Buck") are registered as new, different characters. Manually write the same ID on both so they are treated as one single character. Save the file and run 'idAssigner.py'.
-- Find the character name in 'constants.py' and type the desired character
-- Find the status in 'constants.py' and type the desired status
-- Run 'scene_finder.py'
-- You should have the scenes list in 'out/output.txt'
-  - Additionally, if you want to search for another status, just change the status in 'constants.py' and run 'url_creator.py' again
+- Create a folder named `DCE` and download the CLI version of https://github.com/Tyrrrz/DiscordChatExporter
+
+- Copy the file in the `res` folder named `constants copy.py`, rename it `constants.py` and fill in the fields.
+
+- Run `src/download_channels.py`
+
+- Manually double check `res/character_ids.json`. Tupperbox renames (for example, "John Doe" has been renamed to "John D") and aliases (another tupper for the same character, for example, if John Doe has a tupper of his secret identity "Jon Buck") are registered as new, different characters. Manually write the same ID on both so they are treated as one single character. Save the file and run `src/id_assigner.py`.
+
+- Run `src/scene_finder.py`
+
+- You should have the scenes list in `out/output.txt`
+  - After this, you don't have to run `src/scene_finder.py` if you just want to search a different status for the same character. You can just change the status in `res/constants.py` and run `src/url_creator.py` to get a new list.
+
+- Run `src/file_creator.py` if you want to download the full scenes in HTML.
 
 ## How does it work?
 

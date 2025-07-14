@@ -2,6 +2,8 @@ import json
 import os
 import shutil
 import time
+from set_path import set_path
+set_path()
 
 def find_index(messages, id, base=0):
     

@@ -1,8 +1,9 @@
 import datetime
 import json
-import os
 import subprocess
 import time
+from set_path import set_path
+set_path()
 from res import constants as c
 from get_channel_list import get_channel_list 
 from merge import merge

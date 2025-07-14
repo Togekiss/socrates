@@ -1,6 +1,8 @@
 # bot.py
 import os
 import random
+from set_path import set_path
+set_path()
 from res import constants as c
 import discord
 

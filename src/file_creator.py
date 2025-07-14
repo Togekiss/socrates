@@ -2,6 +2,8 @@ import datetime
 import json
 import os
 import subprocess
+from set_path import set_path
+set_path()
 from res import constants as c
 
 def set_day_before(timestamp_str):
