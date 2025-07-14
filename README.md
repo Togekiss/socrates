@@ -14,7 +14,8 @@ Socrates is in development process. Currently, the bot itself only serves as a w
 
 The current focus of development is fine-tuning the 'end of scene' tags to, hopefully, detect most manners of closing scenes and avoid tagging them as 'timed out'.
 
-Once this basic functionality is in working condition, the focus will shift to cleaning and organizing the code, and making the bot operational to be invoked with Discord commands.
+Once this basic functionality is in working condition, the focus will shift to cleaning and organizing the code, and uploading the bot to a server to be operational 24/7 
+ and invoked with Discord commands.
 
 ## How to use in local (in case you want to help or play with it!)
 
