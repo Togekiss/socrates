@@ -4,6 +4,21 @@ import re
 from set_path import set_path
 set_path()
 
+################# File summary #################
+
+"""
+
+This module is used to test and debug the regex pattern to detect the end of a scene.
+
+Main function: regex()
+
+    This script searches for messages in a folder of JSON files that match a regex pattern.
+    It creates a new JSON file with the matched messages.
+
+"""
+
+################# Functions #################
+
 script_dir = os.path.dirname(os.path.abspath(__file__))
 folder_name = "Elysium/Scenes/Kaminashi City"
 folder_path = os.path.join(script_dir, folder_name)

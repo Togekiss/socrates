@@ -4,6 +4,22 @@ from set_path import set_path
 set_path()
 from res import constants as c
 
+################ File summary #################
+
+"""
+
+This module creates a text file with the scene starts and ends.
+
+Main function: url_creator()
+
+    This function reads the scene starts and ends from the JSON files created by the scene_finder script.
+    It sorts the objects by chronological order based on the "timestamp" field
+    and creates a text file with the titles of each scene, its date, and the link to the first (or last) message.
+
+"""
+
+################# Main function #################
+
 def url_creator():
     # Open the JSON file
     with open('out/scene_starts.json', 'r', encoding="utf-8") as file:

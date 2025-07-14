@@ -4,8 +4,42 @@ import time
 from set_path import set_path
 set_path()
 
-# Function to assign unique IDs to authors based on their names
+################ File summary #################
+
+"""
+
+This module assigns unique IDs to the Tupperbox bots in the backup of a Discord server.
+
+Main function: id_assigner()
+
+    This function traverses all JSON files in the specified folder and its subdirectories to assign unique 
+    identifiers to each bot found within the message data. If a character ID mapping file exists, it will be 
+    loaded and updated; otherwise, a new mapping will be created. The function ensures that each bot has a 
+    unique ID, updates the original JSON files with these IDs, and saves the sorted mapping back to the character 
+    ID file for future reference.
+
+"""
+
+################ Functions #################
+
+"""
+assign_unique_ids(data, id_mapping)
+
+    Assigns unique IDs to the Tupperbox bots in the given data and updates the ID mapping accordingly.
+
+    This function iterates through the messages in the given data and assigns a unique identifier to each bot author.
+    If the author is not already assigned an ID, a new one is assigned and added to the ID mapping. The function then updates
+    the author's ID in the message.
+
+    Args:
+        data (dict): The JSON data of the channel, containing a list of messages.
+        id_mapping (dict): A dictionary mapping author names to their respective unique IDs.
+
+    Returns:
+        None
+"""
 def assign_unique_ids(data, id_mapping):
+
     messages = data["messages"]
 
     for message in messages:
@@ -23,7 +57,10 @@ def assign_unique_ids(data, id_mapping):
             message["author"]["id"] = f"{id_mapping[author_name]}"
 
 
+################# Main function #################
+
 def id_assigner():
+
     # Get the path of the server folder in the same directory as the script
     script_dir = os.path.dirname(os.path.abspath(__file__))
     folder_name = "Elysium"

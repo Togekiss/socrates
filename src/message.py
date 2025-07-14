@@ -6,6 +6,24 @@ set_path()
 from res import constants as c
 import discord
 
+################# File summary #################
+
+"""
+
+This module is used to test the connectivity of the bot with Discord.
+
+Main function: on_message()
+
+    This is the main function of the bot. It is called when a message is sent in a channel.
+
+    If the message is sent by the bot itself, ignores it.
+
+    If the message contains the word "happy birthday", the function sends a message to the channel.
+
+"""
+
+################# Functions #################
+
 TOKEN = c.BOT_TOKEN
 GUILD = 857848490683269161
 

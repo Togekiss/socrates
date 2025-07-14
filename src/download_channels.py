@@ -10,7 +10,36 @@ from merge import merge
 from id_assigner import id_assigner
 
 
+################# File summary #################
+
+"""
+
+This module downloads a backup of all channels from the server.
+
+Main function: download_channels()
+
+    This script downloads all channels from the server specified in the constants.py file, either the full history or from a specified date.
+    If there is no previous backup, downloads all channels from the server.
+    If there is a previous backup, downloads all channels from the day before the last backup and merges them to the main files.
+    Then, assigns a proper ID to each character.
+    
+"""
+
+
+################# Functions #################
+
+"""
+get_last_exported()
+
+    Returns the date of the last export in ISO format as a string or None if there is no previous backup.
+
+    The date is retrieved from the first element in the DM_channel_list.json file, which is the first DM channel exported.
+    If the file doesn't exist, returns None.
+
+    Note: This function assumes that any previous backup is complete. It does not check if all channels were exported at the same time.
+"""
 def get_last_exported():
+    
     date = None
     file = "res/DM_channel_list.json"
 
@@ -26,18 +55,45 @@ def get_last_exported():
 
     return date
 
+"""
+set_day_before(timestamp_str)
+
+    Adjusts the given timestamp by subtracting one day to ensure downloading the whole update.
+
+    Args:
+        timestamp_str (str): The original timestamp in ISO format.
+
+    Returns:
+        str: The adjusted timestamp in ISO format, representing the day before the original.
+"""
 def set_day_before(timestamp_str):
 
     # Parse the timestamp into a datetime object
     timestamp = datetime.datetime.fromisoformat(timestamp_str)
+
     # Subtract one day (24 hours) from the timestamp
     new_timestamp = timestamp - datetime.timedelta(days=1)
+
     # Format the new timestamp back into the original format
     new_timestamp_str = new_timestamp.isoformat()
 
     return new_timestamp_str
 
 
+"""
+download_DMs(after)
+
+    Downloads all DM channels from the server specified in the DM_channel_list.json file.
+
+    For each channel, DCE is called to download the messages and store them in JSON format, either the full history or from a specified date.
+    Downloads are run in parallel in groups of 3 to improve performance.
+
+    Args:
+        after (str, optional): The timestamp of the last export in ISO format. If not provided, downloads the full history.
+
+    Returns:
+        None, but saves the downloaded messages to JSON files.
+"""
 def download_DMs(after):
 
     channel_list = "res/DM_channel_list.json"
@@ -70,6 +126,21 @@ def download_DMs(after):
         except subprocess.CalledProcessError as e:
             pass
 
+
+"""
+download_scenes(after)
+
+    Downloads all scene channels from the server specified in the scene_channel_list.json file.
+
+    For each channel, DCE is called to download the messages and store them in JSON format, either the full history or from a specified date.
+    Downloads are run in parallel in groups of 5 to improve performance.
+
+    Args:
+        after (str, optional): The timestamp of the last export in ISO format. If not provided, downloads the full history.
+
+    Returns:
+        None, but saves the downloaded messages to JSON files.
+"""
 def download_scenes(after):
 
     channel_list = "res/scene_channel_list.json"
@@ -102,6 +173,20 @@ def download_scenes(after):
         except subprocess.CalledProcessError as e:
             pass
 
+"""
+download_threads(after)
+
+    Downloads all thread channels from the server specified in the thread_channel_list.json file.
+
+    For each channel, DCE is called to download the messages and store them in JSON format, either the full history or from a specified date.
+    Downloads are run in parallel in groups of 5 to improve performance.
+
+    Args:
+        after (str, optional): The timestamp of the last export in ISO format. If not provided, downloads the full history.
+
+    Returns:
+        None, but saves the downloaded messages to JSON files.
+"""
 def download_threads(after):
 
     channel_list = "res/thread_channel_list.json"
@@ -141,6 +226,7 @@ def download_threads(after):
                 pass
 
 
+################# Main function ################
 
 def download_channels():
     
@@ -160,9 +246,7 @@ def download_channels():
     else:
         after = None
 
-
     # run through channel list to download it all   
-
     print("Downloading channels...") 
      
     download_DMs(after)

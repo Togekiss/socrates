@@ -1,18 +1,63 @@
 import json
 import os
 import re
+import time
 import unicodedata
 from set_path import set_path
 set_path()
 from res import constants as c
 from url_creator import url_creator
 
+################ File summary #################
 
-# REGEX to detect the end of a scene
+"""
+
+This module finds all thescenes involving the target character in the server backup.
+
+Main function: scene_finder()
+
+    This function loads the character IDs from a file, finds the target character's ID, and creates two empty lists to store scene starts and ends.
+
+    Then it iterates over all JSON files in the server backup to find scenes involving the target character.
+    For each, it stores its start and end messages in the corresponding lists.
+    
+    To finish, it saves the scene starts and ends to JSON files, and calls the url_creator module to create a text file with scene names and URLs.
+
+"""
+
+################# Functions #################
+
+
+"""
+    This regex pattern is used to detect the end of a scene.
+
+    It searches for messages that contain common end of scene markers, such as "end", "closed", "moved to", etc,
+    particularly in code blocks near the end of the message. 
+
+    It also accounts for tag mentions after the end of scene marker.
+
+    Although I have tried to be as inclusive as possible, some false positives or false negatives might occur.
+
+"""
 pattern = r"(?i)(?:`|```).*\n*.*\b(?:end|hold|close|dropped|offline|moved|moving|continu)\w*.{0,10}\n*(?:`|```)\n*(?:$|@.*|\W*)"
 pattern2 = r"(?i).*\n*(?:moved to #|moving to #|continued in #|DM END|END DM|\[end\]|\[read\])\w*.{0,20}\n*"
 
-# Saves the info we need to create scene lists
+"""
+message_info(message, data, status, scene_id, i, other_authors=[]):
+    Creates a JSON object with information about a message.
+
+    Args:
+        message (dict): The message to be saved
+        data (dict): The channel data
+        status (str): The status of the scene (open, closed, timed out)
+        scene_id (int): The ID of the scene
+        i (int): The index of the message in the channel
+        other_authors (list, optional): The IDs of other characters involved in the scene. Defaults to an empty list.
+
+    Returns:
+        dict: Message info in JSON format
+"""
+
 def message_info(message, data, status, scene_id, i, other_authors=[]):
 
     msg = {
@@ -32,6 +77,21 @@ def message_info(message, data, status, scene_id, i, other_authors=[]):
 
     return msg
 
+
+"""
+find_real_start(messages, scene_start):
+
+    Function to find the real start of a scene, in the case the target character was not the author of the first message.
+
+    It starts analyzing the found start message, and iterates backwards to find the end of the previous scene (or the start of the channel).
+
+    Args:
+        messages (list): The list of messages in the channel.
+        scene_start (dict): The found scene start message info.
+
+    Returns:
+        int: The index of the real start of the scene.
+ """
 def find_real_start(messages, scene_start):
 
     # first, we assume the found start is the real start
@@ -72,6 +132,28 @@ def find_real_start(messages, scene_start):
     print("no trigger")
     return index
 
+"""
+find_scenes_in_channel(data, target_author, scene_id)
+
+    Function to find all the scenes of a target character in a channel.
+
+    If the channel is a thread, we can assume it only contains one scene,
+    so the function will only check if the target character is in the first 5 messages, and if so, save the scene and the status.
+
+    If the channel is not a thread, we have to check all the messages in the channel, as it can contain multiple scenes.
+    If it encounters the target character, it will mark the start of a scene.
+    Then, it will keep reading the messages until it finds the scene has ended, either by detecting an "end of scene" marker,
+    by reaching the end of the channel, or if the target character does not appear for several messages.
+
+    Args:
+        data (dict): The channel data.
+        target_author (int): The ID of the target character.
+        scene_id (int): The ID of the scene to be searched.
+
+    Returns:
+        list: A list of scene starts and ends in the channel, in the format of a JSON object.
+        int: The updated scene ID.
+"""
 def find_scenes_in_channel(data, target_author, scene_id):
 
     # create arrays, in case there is more than one scene in a channel
@@ -120,7 +202,6 @@ def find_scenes_in_channel(data, target_author, scene_id):
             scene_ends.append(end_msg)
             
             
-
 
     # if it's a channel, we will have to check the entirety of it
     else:
@@ -199,12 +280,12 @@ def find_scenes_in_channel(data, target_author, scene_id):
                                        other_authors)
                     scene_starts[-1] = msg
                 
-        
-
     return scene_starts, scene_ends, scene_id
 
-if __name__ == "__main__":
 
+################ Main function #################
+
+def find_scenes():
     # Get the path of the "scenes" folder in the same directory as the script
     script_dir = os.path.dirname(os.path.abspath(__file__))
     folder_name = c.SEARCH_FOLDER
@@ -260,3 +341,10 @@ if __name__ == "__main__":
 
     # Uses the created JSONs to create a list of links to each scene start
     url_creator()
+
+if __name__ == "__main__":
+
+    start_time = time.time()
+    print("Scene finding started...")
+    find_scenes()
+    print("Scene finding finished --- %s seconds ---" % (time.time() - start_time))
