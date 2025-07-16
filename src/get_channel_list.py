@@ -1,7 +1,7 @@
 import subprocess
 import json
 import datetime
-from set_path import set_path
+from tricks import set_path
 set_path()
 from res import constants as c
 

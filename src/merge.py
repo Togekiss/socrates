@@ -2,7 +2,7 @@ import json
 import os
 import shutil
 import time
-from set_path import set_path
+from tricks import set_path
 set_path()
 
 ################# File summary #################
