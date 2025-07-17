@@ -99,7 +99,7 @@ def export_category(item, after, type="channels"):
 
     category = item["category"].replace(":", "_")
     folder = c.SERVER_NAME if after is None else "Update"
-    path = f"{folder}/{item["position"]}-{category}/%p-%C.json" if type == "channels" else f"{folder}/{item["position"]}-{category}/Threads/%P-%p-%C.json"
+    path = f"{folder}/{item["position"]}# {category}/%C.json" if type == "channels" else f"{folder}/{item["position"]}# {category}/Threads/%C.json"
     after = "" if after is None else "--after " + after
 
     # Call the CLI command and capture its output
@@ -182,7 +182,7 @@ def export_channels():
     t.debug("\n\tGenerating IDs for character bots...\n") 
     id_assigner()
     
-    print(f"\n# Export finished --- {time.time() - start_time} seconds --- #\n")
+    print(f"\n# Export finished --- {time.time() - start_time:.2f} seconds --- #\n")
 
 
 if __name__ == "__main__":

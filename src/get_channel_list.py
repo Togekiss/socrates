@@ -102,19 +102,26 @@ def parse_output(output):
             # Add it to the data
             backup_data["categories"].append(category_data)
 
+        channel_data = {
+            "id": entry["id"],
+            "channel": entry["channel"],
+            "position": len(backup_data["categories"][category_list.index(entry["category"])]["channels"]) + 1
+        }
+
         # Add the channel to the category
         if entry["isThread"]:
-            channel_data = {
-                "id": entry["id"],
-                "channel": entry["channel"],
-                "thread": entry["thread"]
-            }
+            channel_data["thread"] = entry["thread"]
+
+            # calculate "threadPosition" based on how many threads in the category have the same channel
+            thread_position = 1
+            for thread in backup_data["categories"][category_list.index(entry["category"])]["threads"]:
+                if thread["channel"] == entry["channel"]:
+                    thread_position += 1
+            channel_data["threadPosition"] = thread_position
+            
             backup_data["categories"][category_list.index(entry["category"])]["threads"].append(channel_data)
+        
         else:
-            channel_data = {
-                "id": entry["id"],
-                "channel": entry["channel"],
-            }
             backup_data["categories"][category_list.index(entry["category"])]["channels"].append(channel_data)
 
     t.debug(f"\tFound {len(lines)} channels in {len(backup_data['categories'])} categories\n")
@@ -162,7 +169,7 @@ def get_channel_list():
     t.save_to_json(channel_list, c.CHANNEL_LIST)
     t.debug(f"\tSaved the list of channels to {c.CHANNEL_LIST}\n")
 
-    print(f"\n### Channel list finished --- {time.time() - start_time} seconds --- ###\n")
+    print(f"\n### Channel list finished --- {time.time() - start_time:.2f} seconds --- ###\n")
 
 if __name__ == "__main__":
     get_channel_list()

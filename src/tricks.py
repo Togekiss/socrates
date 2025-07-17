@@ -52,9 +52,9 @@ def debug(message):
 def console(message):
     set_path()
     from res import constants as c
-    
+
     if c.CONSOLE:
-        print(message)
+        print(message, end='')
 
 """
  run_command(command: str)
@@ -73,8 +73,8 @@ def run_command(command: str):
     ANSI_BLUE = '\033[94m'
     ANSI_RESET = '\033[0m'
 
-    console(f"# RUNNING CONSOLE COMMAND #")
-    console(f"{ANSI_GRAY}> {ANSI_BLUE}{command}{ANSI_GRAY} <\n")
+    console(f"# RUNNING CONSOLE COMMAND #\n")
+    console(f"{ANSI_GRAY}> {ANSI_BLUE}{command}{ANSI_GRAY} <\n\n")
 
     process = subprocess.Popen(
         command,
@@ -89,7 +89,7 @@ def run_command(command: str):
 
     try:
         for line in process.stdout:
-            console(f"\t> {line}", end='')  # Stream output to console
+            console(f"\t> {line}")  # Stream output to console
             full_output.append(line)  # Collect output for return
     except KeyboardInterrupt:
         print("\nCommand interrupted by user.")
@@ -97,5 +97,5 @@ def run_command(command: str):
 
     process.wait()
 
-    console(f"\n{ANSI_RESET}# END OF CONSOLE COMMAND #\n")
+    console(f"\n{ANSI_RESET}# END OF CONSOLE COMMAND #\n\n")
     return process.returncode, ''.join(full_output)
