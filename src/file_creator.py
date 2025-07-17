@@ -5,7 +5,7 @@ import subprocess
 from tricks import set_path
 set_path()
 from res import constants as c
-from src.download_channels import set_day_before
+from src.export_channels import set_day_before
 
 ################# File summary #################
 
