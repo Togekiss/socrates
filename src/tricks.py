@@ -1,6 +1,7 @@
 import sys
 import os
 import subprocess
+import json
 
 ################ File summary #################
 
@@ -11,6 +12,16 @@ This module holds a handful of useful functions and helpers.
 """
 
 ################ Functions #################
+"""
+save_to_json(data, file_path)
+
+    Function to write a JSON file.
+    
+"""
+def save_to_json(data, file_path):
+    with open(file_path, "w", encoding="utf-8") as file:
+        json.dump(data, file, indent=4)
+
 
 """
 set_path()
@@ -36,9 +47,13 @@ def set_path():
         tuple[int, str]: A tuple containing the return code and the full output.
 """
 def run_command(command: str):
-    
+
     ANSI_GRAY = '\033[90m'
+    ANSI_BLUE = '\033[94m'
     ANSI_RESET = '\033[0m'
+
+    print(f"# RUNNING CONSOLE COMMAND #")
+    print(f"{ANSI_GRAY}> {ANSI_BLUE}{command}{ANSI_GRAY} <\n")
 
     process = subprocess.Popen(
         command,
@@ -53,11 +68,13 @@ def run_command(command: str):
 
     try:
         for line in process.stdout:
-            print(f"{ANSI_GRAY}> {line}{ANSI_RESET}", end='')  # Stream output to console
+            print(f"\t> {line}", end='')  # Stream output to console
             full_output.append(line)  # Collect output for return
     except KeyboardInterrupt:
         print("\nCommand interrupted by user.")
         process.terminate()
 
     process.wait()
+
+    print(f"\n{ANSI_RESET}# END OF CONSOLE COMMAND #\n")
     return process.returncode, ''.join(full_output)

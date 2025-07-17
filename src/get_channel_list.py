@@ -1,7 +1,5 @@
-import subprocess
-import json
-import datetime
-from tricks import set_path
+import time, datetime
+from tricks import set_path, run_command, save_to_json
 set_path()
 from res import constants as c
 
@@ -16,70 +14,53 @@ Main function: get_channel_list()
     This function calls the DiscordChatExporter CLI tool to get the list of all the server's channels.
     It processes the output and saves it as a JSON.
 
-    Then it reads the list of categories from the scene_categories_cull.txt and dm_categories_keep.txt files,
+    Then it reads the list of categories to ignore from the config file,
     and removes the entries from the JSON data that have matching categories.
 
-    Finally, the function groups the threads by category and saves the grouped data to the thread_channel_list.json file.
+    Finally, the function saves the data to a JSON file.
 
-    The function does not return any value, but it saves the data to the specified JSON files.
+    The function does not return any value, but it saves the data to the specified JSON file.
 
 """
 
 ############### Functions #################
 
-"""
-group_threads(parsed_threads)
-    Groups the parsed threads by category. I don't know why we need to do it like this.
-
-    Args:
-        parsed_threads (list): The list of parsed thread channels from the DiscordChatExporter CLI tool.
-
-    Returns:
-        list: organized thread data in JSON format
-"""
-def group_threads(parsed_threads):
-    
-    grouped_data = {}
-
-    # Iterate through the JSON objects and group them by 'category'
-    for obj in parsed_threads:
-        category = obj['category']
-
-        obj.pop('category')
-        
-        if category in grouped_data:
-            grouped_data[category]['channels'].append(obj)
-        else:
-            grouped_data[category] = {'category': category, 'channels': [obj]}
-
-    # Convert the grouped data to a list
-    result = list(grouped_data.values())
-
-    return result
 
 """
 parse_output(output)
 
-    Parses the output of the DiscordChatExporter CLI tool and returns two lists of channel data.
-
-    The first list contains all non-thread channels, and the second list contains all thread channels.
+    Parses the output of the DiscordChatExporter CLI tool and returns a list of channel data.
 
     Args:
         output (str): The output of the DiscordChatExporter CLI tool.
 
     Returns:
-        tuple: A tuple containing two lists of channel data in JSON format.
+        dict: A list of channel data in JSON format.
 """
+
 def parse_output(output):
 
-    parsed_channels = []
-    parsed_threads = []
+    print("\tParsing the list of channels...")
+
     lines = output.strip().split("\n")
     exported_at = datetime.datetime.now().isoformat(sep='T', timespec='microseconds')
+
+    # Base object
+    backup_data = {
+        "id": c.SERVER_ID,
+        "name": c.SERVER_NAME,
+        "exportedAt": exported_at,
+        "categories": []
+    }
+
+    category_list = []
     
     # Saving the 'parent channel' in case we encounter threads  
     parent_channel = None
     for line in lines:
+
+        #print("\t\t Analyzing: ", line)
+
         parts = line.split(" | ")
         
         # If it's a channel
@@ -88,11 +69,10 @@ def parse_output(output):
                 "id": parts[0].strip(),
                 "category": parts[1].split(" / ")[0].strip(),
                 "channel": parts[1].split(" / ")[1].strip(),
-                "thread": False,
-                "threadName": "",
-                "exportedAt": exported_at
+                "isThread": False,
+                "thread": "",
             }
-            parsed_channels.append(entry)
+            # save it as a reference
             parent_channel = entry
         
         # If it's a thread
@@ -101,37 +81,55 @@ def parse_output(output):
                 "id": parts[0].replace('*', '').strip(),
                 "category": parent_channel["category"],
                 "channel": parent_channel["channel"],
-                "thread": True,
-                "threadName": parts[1].split(" / ")[1].strip(),
-                "exportedAt": exported_at
+                "isThread": True,
+                "thread": parts[1].split(" / ")[1].strip(),
             }
-            parsed_threads.append(entry)
 
-    return parsed_channels, parsed_threads
+        # If we encountered a new category
+        if entry["category"] not in category_list:
+
+            # Save it in the list
+            category_list.append(entry["category"])
+
+            # Create a new category
+            category_data = {
+                "category": entry["category"],
+                "position": len(category_list) + 1,
+                "channels": [],
+                "threads": []
+            }
+
+            # Add it to the data
+            backup_data["categories"].append(category_data)
+
+        # Add the channel to the category
+        if entry["isThread"]:
+            channel_data = {
+                "id": entry["id"],
+                "channel": entry["channel"],
+                "thread": entry["thread"]
+            }
+            backup_data["categories"][category_list.index(entry["category"])]["threads"].append(channel_data)
+        else:
+            channel_data = {
+                "id": entry["id"],
+                "channel": entry["channel"],
+            }
+            backup_data["categories"][category_list.index(entry["category"])]["channels"].append(channel_data)
+
+    print(f"\tFound {len(lines)} channels in {len(backup_data['categories'])} categories\n")
+
+    return backup_data
 
 """
-save_to_json(data, file_path), read_categories_from_txt(file_path)
-
-    Functions to write and read from files.
-
+remove_categories(json_data, categories_to_remove), keep_categories(json_data, categories_to_keep)
+    Function to clean up the channel list.
 """
-def save_to_json(data, file_path):
-    with open(file_path, "w", encoding="utf-8") as file:
-        json.dump(data, file, indent=4)
-
-def read_categories_from_txt(file_path):
-    with open(file_path, "r", encoding="utf-8") as file:
-        return {category.strip() for category in file}
-"""
-cull_json_remove(json_data, categories_to_remove), cull_json_keep(json_data, categories_to_keep)
-
-    Functions to clean up the channel list.
-
-"""
-def cull_json_remove(json_data, categories_to_remove):
+def remove_categories(json_data, categories_to_remove):
     return [entry for entry in json_data if entry["category"] not in categories_to_remove]
+    
 
-def cull_json_keep(json_data, categories_to_keep):
+def keep_categories(json_data, categories_to_keep):
     return [entry for entry in json_data if entry["category"] in categories_to_keep]
 
 
@@ -140,36 +138,31 @@ def cull_json_keep(json_data, categories_to_keep):
 
 def get_channel_list():
 
+    print(f"\n###  Getting a list of all channels from the server {c.SERVER_NAME}...  ###\n")
+    print("\tThis may take a few minutes...\n")
+
+    start_time = time.time()
+
     # Call the CLI command and capture its output
-    cli_command = f"dotnet DCE/DiscordChatExporter.Cli.dll channels -g {c.SERVER_ID} -t {c.BOT_TOKEN} --include-threads All"
-    output = subprocess.check_output(cli_command, shell=True, text=True)
+    cli_command = f"dotnet DCE/DiscordChatExporter.Cli.dll channels -g {c.SERVER_ID} -t {c.BOT_TOKEN} --include-threads all"
+    code, output = run_command(cli_command)
+
+    print("\tGot a list of channels from DCE\n")
 
     # Process the output and create the desired JSON format
-    parsed_channels, parsed_threads = parse_output(output)
+    channel_list = parse_output(output)
 
-    # Read the list of categories from the .txt files
-    scene_categories_list = "res/scene_categories_cull.txt"
-    categories_to_remove = read_categories_from_txt(scene_categories_list)
-    
-    dm_categories_list = "res/dm_categories_keep.txt"
-    categories_to_keep = read_categories_from_txt(dm_categories_list)
+    print("\tCleaning the list of channels...")
 
-    # Cull the JSON data by removing the entries with matching categories
-    scene_channel_list = cull_json_remove(parsed_channels, categories_to_remove)
-    thread_channel_list = cull_json_remove(parsed_threads, categories_to_remove)
-    dm_channel_list = cull_json_keep(parsed_channels, categories_to_keep)
-    
-    grouped_threads = group_threads(thread_channel_list)
-    
-    # Save the culled JSON data back to the same file
-    json_file_path = "res/scene_channel_list.json"
-    save_to_json(scene_channel_list, json_file_path)
+    channel_list["categories"] = remove_categories(channel_list["categories"], c.CATEGORIES_TO_IGNORE)
 
-    json_file_path = "res/DM_channel_list.json"
-    save_to_json(dm_channel_list, json_file_path)
+    print(f"\tRemoved {len(c.CATEGORIES_TO_IGNORE)} categories")
+    print(f"\tKept {len(channel_list['categories'])} categories\n")
 
-    json_file_path = "res/thread_channel_list.json"
-    save_to_json(grouped_threads, json_file_path)
+    save_to_json(channel_list, c.CHANNEL_LIST)
+    print(f"\tSaved the list of channels to {c.CHANNEL_LIST}\n")
+
+    print(f"\n### Channel list finished --- {time.time() - start_time} seconds --- ###\n")
 
 if __name__ == "__main__":
     get_channel_list()

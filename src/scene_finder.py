@@ -12,7 +12,7 @@ from url_creator import url_creator
 
 """
 
-This module finds all thescenes involving the target character in the server backup.
+This module finds all th scenes involving the target character in the server backup.
 
 Main function: scene_finder()
 
@@ -286,10 +286,8 @@ def find_scenes_in_channel(data, target_author, scene_id):
 ################ Main function #################
 
 def find_scenes():
-    # Get the path of the "scenes" folder in the same directory as the script
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    folder_name = c.SEARCH_FOLDER
-    folder_path = os.path.join(script_dir, folder_name)
+    # Get the path of the "scenes" folder from the config file
+    folder_path = c.SEARCH_FOLDER
 
     # Load character IDs
     with open("res/character_ids.json", "r", encoding="utf-8") as file:
@@ -297,6 +295,8 @@ def find_scenes():
 
     # Find target character ID
     author = author_id_mapping[c.CHARACTER]
+
+    print(f"Finding scenes for {c.CHARACTER} with ID {author} in {folder_path}...\n")
 
     # Create an empty list to store scene starts and ends
     all_scene_starts = []
@@ -308,6 +308,7 @@ def find_scenes():
         for filename in files:
             if filename.endswith(".json"):
                 file_path = os.path.join(root, filename)
+                print(f"\tAnalysing {file_path}...")
 
                 # Load JSON data from file
                 with open(file_path, "r", encoding="utf-8") as file:
@@ -324,7 +325,7 @@ def find_scenes():
     scene_starts_output = {
         "scenes": all_scene_starts
     }
-    scene_starts_output_file = os.path.join(script_dir, "out/scene_starts.json")
+    scene_starts_output_file = "out/scene_starts.json"
     with open(scene_starts_output_file, "w", encoding="utf-8") as file:
         json.dump(scene_starts_output, file, indent=4)
 
@@ -332,7 +333,7 @@ def find_scenes():
     scene_ends_output = {
         "scenes": all_scene_ends
     }
-    scene_ends_output_file = os.path.join(script_dir, "out/scene_ends.json")
+    scene_ends_output_file = "out/scene_ends.json"
     with open(scene_ends_output_file, "w", encoding="utf-8") as file:
         json.dump(scene_ends_output, file, indent=4)
 
@@ -345,6 +346,6 @@ def find_scenes():
 if __name__ == "__main__":
 
     start_time = time.time()
-    print("Scene finding started...")
+    print("\nScene finding started...\n")
     find_scenes()
-    print("Scene finding finished --- %s seconds ---" % (time.time() - start_time))
+    print("\nScene finding finished --- %s seconds ---\n" % (time.time() - start_time))

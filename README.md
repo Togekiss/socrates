@@ -26,11 +26,7 @@ Once this basic functionality is in working condition, the focus will shift to c
   - `character_ids.json`: a list of tupperbox characters and their associated IDs
   - `constants.py`: configuration file with server ID, bot token, and search parameters
   - `constants copy.py`: copy of the configuration file with a blank bot token for GitHub upload
-  - `dm_categories_keep.txt`: list of Discord channel categories to be classified as DMs
-  - `scene_categories_cull.txt`: list of Discord channel categories that should be excluded from parsing
-  - `dm_channel_list.json`: list of DM channels with their IDs, names, and creation date
-  - `scene_channel_list.json`: list of scene channels with their IDs, names, and creation date
-  - `thread_channel_list.json`: list of thread channels with their IDs, names, and creation date
+  - `channel_list.json`: list of channels and threads to be downloaded
 
 - `out`: contains the results of scene searches, both for link lists and full scene extractions
   - `[Character name]` folder: contains extracted scenes for a specific character, in HTML format
@@ -40,8 +36,8 @@ Once this basic functionality is in working condition, the focus will shift to c
   - `scene_ends.json`: contains the metadata of the ending messages of found scenes. Used for debugging
 
 - `src`: contains the scripts to download channels, parse them, and extract scenes
-  - `download_channels.py`: updates the server backup by downloading new content from Discord with DCE
-  - `get_channel_list.py`: updates the list of channels to be downloaded by `download_channels.py`
+  - `export_channels.py`: updates the server backup by downloading new content from Discord with DCE
+  - `get_channel_list.py`: updates the list of channels to be downloaded by `export_channels.py`
   - `merge.py`: merges the downloaded updates to the main server backup files
   - `id_assigner.py`: parses the server backup and assigns a unique ID to each tupperbox bot
   - `scene_finder.py`: parses the server backup and gathers a list of scenes for the specified character
@@ -58,7 +54,7 @@ Once this basic functionality is in working condition, the focus will shift to c
 
 - Copy the file in the `res` folder named `constants copy.py`, rename it `constants.py` and fill in the fields.
 
-- Run `src/download_channels.py`
+- Run `src/export_channels.py`
 
 - Manually double check `res/character_ids.json`. Tupperbox renames (for example, "John Doe" has been renamed to "John D") and aliases (another tupper for the same character, for example, if John Doe has a tupper of his secret identity "Jon Buck") are registered as new, different characters. Manually write the same ID on both so they are treated as one single character. Save the file and run `src/id_assigner.py`.
 
