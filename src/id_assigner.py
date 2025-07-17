@@ -3,6 +3,7 @@ import json
 import time
 import tricks as t
 t.set_path()
+from res import constants as c
 
 ################ File summary #################
 
@@ -61,55 +62,59 @@ def assign_unique_ids(data, id_mapping):
 
 def id_assigner():
 
+    print(f"\n###  Assigning unique IDs to Tupperbox bots in {c.SERVER_NAME}...  ###\n")
+
+    start_time = time.time()
+
     # Get the path of the server folder in the same directory as the script
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    folder_name = "Elysium"
-    folder_path = os.path.join(script_dir, folder_name)
+    folder_path = c.SERVER_NAME
 
+    # Open a dictionary to store author IDs
+    chara_file = c.CHARACTER_IDS
 
-    # Initialize a dictionary to store author IDs
-    chara_file="res/character_ids.json"
+    # If the file exists, open and load its contents
     if os.path.exists(chara_file):
-        # The file exists, open and load its contents
         with open(chara_file, "r", encoding="utf-8") as file:
             author_id_mapping = json.load(file)
+    
+    # If the file does not exist, initialize an empty dictionary
     else:
-        # The file does not exist, initialize an empty dictionary
         author_id_mapping = {}
 
-
-    # Iterate over all JSON files in the folder and its subfolders
+    # Iterate over all channel JSON files in the folder and its subfolders
     for root, dirs, files in os.walk(folder_path):
+
         for filename in files:
             if filename.endswith(".json"):
+
                 file_path = os.path.join(root, filename)
 
-                # Load JSON data from file
+                # t.debug(f"\tAnalysing {file_path}...")
+
+                # Load channel JSON data from file
                 with open(file_path, "r", encoding="utf-8") as file:
-                    json_data = json.load(file)
+                    channel_data = json.load(file)
 
                     # Assign unique IDs to authors in the JSON data
-                    assign_unique_ids(json_data, author_id_mapping)
+                    assign_unique_ids(channel_data, author_id_mapping)
 
                 # Save the modified JSON data back to the file
-                with open(file_path, "w", encoding="utf-8") as file:
-                    json.dump(json_data, file, indent=4)
+                t.save_to_json(channel_data, file_path)
 
 
     #sort and save the dictionary
-    #sorted_dict = {key: author_id_mapping[key] for key in sorted(author_id_mapping)}
     sorted_dict = {key: author_id_mapping[key] for key in sorted(author_id_mapping, key=lambda k: author_id_mapping[k])}
 
-    with open(chara_file, "w", encoding="utf-8") as file:
-        json.dump(sorted_dict, file, indent=4)
+    t.save_to_json(sorted_dict, chara_file)
 
     # debug the sorted dictionary
-    for key, value in sorted_dict.items():
-        t.debug(f"{key}: {value}")
+    # for key, value in sorted_dict.items():
+    #    t.debug(f"\t{key}: {value}")
+
+    t.debug(f"\tSaved {len(sorted_dict)} unique IDs")
+
+    print(f"\n### ID assigning finished --- {time.time() - start_time:.2f} seconds --- ###\n")
 
 if __name__ == "__main__":
-    
-    start_time = time.time()
-    t.debug("ID assigning started...")
     id_assigner()
-    t.debug("ID assigning finished --- %s seconds ---" % (time.time() - start_time))
+    

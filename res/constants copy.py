@@ -15,7 +15,7 @@ CHARACTER_IDS = "res/character_ids.json"
 CHANNEL_LIST = "res/channel_list.json"
 
 # Discord parameters
-SERVER_NAME = "Elysium"
+SERVER_NAME = "Elysium" # Does not need to be accurate, a shortened name will do
 SERVER_ID = "857848490683269161"
 BOT_TOKEN = ""
 DM_CATEGORIES = "Text and Calls"

@@ -2,7 +2,7 @@ import sys
 import os
 import subprocess
 import json
-import res.constants as c
+
 
 ################ File summary #################
 
@@ -13,19 +13,6 @@ This module holds a handful of useful functions and helpers.
 """
 
 ################ Functions #################
-"""
-debug(message), console(message)
-
-    Functions to print messages to the console if DEBUG or CONSOLE is set to True.
-
-"""
-def debug(message):
-    if c.DEBUG:
-        print(message)
-
-def console(message):
-    if c.CONSOLE:
-        print(message)
 
 """
 save_to_json(data, file_path)
@@ -49,6 +36,25 @@ def set_path():
     if project_root not in sys.path:
         sys.path.append(project_root)
 
+"""
+debug(message), console(message)
+
+    Functions to print messages to the console if DEBUG or CONSOLE is set to True.
+
+"""
+def debug(message):
+    set_path()
+    from res import constants as c
+
+    if c.DEBUG:
+        print(message)
+
+def console(message):
+    set_path()
+    from res import constants as c
+    
+    if c.CONSOLE:
+        print(message)
 
 """
  run_command(command: str)
