@@ -1,8 +1,8 @@
 # bot.py
 import os
 import random
-from tricks import set_path
-set_path()
+import tricks as t
+t.set_path()
 from res import constants as c
 import discord
 
@@ -35,7 +35,7 @@ client = discord.Client(intents=intents)
 async def on_ready():
     guild = discord.utils.get(client.guilds, id=GUILD)
 
-    print(
+    t.debug(
         f'{client.user} is connected to the following guild:\n'
         f'{guild.name}(id: {guild.id})'
     )
@@ -48,7 +48,7 @@ async def on_ready():
 async def on_message(message):
 
     
-    print (f"i have a message! {message.content} in {message.guild.id}")
+    debug (f"i have a message! {message.content} in {message.guild.id}")
 
     if message.author == client.user:
         return

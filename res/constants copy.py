@@ -2,6 +2,8 @@
 SEARCH_FOLDER = "Elysium" # Elysium, Elysium/Scenes, Elysium/DMs
 CHARACTER = "Haruki Miyoshi"
 STATUS = "all" # closed, open, timeout, all
+DEBUG = True # True if you want to see lots of information in the console
+CONSOLE = True # True if you want to see the output of DCE console commands
 
 # Result file parameters
 OUTPUT_FILE_STARTS = "out/scene_starts.json"

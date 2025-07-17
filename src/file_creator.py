@@ -2,8 +2,8 @@ import datetime
 import json
 import os
 import subprocess
-from tricks import set_path
-set_path()
+import tricks as t
+t.set_path()
 from res import constants as c
 from src.export_channels import set_day_before
 
@@ -68,21 +68,21 @@ def file_creator():
         date = set_day_before(scene['timestamp'])
         channel = scene['channelId']
 
-        print(f"thread in {channel} started at {date}")
+        t.debug(f"thread in {channel} started at {date}")
         
         # find if it has an end message
         id = scene['sceneId']
         end = next((e for e in ends['scenes'] if e["sceneId"] == id), None)
 
         if end == None:
-            print(f"{id} has no end\n")
+            t.debug(f"{id} has no end\n")
             has_end = ""
 
         else:
             # find end date
             end_date = set_hour_after(end['timestamp'])
 
-            print(f"{id} has end, ended at {end_date}\n")
+            t.debug(f"{id} has end, ended at {end_date}\n")
             has_end = f"--before {end_date}"
 
         # download channel from date to end_date
@@ -90,7 +90,7 @@ def file_creator():
         
         try:
             output = subprocess.check_output(cli_command, shell=True, text=True)
-            print(output)
+            t.debug(output)
 
         except subprocess.CalledProcessError as e:
             pass

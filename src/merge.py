@@ -2,8 +2,8 @@ import json
 import os
 import shutil
 import time
-from tricks import set_path
-set_path()
+import tricks as t
+t.set_path()
 
 ################# File summary #################
 
@@ -22,7 +22,7 @@ Main function: merge()
     If not, it will create the necessary subfolders in "Old" to maintain the same directory tree
     and copy the file from "Update" to "Old".
 
-    Finally, it will print a message indicating that all channels have been merged.
+    Finally, it will debug a message indicating that all channels have been merged.
 
 """
 
@@ -174,15 +174,15 @@ def merge():
 
                 # Copy the file from "Update" to "Old"
                 shutil.copy2(update_file_path, old_file_path)
-                print(f"Copied: {update_file_path} to {old_file_path}")
+                t.debug(f"Copied: {update_file_path} to {old_file_path}")
 
     
-    print("All channels merged")
+    t.debug("All channels merged")
 
 
 if __name__ == "__main__":
     
     start_time = time.time()
-    print("Merging started...")
+    t.debug("Merging started...")
     merge()
-    print("Merging finished --- %s seconds ---" % (time.time() - start_time))
+    t.debug("Merging finished --- %s seconds ---" % (time.time() - start_time))

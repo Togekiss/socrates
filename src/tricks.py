@@ -2,6 +2,7 @@ import sys
 import os
 import subprocess
 import json
+import res.constants as c
 
 ################ File summary #################
 
@@ -12,6 +13,20 @@ This module holds a handful of useful functions and helpers.
 """
 
 ################ Functions #################
+"""
+debug(message), console(message)
+
+    Functions to print messages to the console if DEBUG or CONSOLE is set to True.
+
+"""
+def debug(message):
+    if c.DEBUG:
+        print(message)
+
+def console(message):
+    if c.CONSOLE:
+        print(message)
+
 """
 save_to_json(data, file_path)
 
@@ -52,8 +67,8 @@ def run_command(command: str):
     ANSI_BLUE = '\033[94m'
     ANSI_RESET = '\033[0m'
 
-    print(f"# RUNNING CONSOLE COMMAND #")
-    print(f"{ANSI_GRAY}> {ANSI_BLUE}{command}{ANSI_GRAY} <\n")
+    console(f"# RUNNING CONSOLE COMMAND #")
+    console(f"{ANSI_GRAY}> {ANSI_BLUE}{command}{ANSI_GRAY} <\n")
 
     process = subprocess.Popen(
         command,
@@ -68,7 +83,7 @@ def run_command(command: str):
 
     try:
         for line in process.stdout:
-            print(f"\t> {line}", end='')  # Stream output to console
+            console(f"\t> {line}", end='')  # Stream output to console
             full_output.append(line)  # Collect output for return
     except KeyboardInterrupt:
         print("\nCommand interrupted by user.")
@@ -76,5 +91,5 @@ def run_command(command: str):
 
     process.wait()
 
-    print(f"\n{ANSI_RESET}# END OF CONSOLE COMMAND #\n")
+    console(f"\n{ANSI_RESET}# END OF CONSOLE COMMAND #\n")
     return process.returncode, ''.join(full_output)

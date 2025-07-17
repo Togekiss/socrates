@@ -1,8 +1,8 @@
 import json
 import os
 import re
-from tricks import set_path
-set_path()
+import tricks as t
+t.set_path()
 
 ################# File summary #################
 
@@ -47,4 +47,4 @@ output_path = os.path.join(script_dir, output_file)
 with open(output_path, "w", encoding="utf-8") as file:
     json.dump(output_data, file, indent=4, ensure_ascii=False)
 
-print("Output file created:", output_path)
+t.debug("Output file created:", output_path)

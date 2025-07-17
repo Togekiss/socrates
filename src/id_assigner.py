@@ -1,8 +1,8 @@
 import os
 import json
 import time
-from tricks import set_path
-set_path()
+import tricks as t
+t.set_path()
 
 ################ File summary #################
 
@@ -103,13 +103,13 @@ def id_assigner():
     with open(chara_file, "w", encoding="utf-8") as file:
         json.dump(sorted_dict, file, indent=4)
 
-    # Print the sorted dictionary
+    # debug the sorted dictionary
     for key, value in sorted_dict.items():
-        print(f"{key}: {value}")
+        t.debug(f"{key}: {value}")
 
 if __name__ == "__main__":
     
     start_time = time.time()
-    print("ID assigning started...")
+    t.debug("ID assigning started...")
     id_assigner()
-    print("ID assigning finished --- %s seconds ---" % (time.time() - start_time))
+    t.debug("ID assigning finished --- %s seconds ---" % (time.time() - start_time))

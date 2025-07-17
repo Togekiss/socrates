@@ -1,6 +1,6 @@
 import time, datetime
-from tricks import set_path, run_command, save_to_json
-set_path()
+import tricks as t
+t.set_path()
 from res import constants as c
 
 ############### File summary #################
@@ -40,7 +40,7 @@ parse_output(output)
 
 def parse_output(output):
 
-    print("\tParsing the list of channels...")
+    t.debug("\tParsing the list of channels...")
 
     lines = output.strip().split("\n")
     exported_at = datetime.datetime.now().isoformat(sep='T', timespec='microseconds')
@@ -59,7 +59,7 @@ def parse_output(output):
     parent_channel = None
     for line in lines:
 
-        #print("\t\t Analyzing: ", line)
+        #t.debug("\t\t Analyzing: ", line)
 
         parts = line.split(" | ")
         
@@ -117,7 +117,7 @@ def parse_output(output):
             }
             backup_data["categories"][category_list.index(entry["category"])]["channels"].append(channel_data)
 
-    print(f"\tFound {len(lines)} channels in {len(backup_data['categories'])} categories\n")
+    t.debug(f"\tFound {len(lines)} channels in {len(backup_data['categories'])} categories\n")
 
     return backup_data
 
@@ -145,22 +145,22 @@ def get_channel_list():
 
     # Call the CLI command and capture its output
     cli_command = f"dotnet DCE/DiscordChatExporter.Cli.dll channels -g {c.SERVER_ID} -t {c.BOT_TOKEN} --include-threads all"
-    code, output = run_command(cli_command)
+    code, output = t.run_command(cli_command)
 
-    print("\tGot a list of channels from DCE\n")
+    t.debug("\tGot a list of channels from DCE\n")
 
     # Process the output and create the desired JSON format
     channel_list = parse_output(output)
 
-    print("\tCleaning the list of channels...")
+    t.debug("\tCleaning the list of channels...")
 
     channel_list["categories"] = remove_categories(channel_list["categories"], c.CATEGORIES_TO_IGNORE)
 
-    print(f"\tRemoved {len(c.CATEGORIES_TO_IGNORE)} categories")
-    print(f"\tKept {len(channel_list['categories'])} categories\n")
+    t.debug(f"\tRemoved {len(c.CATEGORIES_TO_IGNORE)} categories")
+    t.debug(f"\tKept {len(channel_list['categories'])} categories\n")
 
-    save_to_json(channel_list, c.CHANNEL_LIST)
-    print(f"\tSaved the list of channels to {c.CHANNEL_LIST}\n")
+    t.save_to_json(channel_list, c.CHANNEL_LIST)
+    t.debug(f"\tSaved the list of channels to {c.CHANNEL_LIST}\n")
 
     print(f"\n### Channel list finished --- {time.time() - start_time} seconds --- ###\n")
 

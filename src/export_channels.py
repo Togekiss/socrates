@@ -1,9 +1,8 @@
 import datetime
 import json
-import subprocess
 import time
-from tricks import set_path, run_command
-set_path()
+import tricks as t
+t.set_path()
 from res import constants as c
 from get_channel_list import get_channel_list 
 from merge import merge
@@ -116,7 +115,7 @@ def export_category(item, after, type="channels"):
             channel_ids = channel_ids + " " + channel["id"]
 
         cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export --parallel {group_size} -c {channel_ids} -t {c.BOT_TOKEN} -f Json -o "{path}" --locale "en-GB" {after} --fuck-russia'
-        run_command(cli_command)
+        t.run_command(cli_command)
 
 """
 export_from_list(after)
@@ -137,6 +136,8 @@ def export_from_list(after):
     # for each category, get channel and thread list
     for item in json_data["categories"]:
 
+        t.debug(f"\n\tExporting channels from '{item['category']}'...\n")
+
         export_category(item, after, "channels")
 
         if len(item["threads"]) > 0:
@@ -146,20 +147,20 @@ def export_from_list(after):
 
 def export_channels():
 
-    print(f"\n### Exporting a backup of the server {c.SERVER_NAME}...  ###\n")
+    print(f"\n# Exporting a backup of the server {c.SERVER_NAME}...  #\n")
     
     # check if there's already a backup
     date = get_last_exported()
     
     # if there already was a backup, only download from a day before it
     if date is not None:
-        print(f'\tThe last backup was downloaded at {date}')
+        t.debug(f'\tThe last backup was downloaded at {date}')
         after = set_day_before(date)
-        print(f'\tWill download updates after {after}\n')
+        t.debug(f'\tWill download updates after {after}\n')
     
     # if there was none, download from scratch
     else:
-        print('\tNo previous backup was found. Downloading a full backup...\n')
+        t.debug('\tNo previous backup was found. Downloading a full backup...\n')
         after = None
 
     # refresh the list of channels to download to find new channels
@@ -174,14 +175,14 @@ def export_channels():
 
     # merge the updates to the main files
     if date is not None:
-        print("\n\tMerging the update to the main backup...\n") 
+        t.debug("\n\tMerging the update to the main backup...\n") 
         merge()
 
     # assign a proper ID to each character
-    print("\n\tGenerating IDs for character bots...\n") 
+    t.debug("\n\tGenerating IDs for character bots...\n") 
     id_assigner()
     
-    print(f"\n## Export finished --- {time.time() - start_time} seconds --- ##\n")
+    print(f"\n# Export finished --- {time.time() - start_time} seconds --- #\n")
 
 
 if __name__ == "__main__":

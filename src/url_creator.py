@@ -1,7 +1,7 @@
 import datetime
 import json
-from tricks import set_path
-set_path()
+import tricks as t
+t.set_path()
 from res import constants as c
 
 ################ File summary #################
@@ -38,7 +38,7 @@ def url_creator():
                 
                 output_file.write(f"{obj['category']} - {obj['channel']} - {obj_date.strftime('%B %d, %Y')} - {obj['status']}\n{obj['link']}\n\n")
 
-    print("scene ends output file created: out/output.txt")
+    t.debug("scene ends output file created: out/output.txt")
 
 if __name__ == "__main__":
     url_creator()
