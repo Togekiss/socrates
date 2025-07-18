@@ -7,6 +7,7 @@ from res import constants as c
 from get_channel_list import get_channel_list 
 from merge import merge
 from id_assigner import id_assigner
+from sort_exported_files import sort_exported_files
 
 
 ################# File summary #################
@@ -173,8 +174,11 @@ def export_channels():
      
     export_from_list(after)
 
+    # add position numbers to the exported filenames
+    sort_exported_files(c.SERVER_NAME if after is None else "Update")
+
     # merge the updates to the main files
-    if date is not None:
+    if after is not None:
         t.debug("\n\tMerging the update to the main backup...\n") 
         merge()
 
