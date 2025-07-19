@@ -4,6 +4,7 @@ import shutil
 import time
 import tricks as t
 t.set_path()
+from res import constants as c
 
 ################# File summary #################
 
@@ -132,9 +133,8 @@ merge_channel(old, update)
         None, but saves the merged data to the `old` file.
 """
 def merge_channel(old, update):
+    
     # Load data from old file
-
-
     with open(old, "r", encoding="utf-8") as old_file:
         old_data = json.load(old_file)
 
@@ -153,9 +153,14 @@ def merge_channel(old, update):
 ################# Main function ################
 
 def merge():
+    
+    start_time = time.time()
+
     # Folders
     update_folder = 'Update'
-    old_folder = 'Elysium'
+    old_folder = c.SERVER_NAME
+
+    t.log("base", f"\n### Merging files from {update_folder} into {old_folder}...  ###\n")
 
     for foldername, subfolders, filenames in os.walk(update_folder):
         for filename in filenames:
@@ -166,6 +171,7 @@ def merge():
             
             # If it does, merge the two files
             if os.path.exists(old_file_path):
+                t.log("debug", f"\tMerging {update_file_path} into {old_file_path}")
                 merge_channel(old_file_path, update_file_path)
 
             else:
@@ -174,15 +180,11 @@ def merge():
 
                 # Copy the file from "Update" to "Old"
                 shutil.copy2(update_file_path, old_file_path)
-                t.debug(f"Copied: {update_file_path} to {old_file_path}")
+                t.log("info", f"\tFound new file: Moving {update_file_path} to {old_file_path}")
 
     
-    t.debug("All channels merged")
-
+    t.log("base", f"### Merging finished --- {time.time() - start_time} seconds --- ###\n")
 
 if __name__ == "__main__":
-    
-    start_time = time.time()
-    t.debug("Merging started...")
     merge()
-    t.debug("Merging finished --- %s seconds ---" % (time.time() - start_time))
+    

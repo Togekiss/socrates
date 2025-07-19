@@ -100,13 +100,12 @@ def export_category(item, after, type="channels"):
 
     category = item["category"].replace(":", "_")
     folder = c.SERVER_NAME if after is None else "Update"
-    path = f"{folder}/{item["position"]}# {category}/%C.json" if type == "channels" else f"{folder}/{item["position"]}# {category}/Threads/%C.json"
     after = "" if after is None else "--after " + after
 
-    # Call the CLI command and capture its output
+    path = f"{folder}/{item["position"]}# {category}/%C.json" if type == "channels" else f"{folder}/{item["position"]}# {category}/Threads/%C.json"
+    group_size = 3 if category == "Text and Calls" else 5
 
     channels = item[type]
-    group_size = 3 if category == "Text and Calls" else 5
     for i in range(0, len(channels), group_size):
 
         group = channels[i:i + group_size]
@@ -116,7 +115,8 @@ def export_category(item, after, type="channels"):
             channel_ids = channel_ids + " " + channel["id"]
 
         cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export --parallel {group_size} -c {channel_ids} -t {c.BOT_TOKEN} -f Json -o "{path}" --locale "en-GB" {after} --fuck-russia'
-        t.run_command(cli_command)
+        t.run_command(cli_command, group_size)
+        t.log("info", f"\t\tExported {i+group_size} channels out of {len(channels)}")
 
 """
 export_from_list(after)
@@ -134,34 +134,44 @@ def export_from_list(after):
     with open(c.CHANNEL_LIST, "r", encoding="utf-8") as file:
         json_data = json.load(file)
     
+    channel_count = 0
+
     # for each category, get channel and thread list
     for item in json_data["categories"]:
 
-        t.debug(f"\n\tExporting channels from '{item['category']}'...\n")
+        channels_in_category = len(item["channels"])
+        threads_in_category = len(item["threads"])
+        total_channels = channels_in_category + threads_in_category
+
+        t.log("info", f"\n\tExporting {total_channels} channels from '{item['category']}'...")
 
         export_category(item, after, "channels")
+        channel_count += channels_in_category
 
         if len(item["threads"]) > 0:
             export_category(item, after, "threads")
+            channel_count += threads_in_category
+
+        t.log("info", f"\n\tExported {channel_count} out of {item['numberOfChannels']} channels\n")
 
 ################# Main function ################
 
 def export_channels():
 
-    print(f"\n# Exporting a backup of the server {c.SERVER_NAME}...  #\n")
+    t.log("base", f"\n# Exporting a backup of the server {c.SERVER_NAME}...  #\n")
     
     # check if there's already a backup
     date = get_last_exported()
     
     # if there already was a backup, only download from a day before it
     if date is not None:
-        t.debug(f'\tThe last backup was downloaded at {date}')
+        t.log("info", f'\tThe last backup was downloaded at {date}')
         after = set_day_before(date)
-        t.debug(f'\tWill download updates after {after}\n')
+        t.log("info", f'\tWill download updates after {after}\n')
     
     # if there was none, download from scratch
     else:
-        t.debug('\tNo previous backup was found. Downloading a full backup...\n')
+        t.log("info", '\tNo previous backup was found. Will download the full history\n')
         after = None
 
     # refresh the list of channels to download to find new channels
@@ -170,7 +180,7 @@ def export_channels():
     start_time = time.time()
 
     # run through channel list to download it all   
-    print("\tExporting channels... This may take several minutes\n") 
+    t.log("base", "\tExporting channels... This may take several minutes\n") 
      
     export_from_list(after)
 
@@ -179,14 +189,14 @@ def export_channels():
 
     # merge the updates to the main files
     if after is not None:
-        t.debug("\n\tMerging the update to the main backup...\n") 
+        t.log("info", "\n\tMerging the update to the main backup...\n") 
         merge()
 
     # assign a proper ID to each character
-    t.debug("\n\tGenerating IDs for character bots...\n") 
+    t.log("info", "\n\tGenerating IDs for character bots...\n") 
     id_assigner()
     
-    print(f"\n# Export finished --- {time.time() - start_time:.2f} seconds --- #\n")
+    t.log("base", f"\n# Export finished --- {time.time() - start_time:.2f} seconds --- #\n")
 
 
 if __name__ == "__main__":

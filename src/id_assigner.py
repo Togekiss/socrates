@@ -53,6 +53,8 @@ def assign_unique_ids(data, id_mapping):
             if author_name not in id_mapping:
                 new_id = len(id_mapping) + 1
                 id_mapping[author_name] = new_id
+
+                t.log("info", f"\t  Found a new Tupper: {author_name} (ID: {new_id})")
          
             # Update the author's ID in the message
             message["author"]["id"] = f"{id_mapping[author_name]}"
@@ -62,7 +64,7 @@ def assign_unique_ids(data, id_mapping):
 
 def id_assigner():
 
-    print(f"\n###  Assigning unique IDs to Tupperbox bots in {c.SERVER_NAME}...  ###\n")
+    t.log("base", f"\n###  Assigning unique IDs to Tupperbox bots in {c.SERVER_NAME}...  ###\n")
 
     start_time = time.time()
 
@@ -81,15 +83,15 @@ def id_assigner():
     else:
         author_id_mapping = {}
 
+    t.log("debug", f"\tIterating over backup files in {folder_path}...\n")  
     # Iterate over all channel JSON files in the folder and its subfolders
     for root, dirs, files in os.walk(folder_path):
-
         for filename in files:
             if filename.endswith(".json"):
 
                 file_path = os.path.join(root, filename)
 
-                # t.debug(f"\tAnalysing {file_path}...")
+                t.log("debug", f"\t    Analysing {file_path}...")
 
                 # Load channel JSON data from file
                 with open(file_path, "r", encoding="utf-8") as file:
@@ -108,12 +110,13 @@ def id_assigner():
     t.save_to_json(sorted_dict, chara_file)
 
     # debug the sorted dictionary
-    # for key, value in sorted_dict.items():
-    #    t.debug(f"\t{key}: {value}")
+    t.log("debug", "\tSorted dictionary:")
+    for key, value in sorted_dict.items():
+        t.log("debug", f"\t    {key}: {value}")
 
-    t.debug(f"\tSaved {len(sorted_dict)} unique IDs")
+    t.log("info", f"\tSaved {len(sorted_dict)} unique IDs\n")
 
-    print(f"\n### ID assigning finished --- {time.time() - start_time:.2f} seconds --- ###\n")
+    t.log("base", f"### ID assigning finished --- {time.time() - start_time:.2f} seconds --- ###\n")
 
 if __name__ == "__main__":
     id_assigner()

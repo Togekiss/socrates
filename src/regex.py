@@ -47,4 +47,4 @@ output_path = os.path.join(script_dir, output_file)
 with open(output_path, "w", encoding="utf-8") as file:
     json.dump(output_data, file, indent=4, ensure_ascii=False)
 
-t.debug("Output file created:", output_path)
+print("Output file created:", output_path)

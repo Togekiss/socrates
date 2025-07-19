@@ -40,7 +40,7 @@ parse_output(output)
 
 def parse_output(output):
 
-    t.debug("\tParsing the list of channels...")
+    t.log("info", "\tParsing the list of channels...")
 
     lines = output.strip().split("\n")
     exported_at = datetime.datetime.now().isoformat(sep='T', timespec='microseconds')
@@ -50,6 +50,7 @@ def parse_output(output):
         "id": c.SERVER_ID,
         "name": c.SERVER_NAME,
         "exportedAt": exported_at,
+        "numberOfChannels": 0,
         "categories": []
     }
 
@@ -59,12 +60,15 @@ def parse_output(output):
     parent_channel = None
     for line in lines:
 
-        #t.debug("\t\t Analyzing: ", line)
+        t.log("debug", "\t\t Analyzing line: ", line)
 
         parts = line.split(" | ")
         
         # If it's a channel
         if len(parts) == 2:
+
+            t.log("debug", "\t\t\t It's a channel")
+
             entry = {
                 "id": parts[0].strip(),
                 "category": parts[1].split(" / ")[0].strip(),
@@ -77,6 +81,9 @@ def parse_output(output):
         
         # If it's a thread
         if len(parts) == 3:
+
+            t.log("debug", "\t\t\t It's a thread")
+
             entry = {
                 "id": parts[0].replace('*', '').strip(),
                 "category": parent_channel["category"],
@@ -87,6 +94,8 @@ def parse_output(output):
 
         # If we encountered a new category
         if entry["category"] not in category_list:
+
+            t.log("debug", f"\t\t\t It's a new category: {entry['category']}")
 
             # Save it in the list
             category_list.append(entry["category"])
@@ -123,8 +132,9 @@ def parse_output(output):
         
         else:
             backup_data["categories"][category_list.index(entry["category"])]["channels"].append(channel_data)
+        backup_data["numberOfChannels"] += 1
 
-    t.debug(f"\tFound {len(lines)} channels in {len(backup_data['categories'])} categories\n")
+    t.log("info", f"\tFound {backup_data['numberOfChannels']} channels in {len(backup_data['categories'])} categories\n")
 
     return backup_data
 
@@ -145,8 +155,8 @@ def keep_categories(json_data, categories_to_keep):
 
 def get_channel_list():
 
-    print(f"\n###  Getting a list of all channels from the server {c.SERVER_NAME}...  ###\n")
-    print("\tThis may take a few minutes...\n")
+    t.log("base", f"\n###  Getting a list of all channels from the server {c.SERVER_NAME}...  ###\n")
+    t.log("base", "This may take a few minutes...\n")
 
     start_time = time.time()
 
@@ -154,22 +164,22 @@ def get_channel_list():
     cli_command = f"dotnet DCE/DiscordChatExporter.Cli.dll channels -g {c.SERVER_ID} -t {c.BOT_TOKEN} --include-threads all"
     code, output = t.run_command(cli_command)
 
-    t.debug("\tGot a list of channels from DCE\n")
+    t.log("info", "\tGot a list of channels from DCE\n")
 
     # Process the output and create the desired JSON format
     channel_list = parse_output(output)
 
-    t.debug("\tCleaning the list of channels...")
+    t.log("info", "\tCleaning the list of channels...")
 
     channel_list["categories"] = remove_categories(channel_list["categories"], c.CATEGORIES_TO_IGNORE)
 
-    t.debug(f"\tRemoved {len(c.CATEGORIES_TO_IGNORE)} categories")
-    t.debug(f"\tKept {len(channel_list['categories'])} categories\n")
+    t.log("info", f"\t  Removed {len(c.CATEGORIES_TO_IGNORE)} categories")
+    t.log("info", f"\t  Kept {len(channel_list['categories'])} categories\n")
 
     t.save_to_json(channel_list, c.CHANNEL_LIST)
-    t.debug(f"\tSaved the list of channels to {c.CHANNEL_LIST}\n")
+    t.log("info", f"\tSaved the list of channels to {c.CHANNEL_LIST}\n")
 
-    print(f"\n### Channel list finished --- {time.time() - start_time:.2f} seconds --- ###\n")
+    t.log("base", f"\n### Channel list finished --- {time.time() - start_time:.2f} seconds --- ###\n")
 
 if __name__ == "__main__":
     get_channel_list()

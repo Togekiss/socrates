@@ -68,32 +68,26 @@ def file_creator():
         date = set_day_before(scene['timestamp'])
         channel = scene['channelId']
 
-        t.debug(f"thread in {channel} started at {date}")
+        t.log("debug", f"thread in {channel} started at {date}")
         
         # find if it has an end message
         id = scene['sceneId']
         end = next((e for e in ends['scenes'] if e["sceneId"] == id), None)
 
         if end == None:
-            t.debug(f"{id} has no end\n")
+            t.log("debug", f"{id} has no end\n")
             has_end = ""
 
         else:
             # find end date
             end_date = set_hour_after(end['timestamp'])
 
-            t.debug(f"{id} has end, ended at {end_date}\n")
+            t.log("debug", f"{id} has end, ended at {end_date}\n")
             has_end = f"--before {end_date}"
 
         # download channel from date to end_date
-        cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export -c {channel} -t {c.BOT_TOKEN} -f HtmlDark -o "{folder}/%a - %C.html" --dateformat "dd/MM/yyyy HH:mm" --after {date} {has_end} --fuck-russia'
-        
-        try:
-            output = subprocess.check_output(cli_command, shell=True, text=True)
-            t.debug(output)
-
-        except subprocess.CalledProcessError as e:
-            pass
+        cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export -c {channel} -t {c.BOT_TOKEN} -f HtmlDark -o "{folder}/%a - %C.html" --locale "en-GB" --after {date} {has_end} --fuck-russia'
+        t.run_command(cli_command, 2)
         
 if __name__ == "__main__":
     file_creator()

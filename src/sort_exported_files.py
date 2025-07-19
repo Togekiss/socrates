@@ -70,7 +70,7 @@ def find_channel_file(folder, target_name):
 
 def sort_exported_files(base_folder):
 
-    print(f"\n###  Adding position numbers to channel files in {base_folder}...  ###\n")
+    t.log("base", f"\n###  Adding position numbers to channel files in {base_folder}...  ###\n")
 
     json_path = c.CHANNEL_LIST
 
@@ -101,10 +101,10 @@ def sort_exported_files(base_folder):
                 dst = os.path.join(category_folder, new_filename)
                 os.rename(src, dst)
 
-                t.debug(f"✅ Renamed channel: {old_filename} → {new_filename}")
+                t.log("debug", f"\tRenamed file: {old_filename} → {new_filename}")
 
             else:
-                t.debug(f"❌ Channel file not found: {channel_name}")
+                t.log("debug", f"{t.RED}\tChannel file not found: {channel_name}")
 
         # Rename thread files
         threads_folder = os.path.join(category_folder, "Threads")
@@ -127,12 +127,12 @@ def sort_exported_files(base_folder):
                 dst = os.path.join(threads_folder, new_filename)
                 os.rename(src, dst)
 
-                t.debug(f"✅ Renamed thread: {old_filename} → {new_filename}")
+                t.log("debug", f"\tRenamed file: {old_filename} → {new_filename}")
 
             else:
-                t.debug(f"❌ Thread file not found: {thread_title}")
+                t.log("debug", f"{t.RED}\tThread file not found: {thread_title}")
     
-    print(f"### Finished renaming files ###\n")
+    t.log("base", f"### Finished renaming files ###\n")
 
 if __name__ == "__main__":
     sort_exported_files(c.SERVER_NAME)

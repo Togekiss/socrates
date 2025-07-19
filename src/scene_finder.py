@@ -101,35 +101,35 @@ def find_real_start(messages, scene_start):
     all_authors = scene_start["otherAuthors"]
     all_authors.append(int(scene_start["authorID"]))
 
-    t.debug("\ninside real start at index ", index, " with authors ", all_authors)
+    t.log("debug", "\ninside real start at index ", index, " with authors ", all_authors)
 
     while not found:
         # if the current message is a SOF, the found start is the real start
         if messages[index] == messages[0]:
             found = True
-            t.debug("found SOF")
+            t.log("debug", "found SOF")
             return index
 
         # if the previous message has an END tag, the found start is the real start
         message_content = unicodedata.normalize("NFKD", messages[index-1]["content"])
         if re.search(pattern, message_content, flags=re.I) or re.search(pattern2, message_content, flags=re.I):
             found = True
-            t.debug("found END at index ", index)
+            t.log("debug", "found END at index ", index)
             return index
             
         # if the previous message has an author not found in all_authors, the found start is the real start
         if int(messages[index-1]["author"]["id"]) not in all_authors:
             found = True
-            t.debug("found different author ", int(messages[index-1]["author"]["id"]) ," at index ", index)
+            t.log("debug", "found different author ", int(messages[index-1]["author"]["id"]) ," at index ", index)
             return index
         
         # if the previous message has an author found in all_authors, index-1 and repeat
         if int(messages[index-1]["author"]["id"]) in all_authors:
-            t.debug("found none, going back")
+            t.log("debug", "found none, going back")
             index = index-1
     
     # this should not trigger, but just in case
-    t.debug("no trigger")
+    t.log("debug", "no trigger")
     return index
 
 """
@@ -296,7 +296,7 @@ def find_scenes():
     # Find target character ID
     author = author_id_mapping[c.CHARACTER]
 
-    t.debug(f"Finding scenes for {c.CHARACTER} with ID {author} in {folder_path}...\n")
+    t.log("info", f"Finding scenes for {c.CHARACTER} with ID {author} in {folder_path}...\n")
 
     # Create an empty list to store scene starts and ends
     all_scene_starts = []
@@ -308,7 +308,7 @@ def find_scenes():
         for filename in files:
             if filename.endswith(".json"):
                 file_path = os.path.join(root, filename)
-                t.debug(f"\tAnalysing {file_path}...")
+                t.log("debug", f"\tAnalysing {file_path}...")
 
                 # Load JSON data from file
                 with open(file_path, "r", encoding="utf-8") as file:
@@ -325,20 +325,18 @@ def find_scenes():
     scene_starts_output = {
         "scenes": all_scene_starts
     }
-    scene_starts_output_file = "out/scene_starts.json"
-    with open(scene_starts_output_file, "w", encoding="utf-8") as file:
-        json.dump(scene_starts_output, file, indent=4)
+
+    t.save_to_json(scene_starts_output, c.OUTPUT_FILE_STARTS)
 
     # Create output JSON file for scene ends
     scene_ends_output = {
         "scenes": all_scene_ends
     }
-    scene_ends_output_file = "out/scene_ends.json"
-    with open(scene_ends_output_file, "w", encoding="utf-8") as file:
-        json.dump(scene_ends_output, file, indent=4)
+    
+    t.save_to_json(scene_ends_output, c.OUTPUT_FILE_ENDS)
 
-    t.debug("scene starts output file created:", scene_starts_output_file)
-    t.debug("scene ends output file created:", scene_ends_output_file)
+    t.log("info", "scene starts output file created:", c.OUTPUT_FILE_STARTS)
+    t.log("info", "scene ends output file created:", c.OUTPUT_FILE_ENDS)
 
     # Uses the created JSONs to create a list of links to each scene start
     url_creator()
@@ -346,6 +344,6 @@ def find_scenes():
 if __name__ == "__main__":
 
     start_time = time.time()
-    t.debug("\nScene finding started...\n")
+    t.log("base", "\nScene finding started...\n")
     find_scenes()
-    t.debug("\nScene finding finished --- %s seconds ---\n" % (time.time() - start_time))
+    t.log("base", "\nScene finding finished --- %s seconds ---\n" % (time.time() - start_time))
