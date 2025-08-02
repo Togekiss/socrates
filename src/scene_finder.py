@@ -167,8 +167,6 @@ find_scenes_in_channel(channel, target_author, scene_id)
 def find_scenes_in_channel(channel, target_author, scene_id):
 
     # create arrays, in case there is more than one scene in a channel
-    scene_starts = []
-    scene_ends = []
     scenes = []
 
     # set flags and counters
@@ -195,14 +193,19 @@ def find_scenes_in_channel(channel, target_author, scene_id):
                 active_scene = True
                 scene_id = scene_id + 1
 
+                t.log("debug", f"\tFound a scene in the thread [{channel['channel']['category']} - {channel['channel']['name']}]")
+
                 # get the last message and check if the thread is open or closed
                 last_message = channel["messages"][-1]
                 normalized_content = unicodedata.normalize("NFKD", last_message["content"])
                 
                 if re.search(pattern, normalized_content, flags=re.I) or re.search(pattern2, normalized_content, flags=re.I):
                     status = 'closed'
+                    t.log("debug", f"\t  This scene is {t.CYAN}closed")
                 else:
                     status = 'open'
+                    t.log("debug", f"\t  This scene is still {t.CYAN}open")
+
 
         # save the start and the end of the thread
         if active_scene:
@@ -210,7 +213,6 @@ def find_scenes_in_channel(channel, target_author, scene_id):
             end_msg = message_info(channel["messages"][-1], channel, len(channel["messages"]))
 
             scenes.append(scene_info(start_msg, end_msg, scene_id, channel, status, other_authors))
-            
             
 
     # if it's a channel, we will have to check the entirety of it
@@ -228,6 +230,8 @@ def find_scenes_in_channel(channel, target_author, scene_id):
                 author_missing_counter = 0
                 other_author_search = 0
                 scene_id = scene_id + 1
+
+                t.log("debug", f"\tFound a scene in the channel [{channel['channel']['category']} - {channel['channel']['name']}]")
 
                 found_msg = message_info(message, channel, i)
                 found_scene = scene_info(found_msg, "", scene_id, channel, 'open', other_authors)
@@ -266,6 +270,8 @@ def find_scenes_in_channel(channel, target_author, scene_id):
                     found_scene["end"] = msg
                     scenes.append(found_scene)
 
+                    t.log("debug", f"\t  This scene is {t.CYAN}closed")
+
                 
                 # if it's been too many messages without the target author
                 if author_missing_counter > len(other_authors)*5 and author not in other_authors:
@@ -278,11 +284,16 @@ def find_scenes_in_channel(channel, target_author, scene_id):
                     found_scene["end"] = msg
                     scenes.append(found_scene)
 
+                    t.log("debug", f"\t  This scene has {t.YELLOW}timed out")
+
                 # if it reaches the end of a channel while the scene is active
                 if message == channel["messages"][-1]:
                     active_scene = False
                     found_scene["otherAuthors"] = other_authors
+                    found_scene["end"] = message_info(message, channel, i)
                     scenes.append(found_scene)
+
+                    t.log("debug", f"\t  This scene is still {t.CYAN}open")
 
                 """
                 This does not work very well
@@ -316,7 +327,7 @@ def find_scenes():
     # Find target character ID
     author = author_id_mapping[c.CHARACTER]
 
-    t.log("base", f"# Finding scenes for {c.CHARACTER} with ID {author} in {folder_path}... #\n")
+    t.log("base", f"\n## Finding scenes for {c.CHARACTER} with ID {author} in {folder_path}... ##\n")
 
     # Create an empty list to store scene starts and ends
     all_scenes = []
@@ -328,7 +339,7 @@ def find_scenes():
             if filename.endswith(".json"):
                 
                 file_path = os.path.join(root, filename)
-                t.log("debug", f"\tAnalysing {file_path}...")
+                t.log("log", f"\tAnalysing {file_path}...")
 
                 # Load JSON channel from file
                 with open(file_path, "r", encoding="utf-8") as file:
@@ -342,11 +353,12 @@ def find_scenes():
 
     t.save_to_json(all_scenes, c.OUTPUT_SCENES)
 
-    t.log("info", f"scene  output file created: {c.OUTPUT_SCENES}")
+    t.log("info", f"\n\tScene output file created: {c.OUTPUT_SCENES}")
 
     # Uses the created JSONs to create a list of links to each scene start
-    url_creator()
-    t.log("base", "\nScene finding finished --- %s seconds ---\n" % (time.time() - start_time))
+    # url_creator()
+
+    t.log("base", f"\n## Scene finding finished --- {time.time() - start_time:.2f} seconds --- ##\n")
 
 if __name__ == "__main__":
     find_scenes()

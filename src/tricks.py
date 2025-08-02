@@ -36,11 +36,16 @@ def set_path():
         sys.path.append(project_root)
 
 """
-save_to_json(data, file_path)
+save_to_json(data, file_path), load_from_json(file_path)
 
-    Function to write a JSON file.
+    Functions to read and write a JSON file.
     
 """
+def load_from_json(file_path):
+    with open(file_path, "r", encoding="utf-8") as file:
+        return json.load(file)
+
+
 def save_to_json(data, file_path):
     with open(file_path, "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4)
