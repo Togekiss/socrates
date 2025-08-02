@@ -13,9 +13,9 @@ from src.export_channels import set_day_before
 
 This module downloads all the found scenes from a given character as HTML files.
 
-Main function: file_creator()
+Main function: export_scenes()
 
-    This script reads the scene starts and ends from the JSON files created by the scene_finder script.
+    This script reads the scene starts and ends from the JSON files created by the find_scenes script.
     It creates a folder for the character and downloads each scene as an HTML file, using the DiscordChatExporter.
     If the scene doesn't have an end message, it will download the whole channel from the scene's start date.
     
@@ -49,7 +49,7 @@ def set_hour_after(timestamp_str):
 
 ################# Main function ################
 
-def file_creator():
+def export_scenes():
 
     # Open the JSON files
     with open('out/scene_starts.json', 'r', encoding="utf-8") as file:
@@ -90,4 +90,4 @@ def file_creator():
         t.run_command(cli_command, 2)
         
 if __name__ == "__main__":
-    file_creator()
+    export_scenes()

@@ -11,7 +11,7 @@ from res import constants as c
 
 This module assigns unique IDs to the Tupperbox bots in the backup of a Discord server.
 
-Main function: id_assigner()
+Main function: assign_ids()
 
     This function traverses all JSON files in the specified folder and its subdirectories to assign unique 
     identifiers to each bot found within the message data. If a character ID mapping file exists, it will be 
@@ -62,7 +62,7 @@ def assign_unique_ids(data, id_mapping):
 
 ################# Main function #################
 
-def id_assigner():
+def assign_ids():
 
     t.log("base", f"\n###  Assigning unique IDs to Tupperbox bots in {c.SERVER_NAME}...  ###\n")
 
@@ -119,5 +119,5 @@ def id_assigner():
     t.log("base", f"### ID assigning finished --- {time.time() - start_time:.2f} seconds --- ###\n")
 
 if __name__ == "__main__":
-    id_assigner()
+    assign_ids()
     

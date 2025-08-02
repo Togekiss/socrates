@@ -12,7 +12,7 @@ from res import constants as c
 
 This module merges the channel history files from the "Update" folder to the "Old" folder.
 
-Main function: merge()
+Main function: merge_exports()
 
     The "Update" folder should contain the new channel history files exported by DCE.
     The "Old" folder should contain the old channel history files to be updated.
@@ -152,7 +152,7 @@ def merge_channel(old, update):
 
 ################# Main function ################
 
-def merge():
+def merge_exports():
     
     start_time = time.time()
 
@@ -186,5 +186,5 @@ def merge():
     t.log("base", f"### Merging finished --- {time.time() - start_time} seconds --- ###\n")
 
 if __name__ == "__main__":
-    merge()
+    merge_exports()
     

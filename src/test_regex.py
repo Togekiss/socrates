@@ -10,7 +10,7 @@ t.set_path()
 
 This module is used to test and debug the regex pattern to detect the end of a scene.
 
-Main function: regex()
+Main function: test_regex()
 
     This script searches for messages in a folder of JSON files that match a regex pattern.
     It creates a new JSON file with the matched messages.

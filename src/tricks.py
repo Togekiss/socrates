@@ -62,7 +62,7 @@ def clean(message):
     return no_ansi.lstrip('\n').rstrip('\n')
 
 """
-log( level, message)
+log(level, message)
 
     Centralized function to handle information messages.
     
@@ -98,7 +98,7 @@ def log(level="base", message=""):
             file.write(f"[{timestamp}]{level}: {clean(message)}\n")
 
 """
- run_command(command: str, show_lines: int = 0)
+run_command(command: str, show_lines: int = 0)
 
     Run a shell command, stream its output in real time, and return the full output.
     

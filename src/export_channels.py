@@ -5,8 +5,8 @@ import tricks as t
 t.set_path()
 from res import constants as c
 from get_channel_list import get_channel_list 
-from merge import merge
-from id_assigner import id_assigner
+from merge_exports import merge_exports
+from assign_ids import assign_ids
 from sort_exported_files import sort_exported_files
 
 
@@ -190,11 +190,11 @@ def export_channels():
     # merge the updates to the main files
     if after is not None:
         t.log("info", "\n\tMerging the update to the main backup...\n") 
-        merge()
+        merge_exports()
 
     # assign a proper ID to each character
     t.log("info", "\n\tGenerating IDs for character bots...\n") 
-    id_assigner()
+    assign_ids()
     
     t.log("base", f"\n# Export finished --- {time.time() - start_time:.2f} seconds --- #\n")
 
