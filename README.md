@@ -80,12 +80,12 @@ After having gone through all channels, it will output a list of scenes, with th
 ## Things to implement
 
 ### Scene detection tuning
-- ~~Expand and adjust the selection of 'end of scene' tags - and account for variations or mistakes~~ Doesn't detect super edge cases, but that's a skill issue of the writer who put them wrong
-- ~~Detect the names of other character(s) in the scene~~ Their IDs are added to `out/scenes.json`. Their names are asy to find
+- ~~Expand and adjust the selection of 'end of scene' tags - and account for variations or mistakes~~ Doesn't detect super edge cases, but that's a skill issue of whoever didn't set them correctly
+- ~~Detect the names of other character(s) in the scene~~ Their IDs are added to `out/scenes.json`. Their names are easy to find
 - Detect the true start of the scene, not the first message of the requested character
   - Trace back until you find a previous end tag or SOF to find the proper start
   - Or until its from a character not in the scene, in case last wasn't closed properly
-  - ~~Will most likely need an index attribute in the JSON to iterate back and forth~~
+  - ~~Will most likely need an index attribute in the JSON to iterate back and forth~~ Done
   - Once the true start of the scene is found, check if scene starts with a date tag for more accurate in-universe timeline keeping
 - Work on a different set of rules to log open interactions, like chatrooms or events
 

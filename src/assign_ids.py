@@ -28,13 +28,13 @@ assign_unique_ids(data, id_mapping)
 
     Assigns unique IDs to the Tupperbox bots in the given data and updates the ID mapping accordingly.
 
-    This function iterates through the messages in the given data and assigns a unique identifier to each bot author.
-    If the author is not already assigned an ID, a new one is assigned and added to the ID mapping. The function then updates
+    This function iterates through the messages in the given data and assigns a unique identifier to each bot character.
+    If the character is not already assigned an ID, a new one is assigned and added to the ID mapping. The function then updates
     the author's ID in the message.
 
     Args:
         data (dict): The JSON data of the channel, containing a list of messages.
-        id_mapping (dict): A dictionary mapping author names to their respective unique IDs.
+        id_mapping (dict): A dictionary mapping character names to their respective unique IDs.
 
     Returns:
         None
@@ -49,7 +49,7 @@ def assign_unique_ids(data, id_mapping):
         if message["author"]["isBot"]:
             author_name = message["author"]["name"]
 
-            # If the author is not already assigned an ID, assign a new one
+            # If the character is not already assigned an ID, assign a new one
             if author_name not in id_mapping:
                 new_id = len(id_mapping) + 1
                 id_mapping[author_name] = new_id
