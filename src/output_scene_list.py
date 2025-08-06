@@ -31,7 +31,7 @@ def resolve_type(obj):
 def output_scene_list():
 
 
-    t.log("base", "\n### Compilating a list of scene links... ###\n")
+    t.log("base", "\n### Writing a list of scene links... ###\n")
 
     # Open the JSON file
     data: list = t.load_from_json(c.OUTPUT_SCENES)

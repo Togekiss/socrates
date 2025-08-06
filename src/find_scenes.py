@@ -90,9 +90,9 @@ def scene_info(start_message, end_message, scene_id, channel, status, characters
         "category": channel['channel']['category'],
         "channel": channel['channel']['name'],
         "type": "channel" if channel['channel']['type'] == "GuildTextChat" else "thread",
+        "channelId": channel['channel']['id'], 
         "status": status,
         "characters": characters,
-        "channelId": channel['channel']['id'],        
         "start": start_message,
         "end": end_message
     }
@@ -358,6 +358,12 @@ def find_scenes():
 
                     # Add the messages to the respective lists, can be more than one per channel
                     all_scenes.extend(scenes)
+
+    # Sort scenes by start timestamp
+    all_scenes = sorted(all_scenes, key=lambda x: x['start']['timestamp'])
+    # Reassign scene IDs
+    for i, scene in enumerate(all_scenes):
+        scene['sceneId'] = i
 
     t.save_to_json(all_scenes, c.OUTPUT_SCENES)
 
