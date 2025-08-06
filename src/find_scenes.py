@@ -101,7 +101,7 @@ def scene_info(start_message, end_message, scene_id, channel, status, characters
 
 
 """
-find_real_start(messages, scene_start):
+find_real_start(messages, found_scene):
 
     Function to find the real start of a scene, in the case the main character was not the character of the first message.
 
@@ -109,7 +109,7 @@ find_real_start(messages, scene_start):
 
     Args:
         channel (dict): The channel.
-        scene_start (dict): The found scene start message info.
+        found_scene (dict): The found scene info.
 
     Returns:
         int: The index of the real start of the scene.
@@ -158,6 +158,57 @@ def find_real_start(channel, found_scene):
     # this should not trigger, but just in case
     index = 0
     t.log("debug", f"\t\t{t.YELLOW}Could not find the real start of the scene. Searched until index {index}")
+    return index
+
+"""
+find_real_end(messages, found_scene):
+
+    Function to find the real end of a scene in case it timed out.
+
+    It starts analyzing the found end message, and iterates backwards to find the titular characters again.
+
+    Args:
+        channel (dict): The channel.
+        found_scene (dict): The found scene info.
+
+    Returns:
+        int: The index of the real end of the scene.
+ """
+def find_real_end(channel, found_scene):
+
+    messages = channel["messages"]
+    t.log("debug", "\t    Looking for the real end of the scene...")
+
+    # first, we assume the found end is the real end
+    index = found_scene["end"]["index"]
+    found = False
+
+    characters = found_scene["characters"]
+
+    t.log("debug", f"\t\tCurrent real end is at index {index} with characters {characters}")
+
+    while not found:
+
+        # if the message has an author found in 'characters', the found end is the real end
+        if int(messages[index]["author"]["id"]) in characters:
+            found = True
+            t.log("debug", f"\t\tFound participating characters in this message. The real end is at index {index}")
+            found_scene["end"] = message_info(messages[index], channel, index)
+            return index
+
+        # if the message's author ID is over 10000 (aka not a bot), the found end is the real end
+        if int(messages[index]["author"]["id"]) > 10000:
+            found = True
+            t.log("debug", f"\t\tFound a message sent by a user. The real end is at index {index}")
+            found_scene["end"] = message_info(messages[index], channel, index)
+            return index
+
+        t.log("debug", "\t\tDid not find any participating characters. Looking for the real end...")
+        index = index-1
+ 
+    # this should not trigger, but just in case
+    index = 0
+    t.log("debug", f"\t\t{t.YELLOW}Could not find the real end of the scene. Searched until index {index}")
     return index
 
 """
@@ -283,39 +334,37 @@ def find_scenes_in_channel(channel, main_character, scene_id):
                     active_scene = False
                     found_scene["status"] = 'closed'
                     found_scene["characters"] = characters
+                    t.log("info", f"\t  This scene is {t.GREEN}closed")
 
                     found_scene["end"] = message_info(message, channel, i)
                     find_real_start(channel, found_scene)
                     scenes.append(found_scene)
-
-                    t.log("info", f"\t  This scene is {t.GREEN}closed")
-
                 
                 # if it's been too many messages without the main character
-                if main_missing_counter > len(characters)*5 and character not in characters:
+                if main_missing_counter > len(characters)*5 and character not in characters and active_scene:
 
                     # tag the scene as timed out
                     active_scene = False
                     found_scene["status"] = 'timeout'
-
-                    found_scene["end"] = message_info(message, channel, i)
-                    find_real_start(channel, found_scene)
-                    scenes.append(found_scene)
-
+                    found_scene["characters"] = characters
                     t.log("info", f"\t  This scene has {t.YELLOW}timed out")
 
+                    found_scene["end"] = message_info(message, channel, i)
+                    find_real_start(channel, found_scene)
+                    find_real_end(channel, found_scene)
+                    scenes.append(found_scene)
+
                 # if it reaches the end of a channel while the scene is active
-                if message == channel["messages"][-1]:
+                if message == channel["messages"][-1] and active_scene:
                     active_scene = False
                     found_scene["characters"] = characters
+                    t.log("info", f"\t  This scene is still {t.GREEN}open")
 
                     found_scene["end"] = message_info(message, channel, i)
                     find_real_start(channel, found_scene)
                     scenes.append(found_scene)
 
-                    t.log("info", f"\t  This scene is still {t.GREEN}open")
                     
-
     return scenes, scene_id
 
 
@@ -367,12 +416,13 @@ def find_scenes():
 
     t.save_to_json(all_scenes, c.OUTPUT_SCENES)
 
-    t.log("info", f"\n\tScene output file created: {c.OUTPUT_SCENES}")
+    t.log("info", f"\n\tFound {len(all_scenes)} scenes in total")
+    t.log("info", f"\tScene output file created: {c.OUTPUT_SCENES}")
 
     # Uses the created JSONs to create a list of links to each scene start
     output_scene_list()
 
-    t.log("base", f"\n## Scene finding finished --- {time.time() - start_time:.2f} seconds --- ##\n")
+    t.log("base", f"## Scene finding finished --- {time.time() - start_time:.2f} seconds --- ##\n")
 
 if __name__ == "__main__":
     find_scenes()
