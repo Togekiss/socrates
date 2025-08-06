@@ -60,7 +60,7 @@ def parse_output(output):
     parent_channel = None
     for line in lines:
 
-        t.log("debug", "\t\t Analyzing line: ", line)
+        t.log("debug", f"\t\t Analyzing line: {line}")
 
         parts = line.split(" | ")
         
@@ -174,7 +174,14 @@ def get_channel_list():
     channel_list["categories"] = remove_categories(channel_list["categories"], c.CATEGORIES_TO_IGNORE)
 
     t.log("info", f"\t  Removed {len(c.CATEGORIES_TO_IGNORE)} categories")
-    t.log("info", f"\t  Kept {len(channel_list['categories'])} categories\n")
+
+
+    # Update the number of channels
+    channel_list["numberOfChannels"] = 0
+    for category in channel_list["categories"]:
+        channel_list["numberOfChannels"] += len(category["channels"]) + len(category["threads"])
+        
+    t.log("info", f"\t  Kept {channel_list['numberOfChannels']} channels across {len(channel_list['categories'])} categories\n")
 
     t.save_to_json(channel_list, c.CHANNEL_LIST)
     t.log("info", f"\tSaved the list of channels to {c.CHANNEL_LIST}\n")

@@ -116,7 +116,7 @@ def export_category(item, after, type="channels"):
 
         cli_command = f'dotnet DCE/DiscordChatExporter.Cli.dll export --parallel {group_size} -c {channel_ids} -t {c.BOT_TOKEN} -f Json -o "{path}" --locale "en-GB" {after} --fuck-russia'
         t.run_command(cli_command, group_size)
-        t.log("info", f"\t\tExported {i+group_size} channels out of {len(channels)}")
+        t.log("info", f"\t\tExported {i+group_size} {type} out of {len(channels)}")
 
 """
 export_from_list(after)
@@ -143,7 +143,7 @@ def export_from_list(after):
         threads_in_category = len(item["threads"])
         total_channels = channels_in_category + threads_in_category
 
-        t.log("info", f"\n\tExporting {total_channels} channels from '{item['category']}'...")
+        t.log("info", f"\n\tExporting {total_channels} channels and threads from '{item['category']}'...")
 
         export_category(item, after, "channels")
         channel_count += channels_in_category
@@ -152,7 +152,7 @@ def export_from_list(after):
             export_category(item, after, "threads")
             channel_count += threads_in_category
 
-        t.log("info", f"\n\tExported {channel_count} out of {item['numberOfChannels']} channels\n")
+        t.log("info", f"\n\tExported{total_channels} channels out of {json_data['numChannels']}\n")
 
 ################# Main function ################
 
