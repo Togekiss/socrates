@@ -4,6 +4,7 @@ import re
 import time
 import unicodedata
 import tricks as t
+from assign_ids import get_character_id
 t.set_path()
 from res import constants as c
 from output_scene_list import output_scene_list
@@ -16,7 +17,7 @@ This module finds all th scenes involving the main character in the server backu
 
 Main function: find_scenes()
 
-    This function loads the character IDs from a file, finds the main character's ID, and creates an empty list to store scenes.
+    This function finds the main character's ID, and creates an empty list to store scenes.
 
     Then it iterates over all JSON files in the server backup to find scenes involving the main character.
     For each, it stores its start and end messages.
@@ -377,12 +378,8 @@ def find_scenes():
     # Get the path of the "scenes" folder from the config file
     folder_path = c.SEARCH_FOLDER
 
-    # Load character IDs
-    with open(c.CHARACTER_IDS, "r", encoding="utf-8") as file:
-        chara_id_mapping = json.load(file)
-
     # Find main character ID
-    character = chara_id_mapping[c.CHARACTER]
+    character = get_character_id(c.CHARACTER)
 
     t.log("base", f"\n## Finding scenes for {c.CHARACTER} with ID {character} in {folder_path}... ##\n")
 

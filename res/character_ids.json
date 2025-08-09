@@ -1,198 +1,2463 @@
-{
-    "\u25c8 \u2501 \u2e19 \ud835\ude81\ud835\ude9e\ud835\ude96\ud835\ude92 \ud835\ude75\ud835\ude9e\ud835\ude9b\ud835\ude9e\ud835\udea2\ud835\ude8a \u2e19 \u2501\u25c8": 1,
-    "Rumi Furuya": 1,
-    "\u300c \ud835\udc00\ud835\udc32\ud835\udc1a\ud835\udc2d\ud835\udc28 \ud835\udc12\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc26\ud835\udc1a\ud835\udc24\ud835\udc22 \u265b": 2,
-    "Ayato Sakamaki (Eri)": 2,
-    "Rin Yamada": 3,
-    "Rin Yamada (Fake)": 3,
-    "Yui Komori": 4,
-    "Yui Komori ~ \u2661": 4,
-    "[\u273f // \ud83c\udf52 \u00ab \u2113\u03b1\u03b9\u0442\u03c3 \u00bb]\u21ba": 5,
-    "Laito Sakamaki (Kiyo)": 5,
-    "Hoshi Garfunkel": 6,
-    "Eiji Yugen": 7,
-    "Suzume Chishio": 8,
-    "\u597d\u5eb7 [Hao Kang]": 9,
-    "Hao Kang": 9,
-    "Yuuichi Kuroi": 10,
-    "Reiji Sakamaki": 11,
-    "Reiji Sakamaki (Clear)": 11,
-    "Alrick Rosenfeld": 12,
-    "Ruki Mukami": 13,
-    "Ruki Mukami (Kei)": 13,
-    "\ud83e\udd87  \u02d2  \ud835\udcda\u035f\ud835\udc00\u035f\ud835\udc0d\ud835\udc00\ud835\udc13\ud835\udc0e .\u141f": 14,
-    "Kanato Sakamaki (Alice)": 14,
-    "Yasuhara Soetsu": 15,
-    "Mifuyu Satomi": 16,
-    "\ud835\udd88\ud835\udd8d\ud835\udd86\ud835\udd97\ud835\udd91\ud835\udd8e\ud835\udd8a": 17,
-    "Charlie": 17,
-    "Elise Rosenberg": 18,
-    "Volker Frost": 19,
-    "\ud83e\udde1  \u02d2  \ud835\udce1\u035f\ud835\udc14\u035f\ud835\udc11\ud835\udc14\ud835\udc0a\ud835\udc00 .\u141f": 20,
-    "Ruruka": 20,
-    "Shu Sakamaki": 21,
-    "Shu Sakamaki (Luca)": 21,
-    "Han Chahua": 22,
-    "Kagekao Kaise": 23,
-    "Subaru Sakamaki": 25,
-    "Subaru Sakamaki (Yuki)": 25,
-    "Kotone Hamasaki": 26,
-    "Kousuke \u6d5c\u5d0e": 27,
-    "Kousuke Hamasaki": 27,
-    "yuma mukami.": 28,
-    "Yuma Mukami (Vinnie)": 28,
-    "Hyunwoo Hwang": 29,
-    "Kou Mukami": 30,
-    "Kou Mukami (Ash)": 30,
-    "Ayato Sakamaki": 31,
-    "Ayato Sakamaki (Ogi)": 31,
-    "\ud80c\udc83 \u05b4\u05b6\u05b8  \ud835\udc0a\ud835\udc00\ud835\udc0d\ud835\udc00\ud835\udc13\ud835\udc0e \ud835\udc12\ud835\udc00\ud835\udc0a\ud835\udc00\ud835\udc0c\ud835\udc00\ud835\udc0a\ud835\udc08 . .": 32,
-    "\ud80c\udc83 \u05b4\u05b6\u05b8  \ud835\udcda\ud835\udc1a\ud835\udc27\ud835\udc1a\ud835\udc2d\ud835\udc28 \ud835\udce2\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc26\ud835\udc1a\ud835\udc24\ud835\udc22 . .": 32,
-    "Kanato Sakamaki (Onyx)": 32,
-    "Korinna Tsuyujimo": 33,
-    "Maxine Ackerman": 34,
-    "\ud835\udc3f\ud835\udcca\ud835\udcb8\ud835\udcce \ud835\udc9e\ud835\udc5c\ud835\udcc1\ud835\udc52\ud835\udcc2\ud835\udcb6\ud835\udcc3": 35,
-    "Lucy Coleman": 35,
-    "Lilly Tenebris": 36,
-    "Shou Nakashima": 37,
-    "\ud835\udc12\ud835\udc21\ud835\udc28\ud835\udc2e \ud835\udc0d\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc2c\ud835\udc21\ud835\udc22\ud835\udc26\ud835\udc1a": 37,
-    "\ud835\udc12\ud835\udc21\ud835\udc28\ud835\udc2e \ud835\udc0d\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc2c\ud835\udc21\ud835\udc22\ud835\udc26\ud835\udc1a\ud83c\udf70": 37,
-    "Ayato \ud83d\udc51 Sakamaki": 38,
-    "Ayato Sakamaki (Maca)": 38,
-    "Laito \ud83d\udc9a Sakamaki": 39,
-    "Laito Sakammaki (Meli)": 39,
-    "\u2500 \u4e2d\u7b49 \u30fb \ud835\ude67\ud835\ude6e\ud835\ude6a\ud835\ude63\ud835\ude64\ud835\ude68\ud835\ude6a\ud835\ude60\ud835\ude5a.": 40,
-    "\u256d\u30fb\ud835\udc2b\ud835\udc32\ud835\udc2e\ud835\udc27\ud835\udc28\ud835\udc2c\ud835\udc2e\ud835\udc24\ud835\udc1e \ud835\udc24\ud835\udc1a\ud835\udc26\ud835\udc22\ud835\udc24\ud835\udc22 . .": 40,
-    "Ryunosuke Kamiki": 40,
-    "Dementria Blanche": 42,
-    "\u2606Haruka\u2606(totes not Aoi)": 43,
-    "\u271e \ud835\udd6c\ud835\udd94\ud835\udd8e \ud835\udd79\ud835\udd86\ud835\udd90\ud835\udd86\ud835\udd98\ud835\udd8d\ud835\udd8e\ud835\udd92\ud835\udd86 \u271e": 43,
-    "\u271e \ud835\udd6c\ud835\udd94\ud835\udd8e \ud835\udd79\ud835\udd86\ud835\udd90\ud835\udd86\ud835\udd98\ud835\udd8d\ud835\udd8e\ud835\udd92\ud835\udd86 \u271e\ud83c\udf70": 43,
-    "Aoi Nakashima": 43,
-    "Kiyomi Yamada": 44,
-    "Michi Tamura": 45,
-    "\u2230\u2727\u222d\u2727 [ \ud835\udc3f\ud835\udc52\ud835\udc5c\ud835\udc5b\ud835\udc89\ud835\udc4e\ud835\udc5f\ud835\udc61 \ud835\udc49\ud835\udc5c\ud835\udc54\ud835\udc52\ud835\udc59 ] \u2727\u222d\u2727\u2230": 47,
-    "Leonhart Vogel": 47,
-    "Alena Yukimitsu": 48,
-    "Amina Yukimitsu": 48,
-    "ChildAlena Yukimitsu": 48,
-    "Lycan Amina": 48,
-    "Monica Flores": 48,
-    "Wolf Amina": 48,
-    "Maestro": 48,
-    "Ophelia \u2661 Lecourt": 49,
-    "Ophelia Lecourt": 49,
-    "Tupperbox": 50,
-    "\u2320\ud835\udcfc\ud835\udc21\ud835\udc2e \ud835\udcfc\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc26\ud835\udc1a\ud835\udc24\ud835\udc22 . .\u2570\u2500\u2500\u256e": 51,
-    "Shu Sakamaki (Onyx)": 51,
-    "Lucien Deimos": 52,
-    "\u2570\u2606\u2606 \ud835\udc40\ud835\udcb6\ud835\udcc7\ud835\udc54\ud835\udcbd\ud835\udc52\ud835\udcc7\ud835\udcbe\ud835\udcc9\ud835\udcb6  \ud835\udcaa\ud835\udcc0\ud835\udcb6\ud835\udcc3\ud835\udc5c \u2606\u2606\u256e": 53,
-    "Margherita Okano": 53,
-    "Kaoru Sakurai": 54,
-    "Strix Takahiro": 56,
-    "Mika Yamada": 57,
-    "\u02da\u02f3\u2316[ Noah Lafayette ]\u02d6\u02da\u02f3\u2316 \u26e5": 58,
-    "Noah Lafayette": 58,
-    "Lysander D. Ruiz": 60,
-    "\ua731\u1d1c\u0299\u1d00\u0280\u1d1c \ua731\u1d00\u1d0b\u1d00\u1d0d\u1d00\u1d0b\u026a": 61,
-    "Subaru Sakamaki (Beth)": 61,
-    "Adrian Elphobos": 62,
-    "Akito Shima": 62,
-    "Sophia Firth": 63,
-    "\u30bc\u30d5\u30a3\u30fc\u30fb\ud835\udc19\ud835\udc1e\ud835\udc29\ud835\udc21\ud835\udc2b\ud835\udc32\ud835\udc27 \ud835\udc0c\ud835\udc1a\ud835\udc2d\ud835\udc2c\ud835\udc2e\ud835\udc26\ud835\udc28\ud835\udc2d\ud835\udc28 . .": 63,
-    "\ud835\udc2c\ud835\udc28\ud835\udc29\ud835\udc21\ud835\udc22\ud835\udc1a \ud835\udc1f\ud835\udc22\ud835\udc2b\ud835\udc2d\ud835\udc21. \u2606": 63,
-    "Zephryn Matsumoto": 63,
-    "Morgan Koizumi": 64,
-    "Morgan but Crow": 64,
-    "Arata Kuroi": 65,
-    "Headmaster NPC.": 66,
-    "Ariel Ride": 67,
-    "MotherWolf": 68,
-    "Akira Kaminari": 68,
-    "ShadowWolf": 68,
-    "Shin Tsukinami": 68,
-    "Shin Tsukinami (Oracle)": 68,
-    "Souta Hayashi": 68,
-    "Wolf Shin": 68,
-    "Bruno Ackerman": 70,
-    "Kaizer": 71,
-    "\"Rin's mom\"": 71,
-    "*\u2022.\u00b8\ud83c\udf39 \ud835\udc35\ud835\udcb6\ud835\udcc7\ud835\udcb6   \ud835\udcae\ud835\udcbd\ud835\udcbe\ud835\udcc0\ud835\udcc0\ud835\udcbe \ud83c\udf39\u00b8.\u2022*": 72,
-    "Bara Shikki": 72,
-    "Lunaria Yukimitsu": 73,
-    "Metztli (Lunaria)": 73,
-    "Valentin": 75,
-    "Hinata Natsukawa": 76,
-    "doi ike": 79,
-    "Tomoky Masamune": 80,
-    "\ud83e\ude79 Azusa Mukami \ud83e\ude79": 81,
-    "\u25ba\u2500\u2550  \ud835\udc9c\ud835\udccf\ud835\udcca\ud835\udcc8\ud835\udcb6  \ud835\udc40\ud835\udcca\ud835\udcc0\ud835\udcb6\ud835\udcc2\ud835\udcbe  \u2550\u2500\u25c4": 81,
-    "Azusa Mukami (Summer)": 81,
-    "Carla Tsukinami": 82,
-    "Camille Yves": 84,
-    "Spirit Spectre": 85,
-    "Melody Glass": 87,
-    "Hissy": 90,
-    "Unknown": 91,
-    "kotka mizoroge": 92,
-    "\u25c8 \u2501 \u2e19 \ud835\ude77\ud835\ude92\ud835\ude94\ud835\ude8a\ud835\ude9b\ud835\ude9e \ud835\ude75\ud835\ude9e\ud835\ude9b\ud835\ude9e\ud835\udea2\ud835\ude8a \u2e19 \u2501\u25c8": 96,
-    "Hikaru Furuya": 96,
-    "Janitor": 97,
-    "H. Commander": 98,
-    "Azusa Mukami": 100,
-    "Azusa Mukami (Alyx)": 100,
-    "\ud835\uddde\ud835\uddfc\ud835\ude02 \ud835\udde0\ud835\ude02\ud835\uddf8\ud835\uddee\ud835\uddfa\ud835\uddf6 \ud83d\udc3e": 101,
-    "Kou Mukami (Peanut)": 101,
-    "???": 103,
-    "Satoshi": 105,
-    "\u738b\u5b50 \u014cji \ud83c\udf65": 112,
-    "Oji": 112,
-    "Pollie": 113,
-    "Cartier-san the nurse NPC": 114,
-    "Local npc nurse (Cartier-San \ud83d\udc89)": 114,
-    "Cartier": 114,
-    "Cartier-san": 114,
-    "Ichika Saionji": 150,
-    "Severin Abendroth": 151,
-    "Mei Saitou": 152,
-    "Kura Sen": 153,
-    "Axel Ackerman": 154,
-    "Slyven Aldechi": 155,
-    "Maple": 155,
-    "\ud835\ude54\ud835\ude40\ud835\ude4e\ud835\ude4a\ud835\ude47 \ud835\ude43\ud835\ude3c\ud835\ude4d\ud835\ude3c.": 156,
-    "Haruki Miyoshi": 157,
-    "Kyouru Mitsu . .": 158,
-    "Kyouru Mitsu": 158,
-    "Waiter": 159,
-    "NPC Noah (Rasha approved)": 160,
-    "Chihiro Harada \ud83c\udf55": 161,
-    "Chihiro Harada \ud83c\udf55\ud83c\udf70": 161,
-    "Chihiro Harada": 161,
-    "Kanato Sakamaki": 163,
-    "Kanato Sakamaki (Valor)": 163,
-    "Eleanor Blanc": 164,
-    "Wolf Eleanor": 164,
-    "Yuma Mukami": 171,
-    "Yuma Mukami (Bara)": 171,
-    "Fortune-Teller NPC": 173,
-    "Fortuna": 173,
-    "Cordelia Blackwood": 175,
-    "Familiar": 176,
-    "Sofia Maki": 177,
-    "Megumi Hoshino": 178,
-    "Keiko Yamada": 179,
-    "Telemarketer": 180,
-    "Yami Tetsuo": 183,
-    "Viktor Mastrano": 185,
-    "Yuki Sen": 186,
-    "Ezra Friedman": 187,
-    "Caller": 188,
-    "Silvia Aldechi": 189,
-    "Worker": 190,
-    "Aaron B.": 191,
-    "Steve": 192,
-    "Nyoka Andyn": 193,
-    "Ragnhild Myrborg": 194,
-    "Distorted voice": 194,
-    "Leiko \"Lei Lei\" Walsh": 196
-}
+[
+    {
+        "id": 1,
+        "names": [
+            "Yui Komori ~ \u2661",
+            "Yui Komori",
+            "Yui"
+        ],
+        "writer": [
+            "Prim",
+            "cureprimulas"
+        ],
+        "tags": [
+            "canon",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 2,
+        "names": [
+            "Ayato Sakamaki",
+            "Ayato Sakamaki (Ogi)",
+            "Ayato (Ogi)",
+            "Ogi!Ayato"
+        ],
+        "writer": [
+            "Ogi",
+            "ogiko",
+            "birdie"
+        ],
+        "tags": [
+            "canon",
+            "inactive",
+            "has_other_writers"
+        ],
+        "other_versions": [
+            {
+                "id": 99,
+                "names": [
+                    "Ayato \ud83d\udc51 Sakamaki",
+                    "Ayato Sakamaki (Maca)",
+                    "Ayato (Maca)",
+                    "Maca!Ayato"
+                ],
+                "writer": [
+                    "Maca",
+                    "macayato"
+                ],
+                "tags": [
+                    "canon",
+                    "active"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 100,
+                "names": [
+                    "\u300c \ud835\udc00\ud835\udc32\ud835\udc1a\ud835\udc2d\ud835\udc28 \ud835\udc12\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc26\ud835\udc1a\ud835\udc24\ud835\udc22 \u265b",
+                    "Ayato Sakamaki (Eri)",
+                    "Ayato (Eri)",
+                    "Eri!Ayato"
+                ],
+                "writer": [
+                    "Eri",
+                    "nightlessworld"
+                ],
+                "tags": [
+                    "canon",
+                    "inactive"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "names": [
+            "Kanato Sakamaki",
+            "Kanato Sakamaki (Valor)",
+            "Kanato (Valor)",
+            "Valor!Kanato"
+        ],
+        "writer": [
+            "Valor",
+            "valorvibing"
+        ],
+        "tags": [
+            "canon",
+            "inactive",
+            "has_other_writers"
+        ],
+        "other_versions": [
+            {
+                "id": 101,
+                "names": [
+                    "\ud80c\udc83 \u05b4\u05b6\u05b8  \ud835\udcda\ud835\udc1a\ud835\udc27\ud835\udc1a\ud835\udc2d\ud835\udc28 \ud835\udce2\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc26\ud835\udc1a\ud835\udc24\ud835\udc22 . .",
+                    "\ud80c\udc83 \u05b4\u05b6\u05b8  \ud835\udc0a\ud835\udc00\ud835\udc0d\ud835\udc00\ud835\udc13\ud835\udc0e \ud835\udc12\ud835\udc00\ud835\udc0a\ud835\udc00\ud835\udc0c\ud835\udc00\ud835\udc0a\ud835\udc08 . .",
+                    "Kanato Sakamaki (Onyx)",
+                    "Kanato (Onyx)",
+                    "Onyx!Kanato"
+                ],
+                "writer": [
+                    "Onyx",
+                    "cuminboy"
+                ],
+                "tags": [
+                    "canon",
+                    "inactive"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 102,
+                "names": [
+                    "\ud83e\udd87  \u02d2  \ud835\udcda\u035f\ud835\udc00\u035f\ud835\udc0d\ud835\udc00\ud835\udc13\ud835\udc0e .\u141f",
+                    "Kanato Sakamaki (Alice)",
+                    "Kanato (Alice)",
+                    "Alice!Kanato"
+                ],
+                "writer": [
+                    "Alice"
+                ],
+                "tags": [
+                    "canon",
+                    "inactive"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "names": [
+            "Laito Sakamaki",
+            "Laito \ud83d\udc9a Sakamaki",
+            "Laito Sakamaki (Meli)",
+            "Laito (Meli)",
+            "Meli!Laito"
+        ],
+        "writer": [
+            "Meli",
+            "melissenpai"
+        ],
+        "tags": [
+            "canon",
+            "inactive",
+            "has_other_writers"
+        ],
+        "other_versions": [
+            {
+                "id": 103,
+                "names": [
+                    "[\u273f // \ud83c\udf52 \u00ab \u2113\u03b1\u03b9\u0442\u03c3 \u00bb]\u21ba",
+                    "Laito Sakamaki (Kiyo)",
+                    "Laito (Kiyo)",
+                    "Kiyo!Laito"
+                ],
+                "writer": [
+                    "Kiyo",
+                    "kiyomizuki"
+                ],
+                "tags": [
+                    "canon",
+                    "inactive"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "names": [
+            "Shu Sakamaki",
+            "Shu Sakamaki (Luke)",
+            "Shu (Luke)",
+            "Luke!Shu"
+        ],
+        "writer": [
+            "Luke",
+            "luca",
+            "stxrfell"
+        ],
+        "tags": [
+            "canon",
+            "inactive",
+            "has_other_writers"
+        ],
+        "other_versions": [
+            {
+                "id": 104,
+                "names": [
+                    "\u2320\ud835\udcfc\ud835\udc21\ud835\udc2e \ud835\udcfc\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc26\ud835\udc1a\ud835\udc24\ud835\udc22 . .\u2570\u2500\u2500\u256e",
+                    "Shu Sakamaki (Onyx)",
+                    "Shu (Onyx)",
+                    "Onyx!Shu"
+                ],
+                "writer": [
+                    "Onyx",
+                    "cuminboy"
+                ],
+                "tags": [
+                    "canon",
+                    "active"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "names": [
+            "Reiji Sakamaki",
+            "Reiji Sakamaki (Clear)",
+            "Reiji (Clear)",
+            "Clear!Reiji"
+        ],
+        "writer": [
+            "Clear",
+            "bigpapa_",
+            "Lord Fartquaad"
+        ],
+        "tags": [
+            "canon",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 7,
+        "names": [
+            "Subaru Sakamaki",
+            "Subaru Sakamaki (Yuki)",
+            "Subaru (Yuki)",
+            "Yuki!Subaru"
+        ],
+        "writer": [
+            "Yuki",
+            "Yuki Ikusaba",
+            "yuki_ikusaba"
+        ],
+        "tags": [
+            "canon",
+            "inactive",
+            "has_other_writers"
+        ],
+        "other_versions": [
+            {
+                "id": 105,
+                "names": [
+                    "\ua731\u1d1c\u0299\u1d00\u0280\u1d1c \ua731\u1d00\u1d0b\u1d00\u1d0d\u1d00\u1d0b\u026a",
+                    "Subaru Sakamaki (Beth)",
+                    "Subaru (Beth)",
+                    "Beth!Subaru"
+                ],
+                "writer": [
+                    "Beth",
+                    "Bara Tiddies",
+                    "gentlebara"
+                ],
+                "tags": [
+                    "canon",
+                    "inactive"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "names": [
+            "Ruki Mukami",
+            "Ruki Mukami (Kei)",
+            "Ruki (Kei)",
+            "Kei!Ruki",
+            "Rukei"
+        ],
+        "writer": [
+            "Kei",
+            "mastermilkgane",
+            "milkkei",
+            "milkmateartist"
+        ],
+        "tags": [
+            "canon",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 9,
+        "names": [
+            "Yuma Mukami",
+            "Yuma Mukami (Bara)",
+            "Yuma (Bara)",
+            "Bara!Yuma"
+        ],
+        "writer": [
+            "Bara",
+            "meghawhopp"
+        ],
+        "tags": [
+            "canon",
+            "active",
+            "has_other_writers"
+        ],
+        "other_versions": [
+            {
+                "id": 106,
+                "names": [
+                    "yuma mukami.",
+                    "Yuma Mukami (Vinnie)",
+                    "Yuma (Vinnie)",
+                    "Vinnie!Yuma"
+                ],
+                "writer": [
+                    "Vinnie",
+                    "love_exi3"
+                ],
+                "tags": [
+                    "canon",
+                    "inactive"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "names": [
+            "Kou Mukami",
+            "Kou Mukami (Ash)",
+            "Kou (Ash)",
+            "Ash!Kou"
+        ],
+        "writer": [
+            "Ash",
+            "ashtonshades"
+        ],
+        "tags": [
+            "canon",
+            "inactive",
+            "has_other_writers"
+        ],
+        "other_versions": [
+            {
+                "id": 107,
+                "names": [
+                    "\ud835\uddde\ud835\uddfc\ud835\ude02 \ud835\udde0\ud835\ude02\ud835\uddf8\ud835\uddee\ud835\uddfa\ud835\uddf6 \ud83d\udc3e",
+                    "Kou Mukami (Peanut)",
+                    "Kou (Peanut)",
+                    "Peanut!Kou"
+                ],
+                "writer": [
+                    "Peanut",
+                    "athynace"
+                ],
+                "tags": [
+                    "canon",
+                    "inactive"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "names": [
+            "Azusa Mukami",
+            "Azusa Mukami (Alyx)",
+            "Azusa (Alyx)",
+            "Alyx!Azusa"
+        ],
+        "writer": [
+            "Alyx",
+            "catniptea.",
+            "zuzu"
+        ],
+        "tags": [
+            "canon",
+            "inactive",
+            "has_other_writers"
+        ],
+        "other_versions": [
+            {
+                "id": 108,
+                "names": [
+                    "\u25ba\u2500\u2550  \ud835\udc9c\ud835\udccf\ud835\udcca\ud835\udcc8\ud835\udcb6  \ud835\udc40\ud835\udcca\ud835\udcc0\ud835\udcb6\ud835\udcc2\ud835\udcbe  \u2550\u2500\u25c4",
+                    "\ud83e\ude79 Azusa Mukami \ud83e\ude79",
+                    "Azusa Mukami (Summer)",
+                    "Azusa (Summer)",
+                    "Summer!Azusa"
+                ],
+                "writer": [
+                    "Summer",
+                    "summerbummer"
+                ],
+                "tags": [
+                    "canon",
+                    "active"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "names": [
+            "Carla Tsukinami",
+            "Carla Tsukinami (Rei)",
+            "Carla (Rei)",
+            "Rei!Carla"
+        ],
+        "writer": [
+            "Rei",
+            "reisodi"
+        ],
+        "tags": [
+            "canon",
+            "active",
+            "has_familiars"
+        ],
+        "other_versions": [
+            {
+                "id": 109,
+                "names": [
+                    "Familiar",
+                    "Carla's Familiar"
+                ],
+                "writer": [
+                    "Rei",
+                    "reisodi"
+                ],
+                "tags": [
+                    "familiar",
+                    "active"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "names": [
+            "Shin Tsukinami",
+            "Shin Tsukinami (Oracle)",
+            "Shin (Oracle)",
+            "Oracle!Shin"
+        ],
+        "writer": [
+            "Oracle",
+            "oracle_adagium"
+        ],
+        "tags": [
+            "canon",
+            "active",
+            "has_familiars",
+            "has_alter_egos"
+        ],
+        "other_versions": [
+            {
+                "id": 110,
+                "names": [
+                    "Akira Kaminari",
+                    "Shin Akira",
+                    "Akira"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "canon",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 111,
+                "names": [
+                    "Souta Hayashi"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "canon",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 112,
+                "names": [
+                    "Wolf Shin"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "canon",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 113,
+                "names": [
+                    "ShadowWolf",
+                    "Shadow Wolf",
+                    "Shin's familiar"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "familiar",
+                    "active"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 114,
+                "names": [
+                    "MotherWolf",
+                    "Mother Wolf"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "familiar",
+                    "active"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "names": [
+            "Kaizer"
+        ],
+        "writer": [
+            "Tess",
+            "vibesauze"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_alter_egos",
+            "has_npcs"
+        ],
+        "other_versions": [
+            {
+                "id": 115,
+                "names": [
+                    "Aaron B.",
+                    "Aaron Beaumont",
+                    "Aaron"
+                ],
+                "writer": [
+                    "Tess",
+                    "vibesauze"
+                ],
+                "tags": [
+                    "oc",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 116,
+                "names": [
+                    "Valentin"
+                ],
+                "writer": [
+                    "Tess",
+                    "vibesauze"
+                ],
+                "tags": [
+                    "npc",
+                    "active"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 117,
+                "names": [
+                    "\"Rin's mom\""
+                ],
+                "writer": [
+                    "Tess",
+                    "vibesauze"
+                ],
+                "tags": [
+                    "oc",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "names": [
+            "Chihiro Harada \ud83c\udf55",
+            "Chihiro Harada \ud83c\udf55\ud83c\udf70",
+            "Chihiro Harada",
+            "Chihiro"
+        ],
+        "writer": [
+            "Tess",
+            "vibesauze"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 16,
+        "names": [
+            "Worker"
+        ],
+        "writer": [
+            "Tess",
+            "vibesauze"
+        ],
+        "tags": [
+            "npc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 17,
+        "names": [
+            "Michi Tamura",
+            "Tama",
+            "Tamura Michi"
+        ],
+        "writer": [
+            "Tera",
+            "chibicosplay"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 18,
+        "names": [
+            "Ariel Ride",
+            "Ariel",
+            "Ari"
+        ],
+        "writer": [
+            "Tera",
+            "chibicosplay"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 19,
+        "names": [
+            "Haruki Miyoshi",
+            "Haruki"
+        ],
+        "writer": [
+            "Tera",
+            "chibicosplay"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 20,
+        "names": [
+            "\u2570\u2606\u2606 \ud835\udc40\ud835\udcb6\ud835\udcc7\ud835\udc54\ud835\udcbd\ud835\udc52\ud835\udcc7\ud835\udcbe\ud835\udcc9\ud835\udcb6  \ud835\udcaa\ud835\udcc0\ud835\udcb6\ud835\udcc3\ud835\udc5c \u2606\u2606\u256e",
+            "Margherita Okano",
+            "Mari Okano",
+            "Mari"
+        ],
+        "writer": [
+            "Summer",
+            "summerbummer"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 21,
+        "names": [
+            "Sofia Maki",
+            "Sofia"
+        ],
+        "writer": [
+            "Summer",
+            "summerbummer"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 22,
+        "names": [
+            "*\u2022.\u00b8\ud83c\udf39 \ud835\udc35\ud835\udcb6\ud835\udcc7\ud835\udcb6   \ud835\udcae\ud835\udcbd\ud835\udcbe\ud835\udcc0\ud835\udcc0\ud835\udcbe \ud83c\udf39\u00b8.\u2022*",
+            "Bara Shikki",
+            "Bara"
+        ],
+        "writer": [
+            "Summer",
+            "summerbummer"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 23,
+        "names": [
+            "Kura Sen",
+            "Kura"
+        ],
+        "writer": [
+            "Summer",
+            "summerbummer"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_npcs"
+        ],
+        "other_versions": [
+            {
+                "id": 118,
+                "names": [
+                    "Yuki Sen"
+                ],
+                "writer": [
+                    "Summer",
+                    "summerbummer"
+                ],
+                "tags": [
+                    "npc",
+                    "inactive"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 24,
+        "names": [
+            "Leiko \"Lei Lei\" Walsh",
+            "Leiko Walsh",
+            "Leiko"
+        ],
+        "writer": [
+            "Summer",
+            "summerbummer"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 25,
+        "names": [
+            "Alrick Rosenfeld",
+            "Alrick"
+        ],
+        "writer": [
+            "Slothy",
+            "theslothwoman",
+            "the-sloth-woman"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 26,
+        "names": [
+            "Viktor Mastrano",
+            "Viktor"
+        ],
+        "writer": [
+            "Slothy",
+            "theslothwoman",
+            "the-sloth-woman"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 27,
+        "names": [
+            "Lilly Tenebris",
+            "Lilly"
+        ],
+        "writer": [
+            "Slothy",
+            "theslothwoman",
+            "the-sloth-woman"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 28,
+        "names": [
+            "Kaoru Sakurai",
+            "Kaoru"
+        ],
+        "writer": [
+            "Sigil",
+            "sigil.c"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 29,
+        "names": [
+            "Ragnhild Myrborg",
+            "Ragna Myrborg",
+            "Ragna"
+        ],
+        "writer": [
+            "Sigil",
+            "sigil.c"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_alter_egos"
+        ],
+        "other_versions": [
+            {
+                "id": 119,
+                "names": [
+                    "Distorted voice"
+                ],
+                "writer": [
+                    "Sigil",
+                    "sigil.c"
+                ],
+                "tags": [
+                    "oc",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 30,
+        "names": [
+            "Lucien Deimos",
+            "Lucien",
+            "Lucy"
+        ],
+        "writer": [
+            "Rei",
+            "reisodi"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_familiars"
+        ],
+        "other_versions": [
+            {
+                "id": 120,
+                "names": [
+                    "Pollie"
+                ],
+                "writer": [
+                    "Rei",
+                    "reisodi"
+                ],
+                "tags": [
+                    "familiar",
+                    "active"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 31,
+        "names": [
+            "Ezra Friedman",
+            "Ezra"
+        ],
+        "writer": [
+            "Rei",
+            "reisodi"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 32,
+        "names": [
+            "Adrian Elphobos",
+            "Adrian",
+            "Adri"
+        ],
+        "writer": [
+            "Rei",
+            "reisodi"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_alter_egos"
+        ],
+        "other_versions": [
+            {
+                "id": 121,
+                "names": [
+                    "Akito Shima"
+                ],
+                "writer": [
+                    "Rei",
+                    "reisodi"
+                ],
+                "tags": [
+                    "oc",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 33,
+        "names": [
+            "Mei Saitou",
+            "Mei"
+        ],
+        "writer": [
+            "Rei",
+            "reisodi"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 34,
+        "names": [
+            "Nyoka Andyn",
+            "Nyoka"
+        ],
+        "writer": [
+            "Rei",
+            "reisodi"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 35,
+        "names": [
+            "Fortuna",
+            "Fortune-Teller NPC",
+            "Fortune-Teller"
+        ],
+        "writer": [
+            "Rei",
+            "reisodi"
+        ],
+        "tags": [
+            "npc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 36,
+        "names": [
+            "Steve"
+        ],
+        "writer": [
+            "Rei",
+            "reisodi"
+        ],
+        "tags": [
+            "npc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 37,
+        "names": [
+            "Telemarketer"
+        ],
+        "writer": [
+            "Rei",
+            "reisodi"
+        ],
+        "tags": [
+            "npc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 38,
+        "names": [
+            "\u25c8 \u2501 \u2e19 \ud835\ude81\ud835\ude9e\ud835\ude96\ud835\ude92 \ud835\ude75\ud835\ude9e\ud835\ude9b\ud835\ude9e\ud835\udea2\ud835\ude8a \u2e19 \u2501\u25c8",
+            "Rumi Furuya",
+            "Rumi"
+        ],
+        "writer": [
+            "Rasha",
+            "pen_gui"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_familiars",
+            "has_npcs"
+        ],
+        "other_versions": [
+            {
+                "id": 122,
+                "names": [
+                    "\u738b\u5b50 \u014cji \ud83c\udf65",
+                    "Ouji",
+                    "Oji"
+                ],
+                "writer": [
+                    "Rasha",
+                    "pen_gui"
+                ],
+                "tags": [
+                    "familiar",
+                    "active"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 123,
+                "names": [
+                    "\u25c8 \u2501 \u2e19 \ud835\ude77\ud835\ude92\ud835\ude94\ud835\ude8a\ud835\ude9b\ud835\ude9e \ud835\ude75\ud835\ude9e\ud835\ude9b\ud835\ude9e\ud835\udea2\ud835\ude8a \u2e19 \u2501\u25c8",
+                    "Hikaru Furuya",
+                    "Hikaru"
+                ],
+                "writer": [
+                    "Rasha",
+                    "pen_gui"
+                ],
+                "tags": [
+                    "npc",
+                    "active"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 39,
+        "names": [
+            "\u2230\u2727\u222d\u2727 [ \ud835\udc3f\ud835\udc52\ud835\udc5c\ud835\udc5b\ud835\udc89\ud835\udc4e\ud835\udc5f\ud835\udc61 \ud835\udc49\ud835\udc5c\ud835\udc54\ud835\udc52\ud835\udc59 ] \u2727\u222d\u2727\u2230",
+            "Leonhart Vogel",
+            "Leonhart",
+            "Vogel",
+            "Leon"
+        ],
+        "writer": [
+            "Rasha",
+            "pen_gui"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 40,
+        "names": [
+            "\u02da\u02f3\u2316[ Noah Lafayette ]\u02d6\u02da\u02f3\u2316 \u26e5",
+            "Noah Lafayette",
+            "Noah"
+        ],
+        "writer": [
+            "Rasha",
+            "pen_gui"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_other_writers"
+        ],
+        "other_versions": [
+            {
+                "id": 124,
+                "names": [
+                    "NPC Noah (Rasha approved)",
+                    "Noah Lafayette (Meli)",
+                    "Noah (Meli)"
+                ],
+                "writer": [
+                    "Meli",
+                    "melissenpai"
+                ],
+                "tags": [
+                    "npc",
+                    "inactive"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 41,
+        "names": [
+            "Local npc nurse (Cartier-San \ud83d\udc89)",
+            "Cartier-san",
+            "Cartier"
+        ],
+        "writer": [
+            "Rasha",
+            "pen_gui"
+        ],
+        "tags": [
+            "npc",
+            "active",
+            "has_other_writers"
+        ],
+        "other_versions": [
+            {
+                "id": 125,
+                "names": [
+                    "Cartier-san the nurse NPC",
+                    "Cartier-san (Meli)",
+                    "Cartier (Meli)"
+                ],
+                "writer": [
+                    "Meli",
+                    "melissenpai"
+                ],
+                "tags": [
+                    "npc",
+                    "active"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 42,
+        "names": [
+            "doi ike",
+            "Doi Ike",
+            "Doi"
+        ],
+        "writer": [
+            "Queen",
+            "queenie",
+            "queenclown_"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 43,
+        "names": [
+            "Mifuyu Satomi",
+            "Mifuyu"
+        ],
+        "writer": [
+            "Prim",
+            "cureprimulas"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 44,
+        "names": [
+            "Headmaster NPC.",
+            "Headmaster"
+        ],
+        "writer": [
+            "Prim",
+            "cureprimulas"
+        ],
+        "tags": [
+            "npc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 45,
+        "names": [
+            "\ud835\ude54\ud835\ude40\ud835\ude4e\ud835\ude4a\ud835\ude47 \ud835\ude43\ud835\ude3c\ud835\ude4d\ud835\ude3c.",
+            "Yesol Hara",
+            "Yesol"
+        ],
+        "writer": [
+            "Peanut",
+            "athynace"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 46,
+        "names": [
+            "Alena Yukimitsu",
+            "Amina Yukimitsu",
+            "Amina"
+        ],
+        "writer": [
+            "Oracle",
+            "oracle_adagium"
+        ],
+        "tags": [
+            "oc",
+            "inactive",
+            "has_alter_egos",
+            "has_familiars",
+            "has_npcs"
+        ],
+        "other_versions": [
+            {
+                "id": 126,
+                "names": [
+                    "Monica Flores",
+                    "Monica"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "oc",
+                    "inactive",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 127,
+                "names": [
+                    "Wolf Amina"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "oc",
+                    "inactive",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 128,
+                "names": [
+                    "Lycan Amina"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "oc",
+                    "inactive",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 129,
+                "names": [
+                    "ChildAlena Yukimitsu",
+                    "Child Amina"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "oc",
+                    "inactive",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 130,
+                "names": [
+                    "Unknown",
+                    "Unknown caller"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "npc",
+                    "inactive"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 131,
+                "names": [
+                    "Maestro"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "familiar",
+                    "inactive"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 47,
+        "names": [
+            "Strix Takahiro",
+            "Strix"
+        ],
+        "writer": [
+            "Oracle",
+            "oracle_adagium"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 48,
+        "names": [
+            "Eleanor Blanc",
+            "Eleanor"
+        ],
+        "writer": [
+            "Oracle",
+            "oracle_adagium"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_alter_egos"
+        ],
+        "other_versions": [
+            {
+                "id": 132,
+                "names": [
+                    "Wolf Eleanor"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "oc",
+                    "inactive",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 49,
+        "names": [
+            "Lunaria Yukimitsu",
+            "Lunaria",
+            "Luna"
+        ],
+        "writer": [
+            "Oracle",
+            "oracle_adagium"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_alter_egos",
+            "has_npcs"
+        ],
+        "other_versions": [
+            {
+                "id": 133,
+                "names": [
+                    "Metztli (Lunaria)",
+                    "Metztli"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "oc",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 134,
+                "names": [
+                    "Caller",
+                    "Unknown caller (Lunaria)"
+                ],
+                "writer": [
+                    "Oracle",
+                    "oracle_adagium"
+                ],
+                "tags": [
+                    "npc",
+                    "active"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 50,
+        "names": [
+            "\u30bc\u30d5\u30a3\u30fc\u30fb\ud835\udc19\ud835\udc1e\ud835\udc29\ud835\udc21\ud835\udc2b\ud835\udc32\ud835\udc27 \ud835\udc0c\ud835\udc1a\ud835\udc2d\ud835\udc2c\ud835\udc2e\ud835\udc26\ud835\udc28\ud835\udc2d\ud835\udc28 . .",
+            "\ud835\udc2c\ud835\udc28\ud835\udc29\ud835\udc21\ud835\udc22\ud835\udc1a \ud835\udc1f\ud835\udc22\ud835\udc2b\ud835\udc2d\ud835\udc21. \u2606",
+            "Zephryn Matsumoto",
+            "Zephryn",
+            "Zephy"
+        ],
+        "writer": [
+            "Onyx",
+            "cuminboy"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_alter_egos"
+        ],
+        "other_versions": [
+            {
+                "id": 135,
+                "names": [
+                    "Sophia Firth",
+                    "Sophia"
+                ],
+                "writer": [
+                    "Onyx",
+                    "cuminboy"
+                ],
+                "tags": [
+                    "oc",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 51,
+        "names": [
+            "Kyouru Mitsu . .",
+            "Kyouru Mitsu",
+            "Kyouru",
+            "Kyo"
+        ],
+        "writer": [
+            "Onyx",
+            "cuminboy"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 52,
+        "names": [
+            "\u2500 \u4e2d\u7b49 \u30fb \ud835\ude67\ud835\ude6e\ud835\ude6a\ud835\ude63\ud835\ude64\ud835\ude68\ud835\ude6a\ud835\ude60\ud835\ude5a.",
+            "\u256d\u30fb\ud835\udc2b\ud835\udc32\ud835\udc2e\ud835\udc27\ud835\udc28\ud835\udc2c\ud835\udc2e\ud835\udc24\ud835\udc1e \ud835\udc24\ud835\udc1a\ud835\udc26\ud835\udc22\ud835\udc24\ud835\udc22 . .",
+            "Ryunosuke Kamiki",
+            "Ryu Kamiki",
+            "Ryunosuke",
+            "Ryu"
+        ],
+        "writer": [
+            "Onyx",
+            "cuminboy"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 53,
+        "names": [
+            "\u597d\u5eb7 [Hao Kang]",
+            "Hao Kang",
+            "Kang Hao",
+            "Kang"
+        ],
+        "writer": [
+            "Ogi",
+            "ogiko",
+            "birdie"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 54,
+        "names": [
+            "Han Chahua",
+            "Chahua Han",
+            "Chahua"
+        ],
+        "writer": [
+            "Ogi",
+            "ogiko",
+            "birdie"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 55,
+        "names": [
+            "Hoshi Garfunkel",
+            "Hoshi"
+        ],
+        "writer": [
+            "Neun",
+            "neunsi"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 56,
+        "names": [
+            "Tomoky Masamune",
+            "Tomoky"
+        ],
+        "writer": [
+            "Mina",
+            "minasempai"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 57,
+        "names": [
+            "Elise Rosenberg",
+            "Elise Rosenfeld",
+            "Elise"
+        ],
+        "writer": [
+            "Meli",
+            "melissenpai"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_familiars"
+        ],
+        "other_versions": [
+            {
+                "id": 136,
+                "names": [
+                    "Hissy"
+                ],
+                "writer": [
+                    "Meli",
+                    "melissenpai"
+                ],
+                "tags": [
+                    "familiar",
+                    "active"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 58,
+        "names": [
+            "Janitor"
+        ],
+        "writer": [
+            "Meli",
+            "melissenpai"
+        ],
+        "tags": [
+            "npc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 59,
+        "names": [
+            "Lysander D. Ruiz",
+            "Lysander Ruiz",
+            "Lysander Daytona Ruiz",
+            "Lysander",
+            "Lys"
+        ],
+        "writer": [
+            "Maca",
+            "macayato"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_npcs"
+        ],
+        "other_versions": [
+            {
+                "id": 137,
+                "names": [
+                    "H. Commander",
+                    "Commander",
+                    "Lysander's Commander"
+                ],
+                "writer": [
+                    "Maca",
+                    "macayato"
+                ],
+                "tags": [
+                    "npc",
+                    "active"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 60,
+        "names": [
+            "Hyunwoo Hwang",
+            "Hyun"
+        ],
+        "writer": [
+            "Luke",
+            "luca",
+            "stxrfell"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 61,
+        "names": [
+            "Hinata Natsukawa",
+            "Hinata"
+        ],
+        "writer": [
+            "Luke",
+            "luca",
+            "stxrfell"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 62,
+        "names": [
+            "Camille Yves",
+            "Camille"
+        ],
+        "writer": [
+            "Luc",
+            "Lucrecio",
+            "lucrecio_"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 63,
+        "names": [
+            "Kousuke \u6d5c\u5d0e",
+            "Kousuke Hamasaki",
+            "Kousuke"
+        ],
+        "writer": [
+            "Kei",
+            "mastermilkgane",
+            "milkmateartist"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 64,
+        "names": [
+            "kotka mizoroge",
+            "Kotka Mizoroge",
+            "Kotka"
+        ],
+        "writer": [
+            "Karaba",
+            "karaba_official"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 65,
+        "names": [
+            "\ud835\udc3f\ud835\udcca\ud835\udcb8\ud835\udcce \ud835\udc9e\ud835\udc5c\ud835\udcc1\ud835\udc52\ud835\udcc2\ud835\udcb6\ud835\udcc3",
+            "Lucy Coleman"
+        ],
+        "writer": [
+            "Jess",
+            "jess_5120"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 66,
+        "names": [
+            "Ichika Saionji",
+            "Ichika"
+        ],
+        "writer": [
+            "Jail",
+            "jail._"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 67,
+        "names": [
+            "Melody Glass",
+            "Melody"
+        ],
+        "writer": [
+            "Glassy",
+            "_glassy_3"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 68,
+        "names": [
+            "Kotone Hamasaki",
+            "Kotone"
+        ],
+        "writer": [
+            "Red",
+            "crazyredridinghood"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 69,
+        "names": [
+            "Suzume Chishio",
+            "Suzume"
+        ],
+        "writer": [
+            "Red",
+            "crazyredridinghood"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 70,
+        "names": [
+            "Dementria Blanche",
+            "Demi"
+        ],
+        "writer": [
+            "Snow",
+            "lucifella",
+            "xyclera"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 71,
+        "names": [
+            "\ud835\udd88\ud835\udd8d\ud835\udd86\ud835\udd97\ud835\udd91\ud835\udd8e\ud835\udd8a",
+            "Charlie",
+            "Charlie Dimell"
+        ],
+        "writer": [
+            "Eri",
+            "nightlessworld"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 72,
+        "names": [
+            "Rin Yamada",
+            "Rin"
+        ],
+        "writer": [
+            "Dreamy",
+            "dreamfreaks"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_alter_egos"
+        ],
+        "other_versions": [
+            {
+                "id": 138,
+                "names": [
+                    "Rin Yamada (Fake)"
+                ],
+                "writer": [
+                    "Dreamy",
+                    "dreamfreaks"
+                ],
+                "tags": [
+                    "oc",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 73,
+        "names": [
+            "Kiyomi Yamada",
+            "Kiyomi"
+        ],
+        "writer": [
+            "Dreamy",
+            "dreamfreaks"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 74,
+        "names": [
+            "Satoshi"
+        ],
+        "writer": [
+            "Dreamy",
+            "dreamfreaks"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 75,
+        "names": [
+            "Keiko Yamada",
+            "Keiko"
+        ],
+        "writer": [
+            "Dreamy",
+            "dreamfreaks"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 76,
+        "names": [
+            "Mika Yamada",
+            "Mika"
+        ],
+        "writer": [
+            "Dreamy",
+            "dreamfreaks"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 77,
+        "names": [
+            "Morgan Koizumi",
+            "Morgan"
+        ],
+        "writer": [
+            "Clear",
+            "bigpapa_",
+            "Lord Fartquaad"
+        ],
+        "tags": [
+            "oc",
+            "active",
+            "has_alter_egos"
+        ],
+        "other_versions": [
+            {
+                "id": 139,
+                "names": [
+                    "Morgan but Crow",
+                    "Crow Morgan"
+                ],
+                "writer": [
+                    "Clear",
+                    "bigpapa_",
+                    "Lord Fartquaad"
+                ],
+                "tags": [
+                    "oc",
+                    "active",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 78,
+        "names": [
+            "Severin Abendroth",
+            "Severin",
+            "Sev"
+        ],
+        "writer": [
+            "Clear",
+            "bigpapa_",
+            "Lord Fartquaad"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 79,
+        "names": [
+            "Ophelia \u2661 Lecourt",
+            "Ophelia Lecourt",
+            "Ophelia",
+            "Cordelia Blackwood"
+        ],
+        "writer": [
+            "Candy",
+            "xcandy.popx"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 80,
+        "names": [
+            "\u271e \ud835\udd6c\ud835\udd94\ud835\udd8e \ud835\udd79\ud835\udd86\ud835\udd90\ud835\udd86\ud835\udd98\ud835\udd8d\ud835\udd8e\ud835\udd92\ud835\udd86 \u271e",
+            "\u271e \ud835\udd6c\ud835\udd94\ud835\udd8e \ud835\udd79\ud835\udd86\ud835\udd90\ud835\udd86\ud835\udd98\ud835\udd8d\ud835\udd8e\ud835\udd92\ud835\udd86 \u271e\ud83c\udf70",
+            "Aoi Nakashima",
+            "Aoi"
+        ],
+        "writer": [
+            "Beth",
+            "Bara Tiddies",
+            "gentlebara"
+        ],
+        "tags": [
+            "oc",
+            "inactive",
+            "has_alter_egos"
+        ],
+        "other_versions": [
+            {
+                "id": 140,
+                "names": [
+                    "\u2606Haruka\u2606(totes not Aoi)",
+                    "Haruka",
+                    "Catfish Aoi"
+                ],
+                "writer": [
+                    "Beth",
+                    "Bara Tiddies",
+                    "gentlebara"
+                ],
+                "tags": [
+                    "oc",
+                    "inactive",
+                    "alter_ego"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 81,
+        "names": [
+            "\ud835\udc12\ud835\udc21\ud835\udc28\ud835\udc2e \ud835\udc0d\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc2c\ud835\udc21\ud835\udc22\ud835\udc26\ud835\udc1a",
+            "\ud835\udc12\ud835\udc21\ud835\udc28\ud835\udc2e \ud835\udc0d\ud835\udc1a\ud835\udc24\ud835\udc1a\ud835\udc2c\ud835\udc21\ud835\udc22\ud835\udc26\ud835\udc1a\ud83c\udf70",
+            "Shou Nakashima",
+            "Shou"
+        ],
+        "writer": [
+            "Beth",
+            "Bara Tiddies",
+            "gentlebara"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 82,
+        "names": [
+            "Megumi Hoshino",
+            "Megumi"
+        ],
+        "writer": [
+            "Bara",
+            "meghawhopp"
+        ],
+        "tags": [
+            "oc",
+            "active"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 83,
+        "names": [
+            "Yuuichi Kuroi",
+            "Yuuichi"
+        ],
+        "writer": [
+            "Yuki",
+            "Yuki Ikusaba",
+            "yuki_ikusaba"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 84,
+        "names": [
+            "Arata Kuroi",
+            "Arata"
+        ],
+        "writer": [
+            "Yuki",
+            "Yuki Ikusaba",
+            "yuki_ikusaba"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 85,
+        "names": [
+            "Slyven Aldechi",
+            "Slyven"
+        ],
+        "writer": [
+            "Valor",
+            "valorvibing"
+        ],
+        "tags": [
+            "oc",
+            "inactive",
+            "has_familiars",
+            "has_npcs"
+        ],
+        "other_versions": [
+            {
+                "id": 141,
+                "names": [
+                    "Maple"
+                ],
+                "writer": [
+                    "Valor",
+                    "valorvibing"
+                ],
+                "tags": [
+                    "familiar",
+                    "inactive"
+                ],
+                "other_versions": []
+            },
+            {
+                "id": 142,
+                "names": [
+                    "Silvia Aldechi"
+                ],
+                "writer": [
+                    "Valor",
+                    "valorvibing"
+                ],
+                "tags": [
+                    "npc",
+                    "inactive"
+                ],
+                "other_versions": []
+            }
+        ]
+    },
+    {
+        "id": 86,
+        "names": [
+            "Yami Tetsuo",
+            "Yami"
+        ],
+        "writer": [
+            "Valor",
+            "valorvibing"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 87,
+        "names": [
+            "Maxine Ackerman",
+            "Maxine"
+        ],
+        "writer": [
+            "Sheepie",
+            "Baa-sama",
+            "baasama"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 88,
+        "names": [
+            "Volker Frost",
+            "Volker"
+        ],
+        "writer": [
+            "Sheepie",
+            "Baa-sama",
+            "baasama"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 89,
+        "names": [
+            "Bruno Ackerman",
+            "Bruno"
+        ],
+        "writer": [
+            "Sheepie",
+            "Baa-sama",
+            "baasama"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 90,
+        "names": [
+            "Axel Ackerman",
+            "Axel"
+        ],
+        "writer": [
+            "Sheepie",
+            "Baa-sama",
+            "baasama"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 91,
+        "names": [
+            "Korinna Tsuyujimo",
+            "Korinna"
+        ],
+        "writer": [
+            "Shay",
+            "spacebrawler"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 92,
+        "names": [
+            "Eiji Yugen",
+            "Eiji",
+            "Eijiro Yugen"
+        ],
+        "writer": [
+            "Shay",
+            "spacebrawler"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 93,
+        "names": [
+            "Yasuhara Soetsu",
+            "Yasuhara",
+            "???"
+        ],
+        "writer": [
+            "Alyx",
+            "catniptea.",
+            "zuzu"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 94,
+        "names": [
+            "Spirit Spectre"
+        ],
+        "writer": [
+            "Alyx",
+            "catniptea.",
+            "zuzu"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 95,
+        "names": [
+            "Kagekao Kaise"
+        ],
+        "writer": [
+            "Alyx",
+            "catniptea.",
+            "zuzu"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 96,
+        "names": [
+            "\ud83e\udde1  \u02d2  \ud835\udce1\u035f\ud835\udc14\u035f\ud835\udc11\ud835\udc14\ud835\udc0a\ud835\udc00 .\u141f",
+            "Ruruka"
+        ],
+        "writer": [
+            "Alice"
+        ],
+        "tags": [
+            "oc",
+            "inactive"
+        ],
+        "other_versions": []
+    },
+    {
+        "id": 97,
+        "names": [
+            "Tupperbox"
+        ],
+        "writer": [
+            ""
+        ],
+        "tags": [],
+        "other_versions": []
+    },
+    {
+        "id": 98,
+        "names": [
+            "Waiter",
+            "Note: This NPC doesn't exist"
+        ],
+        "writer": [
+            ""
+        ],
+        "tags": [
+            "npc"
+        ],
+        "other_versions": []
+    }
+]

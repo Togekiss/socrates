@@ -152,3 +152,9 @@ def run_command(command: str, show_lines: int = None):
 
     log("console", f"\n{RESET}# END OF CONSOLE COMMAND #\n\n")
     return process.returncode, ''.join(full_output)
+
+
+################ End Functions ################
+
+if __name__ == "__main__":
+    print("\nThis module is not intended to be run directly.\n")
