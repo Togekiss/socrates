@@ -380,6 +380,7 @@ def find_scenes():
 
     # Find main character ID
     character = get_character_id(c.CHARACTER)
+    # TODO add support to search for multiple IDs at the same time (with filters "all writers" "alter egos" "familiars" "npcs")
 
     t.log("base", f"\n## Finding scenes for {c.CHARACTER} with ID {character} in {folder_path}... ##\n")
 
