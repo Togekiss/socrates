@@ -4,7 +4,7 @@ import re
 import time
 import unicodedata
 import tricks as t
-from assign_ids import get_character_id
+from assign_ids import get_all_character_ids
 t.set_path()
 from res import constants as c
 from output_scene_list import output_scene_list
@@ -234,7 +234,7 @@ find_scenes_in_channel(channel, main_character, scene_id)
         list: A list of scene starts and ends in the channel, in the format of a JSON object.
         int: The updated scene ID.
 """
-def find_scenes_in_channel(channel, main_character, scene_id):
+def find_scenes_in_channel(channel, main_character_list, scene_id):
 
     # create arrays, in case there is more than one scene in a channel
     scenes = []
@@ -254,11 +254,11 @@ def find_scenes_in_channel(channel, main_character, scene_id):
             character = int(message["author"]["id"])
 
             #save the other characters
-            if character != main_character and character not in characters:
+            if character not in main_character_list and character not in characters:
                 characters.append(character)
 
             # if it contains the main character, we'll get the whole channel
-            if not active_scene and character == main_character:
+            if not active_scene and character in main_character_list:
 
                 characters.append(character)
                 active_scene = True
@@ -294,7 +294,7 @@ def find_scenes_in_channel(channel, main_character, scene_id):
             character = int(message["author"]["id"])
             
             # if we have no scene and we see our character, we mark it as a start of a scene
-            if not active_scene and character == main_character:
+            if not active_scene and character in main_character_list:
                 
                 active_scene = True
                 characters = [character]
@@ -311,7 +311,7 @@ def find_scenes_in_channel(channel, main_character, scene_id):
             if active_scene: 
 
                 # if our character appears, we consider this scene active
-                if main_character == character:
+                if character in main_character_list:
                     main_missing_counter = 0
                 
                 else:
@@ -378,11 +378,17 @@ def find_scenes():
     # Get the path of the "scenes" folder from the config file
     folder_path = c.SEARCH_FOLDER
 
-    # Find main character ID
-    character = get_character_id(c.CHARACTER)
-    # TODO add support to search for multiple IDs at the same time (with filters "all writers" "alter egos" "familiars" "npcs")
+    # Find main character ID (and associated versions)
+    characters_list = get_all_character_ids(c.CHARACTER)
 
-    t.log("base", f"\n## Finding scenes for {c.CHARACTER} with ID {character} in {folder_path}... ##\n")
+    if not characters_list:
+        t.log("base", f"{t.RED}\nERROR: Could not find any versions of {c.CHARACTER} in {c.CHARACTER_IDS}.\nPlease check the character name and try again.\n")
+        return 1
+
+    t.log("debug", f"\nFound {len(characters_list)} versions of {c.CHARACTER}: {characters_list}")
+    
+    has_versions = "" if len(characters_list) == 1 else f" and their {len(characters_list)} versions"
+    t.log("base", f"\n## Finding scenes for {c.CHARACTER}{has_versions} in {folder_path}... ##\n")
 
     # Create an empty list to store scene starts and ends
     all_scenes = []
@@ -401,7 +407,7 @@ def find_scenes():
                     json_data = json.load(file)
 
                     # Find scene starts and ends involving character
-                    scenes, scene_id = find_scenes_in_channel(json_data, character, scene_id)
+                    scenes, scene_id = find_scenes_in_channel(json_data, characters_list, scene_id)
 
                     # Add the messages to the respective lists, can be more than one per channel
                     all_scenes.extend(scenes)

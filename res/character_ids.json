@@ -20,6 +20,7 @@
         "id": 2,
         "names": [
             "Ayato Sakamaki",
+            "Ayato",
             "Ayato Sakamaki (Ogi)",
             "Ayato (Ogi)",
             "Ogi!Ayato"
@@ -49,7 +50,8 @@
                 ],
                 "tags": [
                     "canon",
-                    "active"
+                    "active",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             },
@@ -67,7 +69,8 @@
                 ],
                 "tags": [
                     "canon",
-                    "inactive"
+                    "inactive",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             }
@@ -77,6 +80,7 @@
         "id": 3,
         "names": [
             "Kanato Sakamaki",
+            "Kanato",
             "Kanato Sakamaki (Valor)",
             "Kanato (Valor)",
             "Valor!Kanato"
@@ -106,7 +110,8 @@
                 ],
                 "tags": [
                     "canon",
-                    "inactive"
+                    "inactive",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             },
@@ -123,7 +128,8 @@
                 ],
                 "tags": [
                     "canon",
-                    "inactive"
+                    "inactive",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             }
@@ -133,6 +139,7 @@
         "id": 4,
         "names": [
             "Laito Sakamaki",
+            "Laito",
             "Laito \ud83d\udc9a Sakamaki",
             "Laito Sakamaki (Meli)",
             "Laito (Meli)",
@@ -162,7 +169,8 @@
                 ],
                 "tags": [
                     "canon",
-                    "inactive"
+                    "inactive",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             }
@@ -172,6 +180,7 @@
         "id": 5,
         "names": [
             "Shu Sakamaki",
+            "Shu",
             "Shu Sakamaki (Luke)",
             "Shu (Luke)",
             "Luke!Shu"
@@ -201,7 +210,8 @@
                 ],
                 "tags": [
                     "canon",
-                    "active"
+                    "active",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             }
@@ -211,6 +221,7 @@
         "id": 6,
         "names": [
             "Reiji Sakamaki",
+            "Reiji",
             "Reiji Sakamaki (Clear)",
             "Reiji (Clear)",
             "Clear!Reiji"
@@ -230,6 +241,7 @@
         "id": 7,
         "names": [
             "Subaru Sakamaki",
+            "Subaru",
             "Subaru Sakamaki (Yuki)",
             "Subaru (Yuki)",
             "Yuki!Subaru"
@@ -260,7 +272,8 @@
                 ],
                 "tags": [
                     "canon",
-                    "inactive"
+                    "inactive",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             }
@@ -270,6 +283,7 @@
         "id": 8,
         "names": [
             "Ruki Mukami",
+            "Ruki",
             "Ruki Mukami (Kei)",
             "Ruki (Kei)",
             "Kei!Ruki",
@@ -291,6 +305,7 @@
         "id": 9,
         "names": [
             "Yuma Mukami",
+            "Yuma",
             "Yuma Mukami (Bara)",
             "Yuma (Bara)",
             "Bara!Yuma"
@@ -319,7 +334,8 @@
                 ],
                 "tags": [
                     "canon",
-                    "inactive"
+                    "inactive",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             }
@@ -329,6 +345,7 @@
         "id": 10,
         "names": [
             "Kou Mukami",
+            "Kou",
             "Kou Mukami (Ash)",
             "Kou (Ash)",
             "Ash!Kou"
@@ -357,7 +374,8 @@
                 ],
                 "tags": [
                     "canon",
-                    "inactive"
+                    "inactive",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             }
@@ -367,6 +385,7 @@
         "id": 11,
         "names": [
             "Azusa Mukami",
+            "Azusa",
             "Azusa Mukami (Alyx)",
             "Azusa (Alyx)",
             "Alyx!Azusa"
@@ -397,7 +416,8 @@
                 ],
                 "tags": [
                     "canon",
-                    "active"
+                    "active",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             }
@@ -407,6 +427,7 @@
         "id": 12,
         "names": [
             "Carla Tsukinami",
+            "Carla",
             "Carla Tsukinami (Rei)",
             "Carla (Rei)",
             "Rei!Carla"
@@ -443,6 +464,7 @@
         "id": 13,
         "names": [
             "Shin Tsukinami",
+            "Shin",
             "Shin Tsukinami (Oracle)",
             "Shin (Oracle)",
             "Oracle!Shin"
@@ -1163,7 +1185,8 @@
                 ],
                 "tags": [
                     "npc",
-                    "inactive"
+                    "inactive",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             }
@@ -1199,7 +1222,8 @@
                 ],
                 "tags": [
                     "npc",
-                    "active"
+                    "active",
+                    "has_other_writers"
                 ],
                 "other_versions": []
             }

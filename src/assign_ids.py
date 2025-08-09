@@ -96,6 +96,55 @@ def get_character_id(name):
                 return alt["id"]
     return None
 
+
+"""
+get_all_character_ids(name)
+
+    Retrieves the unique IDs of all versions of a character with the given name.
+    The type of versions it returns is determined by the settings in 'res/constants.py'.
+
+    Args:
+        name (str): The name of the character.
+
+    Returns:
+        list: A list of unique IDs representing all versions of the character.
+"""
+def get_all_character_ids(name):
+
+    characters_json = t.load_from_json(c.CHARACTER_IDS)
+
+    ids = []
+
+    for character in characters_json:
+
+        # Assume the user input the generic name, so look for main names
+        if name in character["names"]:
+
+            # Write down the main version
+            ids.append(character["id"])
+            
+            # Write down the other versions
+            for alt in character.get("other_versions", []):
+
+                if c.INCLUDE_ALL_WRITERS and "has_other_writers" in alt["tags"]:
+                    ids.append(alt["id"])
+                
+                if c.INCLUDE_ALTER_EGOS and "alter_ego" in alt["tags"]:
+                    ids.append(alt["id"])
+                
+                if c.INCLUDE_FAMILIARS and "familiar" in alt["tags"]:
+                    ids.append(alt["id"])
+                
+                if c.INCLUDE_NPCS and "npc" in alt["tags"]:
+                    ids.append(alt["id"])
+        
+        # Adding this for compatibility, but if the user input the name of an alt, it won't get the main version
+        for alt in character.get("other_versions", []):
+            if name in alt["names"]:
+                ids.append(alt["id"])
+            
+    return ids
+
 """
 assign_unique_ids(data, characters_json, lookup_map)
 
